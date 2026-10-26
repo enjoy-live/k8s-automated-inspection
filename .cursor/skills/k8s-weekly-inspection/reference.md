@@ -59,8 +59,6 @@ PDF 设计语言（强制，改样式只改 YAML）：`/home/storage/k8s-weekly-
 
 ## 4. 故障处理与告警记录 (Incidents & Alerts)
 
-展示你的专业性，以及你解决了哪些隐患。
-
 问题分级写在条目前：严重、警告、提示。每条包含现象、证据、影响和建议。
 
 ## 5. 数据备份与安全巡检 (Backup & Security)
