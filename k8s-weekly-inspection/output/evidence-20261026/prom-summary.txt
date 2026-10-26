@@ -1,0 +1,42 @@
+count DCGM_FI_DEV_GPU_UTIL = [{'metric': {}, 'value': [1793027777.778, '6']}]
+count DCGM_FI_DEV_XID_ERRORS = []
+count DCGM_FI_DEV_POWER_USAGE = [{'metric': {}, 'value': [1793027777.786, '6']}]
+count DCGM_FI_DEV_FB_USED = [{'metric': {}, 'value': [1793027777.79, '6']}]
+count DCGM_FI_DEV_GPU_TEMP = [{'metric': {}, 'value': [1793027777.794, '6']}]
+count node_boot_time_seconds = [{'metric': {}, 'value': [1793027777.798, '3']}]
+count kubelet_volume_stats_used_bytes = [{'metric': {}, 'value': [1793027777.802, '32']}]
+root_now [{"metric": {"nodename": "worker-node01-pro6000"}, "value": [1793027777.741, "38.226802798199245"]}, {"metric": {"nodename": "worker-node02-3090"}, "value": [1793027777.741, "74.96093924868617"]}, {"metric": {"nodename": "master-node-storage-R620-G40"}, "value": [1793027777.741, "48.79600971801988"]}]
+root_start [{"metric": {"nodename": "worker-node01-pro6000"}, "value": [1792339200, "38.2996667296055"]}, {"metric": {"nodename": "master-node-storage-R620-G40"}, "value": [1792339200, "48.52896582835772"]}, {"metric": {"nodename": "worker-node02-3090"}, "value": [1792339200, "74.95570425583215"]}]
+home_now [{"metric": {"nodename": "worker-node02-3090"}, "value": [1793027777.741, "77.89775692274038"]}]
+home_start [{"metric": {"nodename": "worker-node02-3090"}, "value": [1792339200, "77.89775692274038"]}]
+range duration 191h
+xid [{"metric": {"Hostname": "worker-node01-pro6000", "UUID": "GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f", "device": "nvidia1", "gpu": "1"}, "value": [1793027777.741, "79"]}]
+gpu_gap FAIL HTTP Error 400: Bad Request
+gpu_gap_now [{"metric": {"container": "kube-state-metrics", "endpoint": "http", "instance": "10.244.31.57:8080", "job": "kube-state-metrics", "namespace": "monitoring", "node": "worker-node01-pro6000", "pod": "prometheus-kube-state-metrics-7bf6b764d4-xscb9", "resource": "nvidia_com_gpu", "service": "prometheus-kube-state-metrics", "unit": "integer"}, "value": [1793027777.741, "0"]}, {"metric": {"container": "kube-state-metrics", "endpoint": "http", "instance": "10.244.31.57:8080", "job": "kube-state-metrics", "namespace": "monitoring", "node": "worker-node02-3090", "pod": "prometheus-kube-state-metrics-7bf6b764d4-xscb9", "resource": "nvidia_com_gpu", "service": "prometheus-kube-state-metrics", "unit": "integer"}, "value": [1793027777.741, "0"]}]
+boot [{"metric": {"__name__": "node_boot_time_seconds", "container": "node-exporter", "endpoint": "http-metrics", "instance": "12.12.12.2:9100", "job": "node-exporter", "namespace": "monitoring", "pod": "prometheus-prometheus-node-exporter-pskmn", "service": "prometheus-prometheus-node-exporter"}, "value": [1793027777.741, "1792736377"]}, {"metric": {"__name__": "node_boot_time_seconds", "container": "node-exporter", "endpoint": "http-metrics", "instance": "12.12.12.3:9100", "job": "node-exporter", "namespace": "monitoring", "pod": "prometheus-prometheus-node-exporter-w8kn7", "service": "prometheus-prometheus-node-exporter"}, "value": [1793027777.741, "1778260802"]}, {"metric": {"__name__": "node_boot_time_seconds", "container": "node-exporter", "endpoint": "http-metrics", "instance": "12.12.12.1:9100", "job": "node-exporter", "namespace": "monitoring", "pod": "prometheus-prometheus-node-exporter-5dxm5", "service": "prometheus-prometheus-node-exporter"}, "value": [1793027777.741, "1770598334"]}]
+vol_used [{"metric": {}, "value": [1793027777.741, "41199001411584"]}]
+vol_cap [{"metric": {}, "value": [1793027777.741, "436312263884800"]}]
+alert series 7
+ALERT KubeAggregatedAPIDown | warning | 1 | 10-23 14:25 | 10-23 14:25 | 1.0
+ALERT KubeContainerWaiting | warning | 315 | 10-25 02:50 | 10-26 05:00 | 4.0
+ALERT KubeDaemonSetRolloutStuck | warning | 1040 | 10-19 21:45 | 10-23 14:50 | 1.0
+ALERT KubeMemoryOvercommit | warning | 2294 | 10-19 00:00 | 10-26 23:15 | 1.0
+ALERT KubePodCrashLooping | warning | 1065 | 10-19 21:45 | 10-23 14:25 | 1.0
+ALERT KubePodNotReady | warning | 2296 | 10-19 00:00 | 10-26 23:15 | 2.0
+ALERT KubeStatefulSetReplicasMismatch | warning | 4 | 10-23 14:35 | 10-23 14:50 | 1.0
+FIRING NOW 3
+ NOW KubeMemoryOvercommit | warning | - | -
+ NOW KubePodNotReady | warning | user5-example-com | spline-yolov8-train-sj7sw-train-103964838
+ NOW Watchdog | none | - | -
+dashboard FAIL HTTP Error 400: Bad Request
+BOOT 12.12.12.1:9100 values ['02-09 08:52:14']
+BOOT 12.12.12.2:9100 values ['09-18 10:48:14', '10-23 14:19:37']
+BOOT 12.12.12.3:9100 values ['05-09 01:20:02']
+mw_start [{"metric": {"__name__": "kube_pod_container_status_restarts_total", "container": "main", "endpoint": "http", "instance": "10.244.31.57:8080", "job": "kube-state-metrics", "namespace": "kubeflow", "pod": "metadata-writer-6f9f556688-ntmsc", "service": "prometheus-kube-state-metrics", "uid": "049fbd26-ba33-46da-af4a-0b2530a3024a"}, "value": [1792339200, "15"]}]
+mw_end [{"metric": {"__name__": "kube_pod_container_status_restarts_total", "container": "main", "endpoint": "http", "instance": "10.244.31.57:8080", "job": "kube-state-metrics", "namespace": "kubeflow", "pod": "metadata-writer-6f9f556688-ntmsc", "service": "prometheus-kube-state-metrics", "uid": "049fbd26-ba33-46da-af4a-0b2530a3024a"}, "value": [1793027777.741, "134"]}]
+POWER worker-node01-pro6000 gpu=0 max=619.4 avg=113.7 last=85.0
+POWER worker-node01-pro6000 gpu=1 max=495.8 avg=310.9 last=356.1
+POWER worker-node02-3090 gpu=0 max=349.3 avg=97.7 last=28.3
+POWER worker-node02-3090 gpu=1 max=28.3 avg=27.2 last=27.0
+POWER worker-node02-3090 gpu=2 max=349.6 avg=140.1 last=342.8
+POWER worker-node02-3090 gpu=3 max=349.8 avg=116.8 last=165.8

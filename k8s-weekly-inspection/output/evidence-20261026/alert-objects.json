@@ -1,0 +1,188 @@
+[
+  {
+    "metric": {
+      "alertname": "KubeAggregatedAPIDown",
+      "namespace": "default"
+    },
+    "value": [
+      1793030399,
+      "1"
+    ]
+  },
+  {
+    "metric": {
+      "alertname": "KubeContainerWaiting",
+      "container": "main",
+      "namespace": "user3-example-com",
+      "pod": "pengwin-of-ab-formal-20261024-auto-launch-v1-gfhdc-system-container-driver-2176270817"
+    },
+    "value": [
+      1793030399,
+      "1"
+    ]
+  },
+  {
+    "metric": {
+      "alertname": "KubeContainerWaiting",
+      "container": "main",
+      "namespace": "user3-example-com",
+      "pod": "pengwin-of-ab-formal-20261024-snapshot-20261024204500-k8p8c-worker-system-container-impl-2599772390"
+    },
+    "value": [
+      1793030399,
+      "1"
+    ]
+  },
+  {
+    "metric": {
+      "alertname": "KubeContainerWaiting",
+      "container": "wait",
+      "namespace": "user3-example-com",
+      "pod": "pengwin-of-ab-formal-20261024-auto-launch-v1-gfhdc-system-container-driver-2176270817"
+    },
+    "value": [
+      1793030399,
+      "1"
+    ]
+  },
+  {
+    "metric": {
+      "alertname": "KubeContainerWaiting",
+      "container": "wait",
+      "namespace": "user3-example-com",
+      "pod": "pengwin-of-ab-formal-20261024-snapshot-20261024204500-k8p8c-worker-system-container-impl-2599772390"
+    },
+    "value": [
+      1793030399,
+      "1"
+    ]
+  },
+  {
+    "metric": {
+      "alertname": "KubeDaemonSetRolloutStuck",
+      "container": "kube-state-metrics",
+      "daemonset": "fluent-bit",
+      "namespace": "logging",
+      "pod": "prometheus-kube-state-metrics-7bf6b764d4-xscb9"
+    },
+    "value": [
+      1793030399,
+      "1"
+    ]
+  },
+  {
+    "metric": {
+      "alertname": "KubeDaemonSetRolloutStuck",
+      "container": "kube-state-metrics",
+      "daemonset": "gpu-feature-discovery",
+      "namespace": "gpu-operator",
+      "pod": "prometheus-kube-state-metrics-7bf6b764d4-xscb9"
+    },
+    "value": [
+      1793030399,
+      "1"
+    ]
+  },
+  {
+    "metric": {
+      "alertname": "KubePodCrashLooping",
+      "container": "gpu-feature-discovery",
+      "namespace": "gpu-operator",
+      "pod": "gpu-feature-discovery-44fkk"
+    },
+    "value": [
+      1793030399,
+      "1"
+    ]
+  },
+  {
+    "metric": {
+      "alertname": "KubePodNotReady",
+      "namespace": "user3-example-com",
+      "pod": "pengwin-task3-beta-20261019-3gpu-v6-pro6000-check-child-5aac16"
+    },
+    "value": [
+      1793030399,
+      "1"
+    ]
+  },
+  {
+    "metric": {
+      "alertname": "KubePodNotReady",
+      "namespace": "user3-example-com",
+      "pod": "pengwin-task3-beta-20261019-pro-retry-v7-check-child-d9c3e5"
+    },
+    "value": [
+      1793030399,
+      "1"
+    ]
+  },
+  {
+    "metric": {
+      "alertname": "KubePodNotReady",
+      "namespace": "user3-example-com",
+      "pod": "pengwin-task3-beta-20261020-pro-retry-v10-check-child-20c4b5"
+    },
+    "value": [
+      1793030399,
+      "1"
+    ]
+  },
+  {
+    "metric": {
+      "alertname": "KubePodNotReady",
+      "namespace": "user3-example-com",
+      "pod": "pengwin-task3-beta-20261020-pro-retry-v11-check-child-102806"
+    },
+    "value": [
+      1793030399,
+      "1"
+    ]
+  },
+  {
+    "metric": {
+      "alertname": "KubePodNotReady",
+      "namespace": "user3-example-com",
+      "pod": "pengwin-task3-beta-20261020-pro-retry-v8-check-child-f0e3ba"
+    },
+    "value": [
+      1793030399,
+      "1"
+    ]
+  },
+  {
+    "metric": {
+      "alertname": "KubePodNotReady",
+      "namespace": "user3-example-com",
+      "pod": "pengwin-task3-beta-20261020-pro-retry-v9-check-child-5d9f10"
+    },
+    "value": [
+      1793030399,
+      "1"
+    ]
+  },
+  {
+    "metric": {
+      "alertname": "KubePodNotReady",
+      "namespace": "user5-example-com",
+      "pod": "spline-yolov8-train-sj7sw-train-103964838"
+    },
+    "value": [
+      1793030399,
+      "1"
+    ]
+  },
+  {
+    "metric": {
+      "alertname": "KubeStatefulSetReplicasMismatch",
+      "container": "kube-state-metrics",
+      "namespace": "logging",
+      "pod": "prometheus-kube-state-metrics-7bf6b764d4-xscb9",
+      "statefulset": "loki"
+    },
+    "value": [
+      1793030399,
+      "1"
+    ]
+  }
+]

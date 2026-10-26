@@ -3,9 +3,9 @@ auth                        deployment.apps/dex                                 
 cert-manager                deployment.apps/cert-manager                                 1/1     1            1           304d
 cert-manager                deployment.apps/cert-manager-cainjector                      1/1     1            1           304d
 cert-manager                deployment.apps/cert-manager-webhook                         1/1     1            1           304d
-gpu-operator                deployment.apps/gpu-operator                                 1/1     1            1           303d
-gpu-operator                deployment.apps/gpu-operator-node-feature-discovery-gc       1/1     1            1           303d
-gpu-operator                deployment.apps/gpu-operator-node-feature-discovery-master   1/1     1            1           303d
+gpu-operator                deployment.apps/gpu-operator                                 1/1     1            1           304d
+gpu-operator                deployment.apps/gpu-operator-node-feature-discovery-gc       1/1     1            1           304d
+gpu-operator                deployment.apps/gpu-operator-node-feature-discovery-master   1/1     1            1           304d
 harbor                      deployment.apps/harbor-core                                  1/1     1            1           304d
 harbor                      deployment.apps/harbor-jobservice                            1/1     1            1           304d
 harbor                      deployment.apps/harbor-nginx                                 1/1     1            1           304d
@@ -27,7 +27,7 @@ knative-serving             deployment.apps/webhook                             
 kube-system                 deployment.apps/calico-kube-controllers                      1/1     1            1           304d
 kube-system                 deployment.apps/coredns                                      3/3     3            3           304d
 kube-system                 deployment.apps/csi-nfs-controller                           1/1     1            1           304d
-kube-system                 deployment.apps/metrics-server                               1/1     1            1           303d
+kube-system                 deployment.apps/metrics-server                               1/1     1            1           304d
 kubeflow-user-example-com   deployment.apps/detect-digits-2-predictor-00001-deployment   0/0     0            0           299d
 kubeflow-user-example-com   deployment.apps/ml-pipeline-ui-artifact                      1/1     1            1           286d
 kubeflow-user-example-com   deployment.apps/ml-pipeline-visualizationserver              1/1     1            1           286d
@@ -74,26 +74,26 @@ kyverno                     deployment.apps/kyverno-cleanup-controller          
 kyverno                     deployment.apps/kyverno-reports-controller                   1/1     1            1           300d
 local-path-storage          deployment.apps/local-path-provisioner                       1/1     1            1           304d
 logging                     deployment.apps/event-exporter-kubernetes-event-exporter     1/1     1            1           299d
-logging                     deployment.apps/grafana                                      1/1     1            1           303d
-logging                     deployment.apps/loki-gateway                                 1/1     1            1           303d
+logging                     deployment.apps/grafana                                      1/1     1            1           304d
+logging                     deployment.apps/loki-gateway                                 1/1     1            1           304d
 monitoring                  deployment.apps/cert-exporter-cert-manager                   1/1     1            1           210d
 monitoring                  deployment.apps/prometheus-grafana                           1/1     1            1           182d
-monitoring                  deployment.apps/prometheus-kube-prometheus-operator          1/1     1            1           303d
-monitoring                  deployment.apps/prometheus-kube-state-metrics                1/1     1            1           303d
+monitoring                  deployment.apps/prometheus-kube-prometheus-operator          1/1     1            1           304d
+monitoring                  deployment.apps/prometheus-kube-state-metrics                1/1     1            1           304d
 oauth2-proxy                deployment.apps/oauth2-proxy                                 2/2     2            2           304d
-user1-example-com           deployment.apps/ml-pipeline-ui-artifact                      1/1     1            1           302d
-user1-example-com           deployment.apps/ml-pipeline-visualizationserver              1/1     1            1           302d
-user2-example-com           deployment.apps/ml-pipeline-ui-artifact                      1/1     1            1           302d
-user2-example-com           deployment.apps/ml-pipeline-visualizationserver              1/1     1            1           302d
+user1-example-com           deployment.apps/ml-pipeline-ui-artifact                      1/1     1            1           303d
+user1-example-com           deployment.apps/ml-pipeline-visualizationserver              1/1     1            1           303d
+user2-example-com           deployment.apps/ml-pipeline-ui-artifact                      1/1     1            1           303d
+user2-example-com           deployment.apps/ml-pipeline-visualizationserver              1/1     1            1           303d
 user2-example-com           deployment.apps/pvcviewer-mni-test-qw-260106-datavol-1       1/1     1            1           293d
 user2-example-com           deployment.apps/pvcviewer-qwen-model                         1/1     1            1           290d
 user2-example-com           deployment.apps/pvcviewer-qwen-tunning-data                  1/1     1            1           290d
 user3-example-com           deployment.apps/ml-pipeline-ui-artifact                      1/1     1            1           185d
 user3-example-com           deployment.apps/ml-pipeline-visualizationserver              1/1     1            1           185d
-user3-example-com           deployment.apps/pvcviewer-nndet-v2-datavol-1                 1/1     1            1           167d
-user3-example-com           deployment.apps/pvcviewer-nndetection-datavol-1              1/1     1            1           181d
-user3-example-com           deployment.apps/pvcviewer-nndetection-workspace              1/1     1            1           181d
-user3-example-com           deployment.apps/pvcviewer-nndetetion-gt-workspace            1/1     1            1           167d
+user3-example-com           deployment.apps/pvcviewer-nndet-v2-datavol-1                 1/1     1            1           168d
+user3-example-com           deployment.apps/pvcviewer-nndetection-datavol-1              1/1     1            1           182d
+user3-example-com           deployment.apps/pvcviewer-nndetection-workspace              1/1     1            1           182d
+user3-example-com           deployment.apps/pvcviewer-nndetetion-gt-workspace            1/1     1            1           168d
 user4-example-com           deployment.apps/ml-pipeline-ui-artifact                      1/1     1            1           159d
 user4-example-com           deployment.apps/ml-pipeline-visualizationserver              1/1     1            1           159d
 user4-example-com           deployment.apps/pvcviewer-huashan-test-datavol-1             1/1     1            1           151d
@@ -108,36 +108,36 @@ harbor                      statefulset.apps/harbor-database                    
 harbor                      statefulset.apps/harbor-redis                                           1/1     304d
 harbor                      statefulset.apps/harbor-trivy                                           1/1     304d
 kubeflow-user-example-com   statefulset.apps/style-big                                              1/1     293d
-kubeflow-user-example-com   statefulset.apps/vs                                                     1/1     178d
+kubeflow-user-example-com   statefulset.apps/vs                                                     1/1     179d
 kubeflow                    statefulset.apps/metacontroller                                         1/1     304d
-logging                     statefulset.apps/loki                                                   1/1     303d
-logging                     statefulset.apps/loki-chunks-cache                                      1/1     303d
-logging                     statefulset.apps/loki-results-cache                                     1/1     303d
+logging                     statefulset.apps/loki                                                   1/1     304d
+logging                     statefulset.apps/loki-chunks-cache                                      1/1     304d
+logging                     statefulset.apps/loki-results-cache                                     1/1     304d
 monitoring                  statefulset.apps/alertmanager-prometheus-kube-prometheus-alertmanager   1/1     182d
 monitoring                  statefulset.apps/prometheus-prometheus-kube-prometheus-prometheus       1/1     185d
 user2-example-com           statefulset.apps/mni-test-0104                                          1/1     295d
 user2-example-com           statefulset.apps/mni-test-qw-260106                                     1/1     293d
-user3-example-com           statefulset.apps/nndet-v2                                               0/0     167d
+user3-example-com           statefulset.apps/nndet-v2                                               0/0     168d
 user3-example-com           statefulset.apps/nndetection                                            0/0     182d
 user3-example-com           statefulset.apps/p60001                                                 0/0     133d
 user4-example-com           statefulset.apps/awgs-builder                                           1/1     145d
 user5-example-com           statefulset.apps/csj-spine-detection                                    1/1     133d
 
 NAMESPACE      NAME                                                        DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR                                                          AGE
-gpu-operator   daemonset.apps/gpu-feature-discovery                        2         2         2       2            2           nvidia.com/gpu.deploy.gpu-feature-discovery=true                       303d
-gpu-operator   daemonset.apps/gpu-operator-node-feature-discovery-worker   3         3         3       3            3           <none>                                                                 303d
-gpu-operator   daemonset.apps/nvidia-container-toolkit-daemonset           2         2         2       2            2           nvidia.com/gpu.deploy.container-toolkit=true                           303d
-gpu-operator   daemonset.apps/nvidia-dcgm-exporter                         2         2         2       2            2           nvidia.com/gpu.deploy.dcgm-exporter=true                               303d
-gpu-operator   daemonset.apps/nvidia-device-plugin-daemonset               2         2         2       2            2           nvidia.com/gpu.deploy.device-plugin=true                               303d
-gpu-operator   daemonset.apps/nvidia-device-plugin-mps-control-daemon      0         0         0       0            0           nvidia.com/gpu.deploy.device-plugin=true,nvidia.com/mps.capable=true   303d
-gpu-operator   daemonset.apps/nvidia-mig-manager                           1         1         1       1            1           nvidia.com/gpu.deploy.mig-manager=true                                 303d
-gpu-operator   daemonset.apps/nvidia-operator-validator                    2         2         2       2            2           nvidia.com/gpu.deploy.operator-validator=true                          303d
+gpu-operator   daemonset.apps/gpu-feature-discovery                        2         2         2       2            2           nvidia.com/gpu.deploy.gpu-feature-discovery=true                       304d
+gpu-operator   daemonset.apps/gpu-operator-node-feature-discovery-worker   3         3         3       3            3           <none>                                                                 304d
+gpu-operator   daemonset.apps/nvidia-container-toolkit-daemonset           2         2         2       2            2           nvidia.com/gpu.deploy.container-toolkit=true                           304d
+gpu-operator   daemonset.apps/nvidia-dcgm-exporter                         2         2         2       2            2           nvidia.com/gpu.deploy.dcgm-exporter=true                               304d
+gpu-operator   daemonset.apps/nvidia-device-plugin-daemonset               2         2         2       2            2           nvidia.com/gpu.deploy.device-plugin=true                               304d
+gpu-operator   daemonset.apps/nvidia-device-plugin-mps-control-daemon      0         0         0       0            0           nvidia.com/gpu.deploy.device-plugin=true,nvidia.com/mps.capable=true   304d
+gpu-operator   daemonset.apps/nvidia-mig-manager                           1         1         1       1            1           nvidia.com/gpu.deploy.mig-manager=true                                 304d
+gpu-operator   daemonset.apps/nvidia-operator-validator                    2         2         2       2            2           nvidia.com/gpu.deploy.operator-validator=true                          304d
 kube-system    daemonset.apps/calico-node                                  3         3         3       3            3           kubernetes.io/os=linux                                                 304d
 kube-system    daemonset.apps/csi-nfs-node                                 3         3         3       3            3           kubernetes.io/os=linux                                                 304d
 kube-system    daemonset.apps/istio-cni-node                               3         3         3       3            3           kubernetes.io/os=linux                                                 304d
 kube-system    daemonset.apps/kube-proxy                                   3         3         3       3            3           kubernetes.io/os=linux                                                 304d
 kubeflow       daemonset.apps/kserve-localmodelnode-agent                  0         0         0       0            0           kserve/localmodel=worker                                               304d
-logging        daemonset.apps/fluent-bit                                   2         2         2       2            2           <none>                                                                 303d
-logging        daemonset.apps/loki-canary                                  2         2         2       2            2           <none>                                                                 303d
-monitoring     daemonset.apps/prometheus-prometheus-node-exporter          3         3         3       3            3           kubernetes.io/os=linux                                                 303d
+logging        daemonset.apps/fluent-bit                                   2         2         2       2            2           <none>                                                                 304d
+logging        daemonset.apps/loki-canary                                  2         2         2       2            2           <none>                                                                 304d
+monitoring     daemonset.apps/prometheus-prometheus-node-exporter          3         3         3       3            3           kubernetes.io/os=linux                                                 304d
 velero         daemonset.apps/node-agent                                   2         2         2       2            2           kubernetes.io/os=linux                                                 272d

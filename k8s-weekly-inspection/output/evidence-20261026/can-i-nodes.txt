@@ -1,0 +1,3 @@
+Warning: resource 'nodes' is not namespace scoped
+
+yes

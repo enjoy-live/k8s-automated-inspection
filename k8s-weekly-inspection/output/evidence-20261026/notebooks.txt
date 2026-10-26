@@ -1,9 +1,9 @@
 NAMESPACE                   NAME                  AGE
 kubeflow-user-example-com   style-big             293d
-kubeflow-user-example-com   vs                    178d
+kubeflow-user-example-com   vs                    179d
 user2-example-com           mni-test-0104         295d
 user2-example-com           mni-test-qw-260106    293d
-user3-example-com           nndet-v2              167d
+user3-example-com           nndet-v2              168d
 user3-example-com           nndetection           182d
 user3-example-com           p60001                133d
 user4-example-com           awgs-builder          145d

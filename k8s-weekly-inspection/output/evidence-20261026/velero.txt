@@ -1,43 +1,43 @@
-NAME                                    PHASE       ERR      WARN     START
-kubeflow-weekly-backup-20260927020012   Completed   <none>   <none>   2026-09-27T02:00:12Z
-minio-daily-backup-20260927040012       Completed   <none>   <none>   2026-09-27T04:00:12Z
-minio-daily-backup-20260928040013       Completed   <none>   <none>   2026-09-28T04:00:13Z
-minio-daily-backup-20260929040015       Completed   <none>   <none>   2026-09-29T04:00:15Z
-minio-daily-backup-20260930040016       Completed   <none>   <none>   2026-09-30T04:00:16Z
-minio-daily-backup-20261001040017       Completed   <none>   <none>   2026-10-01T04:00:18Z
-minio-daily-backup-20261002040019       Completed   <none>   <none>   2026-10-02T04:00:19Z
-minio-daily-backup-20261003040020       Completed   <none>   <none>   2026-10-03T04:00:20Z
-kubeflow-weekly-backup-20261004020021   Completed   <none>   <none>   2026-10-04T02:00:21Z
-minio-daily-backup-20261004040022       Completed   <none>   <none>   2026-10-04T04:00:22Z
-minio-daily-backup-20261005040023       Completed   <none>   <none>   2026-10-05T04:00:23Z
-minio-daily-backup-20261006040024       Completed   <none>   <none>   2026-10-06T04:00:24Z
-minio-daily-backup-20261007040026       Completed   <none>   <none>   2026-10-07T04:00:26Z
-minio-daily-backup-20261008040027       Completed   <none>   <none>   2026-10-08T04:00:27Z
-minio-daily-backup-20261009040028       Completed   <none>   <none>   2026-10-09T04:00:28Z
-minio-daily-backup-20261010040030       Completed   <none>   <none>   2026-10-10T04:00:30Z
-kubeflow-weekly-backup-20261011020031   Completed   <none>   <none>   2026-10-11T02:00:31Z
-minio-daily-backup-20261011040031       Completed   <none>   <none>   2026-10-11T04:00:31Z
-minio-daily-backup-20261012040032       Completed   <none>   <none>   2026-10-12T04:00:32Z
-minio-daily-backup-20261013040034       Completed   <none>   <none>   2026-10-13T04:00:34Z
-minio-daily-backup-20261014040012       Completed   <none>   <none>   2026-10-14T04:00:12Z
-minio-daily-backup-20261015040013       Completed   <none>   <none>   2026-10-15T04:00:13Z
-minio-daily-backup-20261016040014       Completed   <none>   <none>   2026-10-16T04:00:14Z
-minio-daily-backup-20261017040015       Completed   <none>   <none>   2026-10-17T04:00:15Z
-kubeflow-weekly-backup-20261018020016   Completed   <none>   <none>   2026-10-18T02:00:16Z
-minio-daily-backup-20261018040016       Completed   <none>   <none>   2026-10-18T04:00:16Z
-minio-daily-backup-20261019040018       Completed   <none>   <none>   2026-10-19T04:00:18Z
-pvc-daily-backup-20261020030019         Completed   <none>   <none>   2026-10-20T03:00:19Z
-minio-daily-backup-20261020040019       Completed   <none>   <none>   2026-10-20T04:00:19Z
-pvc-daily-backup-20261021030020         Completed   <none>   <none>   2026-10-21T03:00:20Z
-minio-daily-backup-20261021040020       Completed   <none>   <none>   2026-10-21T04:00:20Z
-pvc-daily-backup-20261022030021         Completed   <none>   <none>   2026-10-22T03:00:21Z
-minio-daily-backup-20261022040021       Completed   <none>   <none>   2026-10-22T04:00:21Z
-pvc-daily-backup-20261023030023         Completed   <none>   <none>   2026-10-23T03:00:23Z
-minio-daily-backup-20261023040023       Completed   <none>   <none>   2026-10-23T04:00:23Z
-pvc-daily-backup-20261024030020         Completed   <none>   <none>   2026-10-24T03:00:20Z
-minio-daily-backup-20261024040020       Completed   <none>   <none>   2026-10-24T04:00:20Z
-kubeflow-weekly-backup-20261025020021   Completed   <none>   <none>   2026-10-25T02:00:21Z
-pvc-daily-backup-20261025030021         Completed   <none>   <none>   2026-10-25T03:00:21Z
-minio-daily-backup-20261025040021       Completed   <none>   <none>   2026-10-25T04:00:21Z
-pvc-daily-backup-20261026030022         Completed   <none>   <none>   2026-10-26T03:00:22Z
-minio-daily-backup-20261026040022       Completed   <none>   <none>   2026-10-26T04:00:22Z
+NAMESPACE   NAME                                    AGE
+velero      kubeflow-weekly-backup-20260927020012   29d
+velero      kubeflow-weekly-backup-20261004020021   22d
+velero      kubeflow-weekly-backup-20261011020031   15d
+velero      kubeflow-weekly-backup-20261018020016   8d
+velero      kubeflow-weekly-backup-20261025020021   41h
+velero      minio-daily-backup-20260927040012       29d
+velero      minio-daily-backup-20260928040013       28d
+velero      minio-daily-backup-20260929040015       27d
+velero      minio-daily-backup-20260930040016       26d
+velero      minio-daily-backup-20261001040017       25d
+velero      minio-daily-backup-20261002040019       24d
+velero      minio-daily-backup-20261003040020       23d
+velero      minio-daily-backup-20261004040022       22d
+velero      minio-daily-backup-20261005040023       21d
+velero      minio-daily-backup-20261006040024       20d
+velero      minio-daily-backup-20261007040026       19d
+velero      minio-daily-backup-20261008040027       18d
+velero      minio-daily-backup-20261009040028       17d
+velero      minio-daily-backup-20261010040030       16d
+velero      minio-daily-backup-20261011040031       15d
+velero      minio-daily-backup-20261012040032       14d
+velero      minio-daily-backup-20261013040034       13d
+velero      minio-daily-backup-20261014040012       12d
+velero      minio-daily-backup-20261015040013       11d
+velero      minio-daily-backup-20261016040014       10d
+velero      minio-daily-backup-20261017040015       9d
+velero      minio-daily-backup-20261018040016       8d
+velero      minio-daily-backup-20261019040018       7d15h
+velero      minio-daily-backup-20261020040019       6d15h
+velero      minio-daily-backup-20261021040020       5d15h
+velero      minio-daily-backup-20261022040021       4d15h
+velero      minio-daily-backup-20261023040023       3d15h
+velero      minio-daily-backup-20261024040020       2d15h
+velero      minio-daily-backup-20261025040021       39h
+velero      minio-daily-backup-20261026040022       15h
+velero      pvc-daily-backup-20261020030019         6d16h
+velero      pvc-daily-backup-20261021030020         5d16h
+velero      pvc-daily-backup-20261022030021         4d16h
+velero      pvc-daily-backup-20261023030023         3d16h
+velero      pvc-daily-backup-20261024030020         2d16h
+velero      pvc-daily-backup-20261025030021         40h
+velero      pvc-daily-backup-20261026030022         16h

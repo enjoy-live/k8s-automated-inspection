@@ -1,4 +1,4 @@
-NAME                     SCHEDULE    TTL        LAST                   PAUSED
-kubeflow-weekly-backup   0 2 * * 0   720h0m0s   2026-10-25T02:00:21Z   <none>
-minio-daily-backup       0 4 * * *   720h0m0s   2026-10-26T04:00:22Z   <none>
-pvc-daily-backup         0 3 * * *   168h0m0s   2026-10-26T03:00:22Z   <none>
+NAMESPACE   NAME                     STATUS    SCHEDULE    LASTBACKUP   AGE    PAUSED
+velero      kubeflow-weekly-backup   Enabled   0 2 * * 0   41h          272d   
+velero      minio-daily-backup       Enabled   0 4 * * *   15h          272d   
+velero      pvc-daily-backup         Enabled   0 3 * * *   16h          272d   

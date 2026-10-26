@@ -1,0 +1,7 @@
+NAMESPACE   NAME                     READY   SECRET                           AGE
+kubeflow    admission-webhook-cert   True    webhook-certs                    304d
+kubeflow    katib-webhook-cert       True    katib-webhook-cert               304d
+kubeflow    kfp-cache-cert           True    webhook-server-tls               304d
+kubeflow    kubeflow-trainer-cert    True    kubeflow-trainer-webhook-certs   284d
+kubeflow    pvcviewer-serving-cert   True    webhook-server-cert              304d
+kubeflow    serving-cert             True    kserve-webhook-server-cert       304d

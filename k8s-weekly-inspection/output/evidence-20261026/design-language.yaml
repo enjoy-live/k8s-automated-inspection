@@ -1,0 +1,130 @@
+# 维护周报 PDF 视觉参数。
+# 渲染脚本读取 page、fonts、colors、typography、table、wave、hr、list.bullet、emphasis_rules、glyph_fallback。
+# 标记含义与 reference.md「写作契约」一致：本周重点、【严重】、现象/结论/影响、【警告】、异常、复发。
+# 改颜色、字号、判定词只改本文件。不要在渲染脚本里另写一套。
+
+version: 2
+name: kubeflow-maintenance-weekly-report
+
+page:
+  size: A4
+  margins_mm:
+    top: 16
+    bottom: 16
+    left: 15
+    right: 15
+  author: unix
+
+fonts:
+  base:
+    path: /usr/share/fonts/truetype/wqy/wqy-microhei.ttc
+    subfont_index: 0
+    register_as: CJK
+  bold:
+    path: /usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc
+    subfont_index: 2
+    register_as: CJK-Bold
+
+colors:
+  title: "#1a3b6e"
+  h1: "#0d47a1"
+  h2: "#1565c0"
+  h3: "#1565c0"
+  body: "#000000"
+  meta: "#555555"
+  quote: "#4a4a4a"
+  table_header_bg: "#1565c0"
+  table_header_fg: "#ffffff"
+  table_row_alt: "#eef3fb"
+  table_grid: "#b8c4d9"
+  hr: "#c9d3e5"
+  status_ok: "#1b7f3b"
+  status_warn: "#b36b00"
+  status_fail: "#c0392b"
+  emphasis: "#c0392b"
+  row_alert_fg: "#c0392b"
+  row_alert_bg: "#fdecea"
+  wave_warn: "#e6a800"
+
+typography:
+  title:  { size: 19,   leading: 24, bold: true,  space_before: 4, space_after: 2, left_indent: 0 }
+  h1:     { size: 15,   leading: 20, bold: true,  space_before: 14, space_after: 6, left_indent: 0 }
+  h2:     { size: 12.5, leading: 17, bold: true,  space_before: 10, space_after: 4, left_indent: 0 }
+  h3:     { size: 11,   leading: 15, bold: true,  space_before: 8, space_after: 4, left_indent: 0 }
+  body:   { size: 10,   leading: 15, bold: false, space_before: 2, space_after: 4, left_indent: 0 }
+  meta:   { size: 10,   leading: 14, bold: false, space_before: 2, space_after: 4, left_indent: 0 }
+  list:   { size: 10,   leading: 15, bold: false, space_before: 2, space_after: 4, left_indent: 10 }
+  quote:  { size: 9.5,  leading: 14, bold: false, space_before: 4, space_after: 4, left_indent: 8 }
+  highlight_title: { size: 11, leading: 16, bold: true, space_before: 6, space_after: 2, left_indent: 0 }
+  highlight: { size: 10.5, leading: 16, bold: true, space_before: 1, space_after: 1, left_indent: 10 }
+  th:     { size: 9,    leading: 12, bold: true,  space_before: 1, space_after: 1, left_indent: 0 }
+  td:     { size: 9,    leading: 12, bold: false, space_before: 1, space_after: 1, left_indent: 0 }
+
+table:
+  header_text_color: table_header_fg
+  header_background: table_header_bg
+  stripe_background: table_row_alt
+  grid_color: table_grid
+  grid_width: 0.4
+  padding:
+    left: 4
+    right: 4
+    top: 2
+    bottom: 2
+  spacer_before: 3
+  spacer_after: 6
+  repeat_header: true
+
+wave:
+  color: wave_warn
+  amplitude: 1.15
+  wavelength: 6.5
+  stroke: 1.2
+
+hr:
+  thickness: 0.6
+  color: hr
+  space_before: 4
+  space_after: 6
+
+list:
+  bullet: "•"
+
+emphasis_rules:
+  highlight_label: "本周重点"
+  critical_marker: "【严重】"
+  warning_line_marker: "【警告】"
+  warning_tokens: ["警告", "warning"]
+  critical_tokens: ["严重", "critical"]
+  core_prefixes: ["现象", "结论", "影响"]
+  alert_terms: ["异常", "复发"]
+  wave_negations:
+    - "没有出现警告"
+    - "未出现警告"
+    - "没有警告"
+    - "不是警告"
+    - "无警告"
+  alert_negations:
+    - "未发现异常"
+    - "没有发现异常"
+    - "没有出现异常"
+    - "未出现异常"
+    - "不存在异常"
+    - "未见异常"
+    - "没有异常"
+    - "无异常"
+    - "零异常"
+    - "未出现复发"
+    - "没有复发"
+    - "不存在复发"
+    - "未见复发"
+    - "无复发"
+    - "未复发"
+    - "不再复发"
+
+glyph_fallback:
+  "✅": '<font color="{status_ok}"><b>[OK]</b></font>'
+  "❌": '<font color="{status_fail}"><b>[X]</b></font>'
+  "⚠":  '<font color="{status_warn}"><b>[!]</b></font>'
+  "⚠️": '<font color="{status_warn}"><b>[!]</b></font>'
+  "℃": "°C"

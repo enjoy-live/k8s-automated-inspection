@@ -1,0 +1,97 @@
+{
+  "source": "kubelet configz evictionHard/imageGC and stats/summary fs vs imageFs, 2026-10-27 review",
+  "evictionHard": {
+    "imagefs.available": "15%",
+    "imagefs.inodesFree": "5%",
+    "memory.available": "100Mi",
+    "nodefs.available": "10%",
+    "nodefs.inodesFree": "5%"
+  },
+  "evictionSoft": null,
+  "imageGCHighThresholdPercent": 85,
+  "imageGCLowThresholdPercent": 80,
+  "imageMinimumGCAge": "2m0s",
+  "same_on_nodes": [
+    "master-node-storage-r620-g40",
+    "worker-node01-pro6000",
+    "worker-node02-3090"
+  ],
+  "stats": {
+    "master-node-storage-r620-g40": {
+      "fs": {
+        "time": "2026-10-26T16:16:43Z",
+        "availableBytes": 234622287872,
+        "capacityBytes": 458231791616,
+        "usedBytes": 200257351680,
+        "inodesFree": 27532346,
+        "inodes": 28491776,
+        "inodesUsed": 959430,
+        "used_percent": 43.7,
+        "disk_used_percent": 48.8
+      },
+      "imageFs": {
+        "time": "2026-10-26T16:16:45Z",
+        "availableBytes": 234622287872,
+        "capacityBytes": 458231791616,
+        "usedBytes": 15619948544,
+        "inodesFree": 27532346,
+        "inodes": 28491776,
+        "inodesUsed": 140240,
+        "used_percent": 3.41,
+        "disk_used_percent": 48.8
+      },
+      "runtime_name": null
+    },
+    "worker-node01-pro6000": {
+      "fs": {
+        "time": "2026-10-26T16:16:44Z",
+        "availableBytes": 562257809408,
+        "capacityBytes": 910217457664,
+        "usedBytes": 301647667200,
+        "inodesFree": 54023447,
+        "inodes": 56516608,
+        "inodesUsed": 2493161,
+        "used_percent": 33.14,
+        "disk_used_percent": 38.23
+      },
+      "imageFs": {
+        "time": "2026-10-26T16:16:42Z",
+        "availableBytes": 562257809408,
+        "capacityBytes": 910217457664,
+        "usedBytes": 84496556032,
+        "inodesFree": 54023447,
+        "inodes": 56516608,
+        "inodesUsed": 1069842,
+        "used_percent": 9.28,
+        "disk_used_percent": 38.23
+      },
+      "runtime_name": null
+    },
+    "worker-node02-3090": {
+      "fs": {
+        "time": "2026-10-26T16:16:43Z",
+        "availableBytes": 237209866240,
+        "capacityBytes": 947362668544,
+        "usedBytes": 661953957888,
+        "inodesFree": 54968832,
+        "inodes": 58818560,
+        "inodesUsed": 3849728,
+        "used_percent": 69.87,
+        "disk_used_percent": 74.96
+      },
+      "imageFs": {
+        "time": "2026-10-26T16:16:41Z",
+        "availableBytes": 237209866240,
+        "capacityBytes": 947362668544,
+        "usedBytes": 152644894720,
+        "inodesFree": 54968832,
+        "inodes": 58818560,
+        "inodesUsed": 2166110,
+        "used_percent": 16.11,
+        "disk_used_percent": 74.96
+      },
+      "runtime_name": null
+    }
+  },
+  "note": "imageFs.usedBytes 是镜像占用，不是整盘使用率。三台 imageFs 的 capacityBytes 和 availableBytes 都与 node.fs 相同，镜像盘就是根分区。整盘使用率按 (capacity-available)/capacity。"
+}

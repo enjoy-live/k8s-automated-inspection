@@ -1,2 +1,4 @@
-NAMESPACE           LAST SEEN   TYPE      REASON   OBJECT                                          MESSAGE
-user5-example-com   3m29s       Warning   Failed   pod/spline-yolov8-train-sj7sw-train-103964838   Error: ImagePullBackOff
+NAMESPACE           LAST SEEN   TYPE      REASON      OBJECT                                          MESSAGE
+kube-system         47m         Warning   Unhealthy   pod/istio-cni-node-7k864                        Readiness probe failed: HTTP probe failed with statuscode: 503
+kube-system         15m         Warning   Unhealthy   pod/istio-cni-node-phn2j                        Readiness probe failed: HTTP probe failed with statuscode: 503
+user5-example-com   77s         Warning   Failed      pod/spline-yolov8-train-sj7sw-train-103964838   Error: ImagePullBackOff

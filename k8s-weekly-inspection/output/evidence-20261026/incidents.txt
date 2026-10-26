@@ -1,0 +1,47 @@
+周期：2026-10-19 00:00 至 2026-10-26 23:59 Asia/Shanghai
+巡检时刻：2026-10-27 03:33 CST
+
+一、节点级中断
+- worker-node01-pro6000 的 Ready、MemoryPressure、DiskPressure、PIDPressure 均于 2026-10-23T06:20:07Z（10-23 14:20:07 CST）重新成立。master Ready 自 2025-12-26T05:29:16Z 未变。worker-node02 Ready 自 2026-10-14T03:20:45Z 未变。
+- 节点条件只保留最后一次转移，没有 NotReady 起点。
+- 124 个容器的 lastState.finishedAt 落在本周期，其中大量原因为 Unknown，时间集中在 2026-10-23T14:19:54+08:00，节点为 worker-node01 上的平台组件。
+- gpu-feature-discovery-44fkk 最后一次退出：2026-10-23T14:15:49+08:00，reason=Error，restartCount=1094。
+- 恢复时刻（容器 startedAt，CST）：istio-proxy 14:20:50；qwen38 kserve-container 14:21:55；centraldashboard 14:27:13；ml-pipeline-api-server 14:32:09；loki 14:50:53。
+- node01 / node02 的 GPU 利用率序列在 10-23 14:15 有 10 分钟缺口，随后恢复。node01 当前 nvidia.com/gpu allocatable=2。
+
+二、告警（alerts.json，已排除 Watchdog、InfoInhibitor）
+- KubePodCrashLooping warning，gpu-operator/gpu-feature-discovery-44fkk，2026-10-19 21:45 至 2026-10-23 14:25，reason=CrashLoopBackOff。
+- KubeDaemonSetRolloutStuck warning，daemonset=gpu-feature-discovery，2026-10-19 21:45 至 2026-10-23 14:15。
+- KubeDaemonSetRolloutStuck warning，daemonset=fluent-bit，2026-10-23 14:45 至 14:50。
+- KubePodNotReady warning，user5-example-com/spline-yolov8-train-sj7sw-train-103964838，2026-10-19 00:00 至 2026-10-26 23:55。
+- KubePodNotReady warning，若干 pengwin check-child，各 1 至 4 个采样点，不作为持续告警。
+- KubeContainerWaiting warning，user3 Pipeline driver/impl，reason=PodInitializing，2026-10-25 02:50 至 2026-10-26 05:00。当前 Workflow 列表中这些 Pod 已不在运行。
+- KubeMemoryOvercommit warning，几乎全周期。集群内存使用最高 11.6%，节点最高 36.5%。configz evictionHard memory.available=100Mi。剩余内存未接近该阈值，不计入告警结论。
+- KubeStatefulSetReplicasMismatch warning，logging/loki，2026-10-23 14:35 至 14:50。
+- KubeAggregatedAPIDown warning，v1beta1.metrics.k8s.io，2026-10-23 14:25，1 个采样点。
+
+三、周期外事件（events.json / warning-events.txt）
+现存事件的最后时间都在 2026-10-26 15:59:59Z 之后，即周期结束后。包括：
+- istio-cni-node 就绪探针 503（10-27 02:40 与 03:12 CST）
+- spline-yolov8-train ImagePullBackOff（10-27 03:26 CST）
+这些事件不能当作本周期内的新事件，只说明巡检时问题仍在。
+
+四、Pod 五类
+- 异常重启：有。本周期 lastFinished 124 条，主因是 10-23 14:19:54 的 Unknown。
+- Pending：user5-example-com/spline-yolov8-train-sj7sw-train-103964838，创建于 2026-10-14T03:21:07Z。
+- Failed：有多条，多数为 user3 业务任务；qwen38 旧 Pod 创建于 2026-09-18，reason=UnexpectedAdmissionError。
+- Evicted：未发现。
+- OOMKilled：未发现。
+- ImagePullBackOff：仅上述 spline Pod，镜像 172.16.1.72:30002/private_library/csj-spine-base:v1.0 not found。
+
+五、Velero
+- Schedule：pvc-daily-backup `0 3 * * *` TTL 168h；minio-daily-backup `0 4 * * *` TTL 720h；kubeflow-weekly-backup `0 2 * * 0` TTL 720h。均未暂停。
+- 名称时间落在本周期且仍保留的 Backup：16 个，全部 Completed。minio-daily 8，pvc-daily 7，kubeflow-weekly 1。errors 为空。
+- 名称含 minio：minio-daily-backup 的 Schedule 与上述 8 个 Backup。
+- pvc-daily 的 10-19 03:00 UTC 副本不在当前列表。168h 保留已覆盖不住该时间点，不能写成失败。
+
+六、仍缺的数据
+- 本周期大部分 Events 已滚动删除。
+- 未采集节点内核日志，不能判断 node01 重启原因，也不能判断 Xid。
+- node01 nvidia-smi compute-apps 无进程行。
+- S12 把 Prometheus 的 storage.json 覆盖为 PVC/PV JSON。存储利用率已按同一查询补存到 storage-prom.json。

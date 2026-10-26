@@ -1,0 +1,38 @@
+=== 各节点 GPU（经已有 dcgm-exporter Pod 执行 nvidia-smi）===
+--- worker-node01-pro6000 (nvidia-dcgm-exporter-c2zwk) ---
+  GPU 0: NVIDIA RTX PRO 6000 Blackwell Server Edition (UUID: GPU-2e6829ca-a897-7b4d-a86c-590920ac3509)
+  GPU 1: NVIDIA RTX PRO 6000 Blackwell Server Edition (UUID: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f)
+  0, 00000000:38:00.0, 30, 83.43 W, 90028 MiB, 0 %, 0, 580.126.09
+  1, 00000000:98:00.0, 46, 300.48 W, 14876 MiB, 21 %, 0, 580.126.09
+--- worker-node02-3090 (nvidia-dcgm-exporter-x7zrx) ---
+  GPU 0: NVIDIA GeForce RTX 3090 (UUID: GPU-09f9029d-378f-0d6c-e79d-9b041c8bff8a)
+  GPU 1: NVIDIA GeForce RTX 3090 (UUID: GPU-6a0810ea-670a-1637-b761-bf978024871f)
+  GPU 2: NVIDIA GeForce RTX 3090 (UUID: GPU-ec736c0b-8186-7aad-ac88-a4c7a2db4226)
+  GPU 3: NVIDIA GeForce RTX 3090 (UUID: GPU-128360a2-7e24-2bf8-f411-f1b686a6555d)
+  0, 00000000:18:00.0, 26, 28.62 W, 0 MiB, 0 %, [N/A], 580.95.05
+  1, 00000000:3B:00.0, 29, 27.09 W, 0 MiB, 0 %, [N/A], 580.95.05
+  2, 00000000:86:00.0, 28, 27.88 W, 0 MiB, 0 %, [N/A], 580.95.05
+  3, 00000000:AF:00.0, 30, 24.81 W, 0 MiB, 0 %, [N/A], 580.95.05
+
+=== gpu-operator Pod（node01）===
+gpu-feature-discovery-44fkk                               1/1   Running     1094 (3d3h ago)   293d   10.244.86.168   worker-node01-pro6000   <none>   <none>
+gpu-operator-node-feature-discovery-gc-67474f8744-c8vgh   1/1   Running     1 (3d3h ago)      12d    10.244.86.148   worker-node01-pro6000   <none>   <none>
+gpu-operator-node-feature-discovery-worker-wc497          1/1   Running     22 (3d3h ago)     293d   10.244.86.170   worker-node01-pro6000   <none>   <none>
+nvidia-container-toolkit-daemonset-ngjqf                  1/1   Running     6 (3d3h ago)      293d   10.244.86.100   worker-node01-pro6000   <none>   <none>
+nvidia-cuda-validator-2r4m5                               0/1   Completed   0                 3d3h   10.244.86.102   worker-node01-pro6000   <none>   <none>
+nvidia-dcgm-exporter-c2zwk                                1/1   Running     6 (3d3h ago)      293d   10.244.86.108   worker-node01-pro6000   <none>   <none>
+nvidia-device-plugin-daemonset-7vm7c                      1/1   Running     6 (3d3h ago)      293d   10.244.86.127   worker-node01-pro6000   <none>   <none>
+nvidia-mig-manager-5gqq9                                  1/1   Running     6 (3d3h ago)      293d   10.244.86.97    worker-node01-pro6000   <none>   <none>
+nvidia-operator-validator-zstwn                           1/1   Running     6 (3d3h ago)      293d   10.244.86.145   worker-node01-pro6000   <none>   <none>
+
+=== device-plugin 日志中的 Xid / unhealthy / 重启信息 ===
+device-plugin pod: nvidia-device-plugin-daemonset-7vm7c
+nvidia-device-plugin restarts=6 started=2026-10-23T06:21:46Z
+--- 首条/末条 Xid ---
+--- 不同 Xid 编号与设备 ---
+
+=== gpu-feature-discovery ===
+gpu-feature-discovery-44fkk restarts=1094 waiting=
+I1026 09:59:12.840040       1 main.go:277] Creating Labels
+I1026 09:59:12.840058       1 output.go:82] Writing labels to output file /etc/kubernetes/node-feature-discovery/features.d/gfd
+I1026 09:59:12.841319       1 main.go:286] Sleeping for 60000000000

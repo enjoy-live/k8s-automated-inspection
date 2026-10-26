@@ -1,0 +1,278 @@
+异常重启
+auth/dex-8666d8cf4c-pwcs5 container=dex restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+cert-manager/cert-manager-855969d7b8-q78lw container=cert-manager-controller restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+cert-manager/cert-manager-cainjector-b967cbd4c-sn8p2 container=cert-manager-cainjector restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+cert-manager/cert-manager-webhook-74f6779b6d-6t8mp container=cert-manager-webhook restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+gpu-operator/gpu-feature-discovery-44fkk container=gpu-feature-discovery restartCount=1094 lastReason=Error lastFinished=2026-10-23T06:15:49Z
+gpu-operator/gpu-feature-discovery-vpcb7 container=gpu-feature-discovery restartCount=19 lastReason=Unknown lastFinished=2026-05-08T17:20:38Z
+gpu-operator/gpu-feature-discovery-vpcb7 container=toolkit-validation restartCount=2 lastReason= lastFinished=
+gpu-operator/gpu-operator-6448cb7665-9cqkw container=gpu-operator restartCount=5 lastReason=Error lastFinished=2026-10-14T02:33:55Z
+gpu-operator/gpu-operator-node-feature-discovery-gc-67474f8744-c8vgh container=gc restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+gpu-operator/gpu-operator-node-feature-discovery-master-7f9c56cbc-zsr2z container=master restartCount=3 lastReason=Error lastFinished=2026-10-14T02:31:55Z
+gpu-operator/gpu-operator-node-feature-discovery-worker-rrjhf container=worker restartCount=9 lastReason=Error lastFinished=2026-10-14T02:34:06Z
+gpu-operator/gpu-operator-node-feature-discovery-worker-s7hcs container=worker restartCount=43 lastReason=Error lastFinished=2026-10-14T03:20:02Z
+gpu-operator/gpu-operator-node-feature-discovery-worker-wc497 container=worker restartCount=22 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+gpu-operator/nvidia-container-toolkit-daemonset-ngjqf container=nvidia-container-toolkit-ctr restartCount=6 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+gpu-operator/nvidia-container-toolkit-daemonset-ngjqf container=driver-validation restartCount=6 lastReason= lastFinished=
+gpu-operator/nvidia-container-toolkit-daemonset-xdtqg container=nvidia-container-toolkit-ctr restartCount=20 lastReason=Unknown lastFinished=2026-05-08T17:20:38Z
+gpu-operator/nvidia-container-toolkit-daemonset-xdtqg container=driver-validation restartCount=20 lastReason= lastFinished=
+gpu-operator/nvidia-dcgm-exporter-c2zwk container=nvidia-dcgm-exporter restartCount=6 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+gpu-operator/nvidia-dcgm-exporter-x7zrx container=nvidia-dcgm-exporter restartCount=19 lastReason=Unknown lastFinished=2026-05-08T17:20:38Z
+gpu-operator/nvidia-dcgm-exporter-x7zrx container=toolkit-validation restartCount=2 lastReason= lastFinished=
+gpu-operator/nvidia-device-plugin-daemonset-7vm7c container=nvidia-device-plugin restartCount=6 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+gpu-operator/nvidia-device-plugin-daemonset-97sjf container=nvidia-device-plugin restartCount=19 lastReason=Unknown lastFinished=2026-05-08T17:20:38Z
+gpu-operator/nvidia-device-plugin-daemonset-97sjf container=toolkit-validation restartCount=2 lastReason= lastFinished=
+gpu-operator/nvidia-mig-manager-5gqq9 container=nvidia-mig-manager restartCount=6 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+gpu-operator/nvidia-operator-validator-dpnbp container=nvidia-operator-validator restartCount=19 lastReason=Unknown lastFinished=2026-05-08T17:20:38Z
+gpu-operator/nvidia-operator-validator-dpnbp container=driver-validation restartCount=2 lastReason= lastFinished=
+gpu-operator/nvidia-operator-validator-dpnbp container=toolkit-validation restartCount=2 lastReason= lastFinished=
+gpu-operator/nvidia-operator-validator-zstwn container=nvidia-operator-validator restartCount=6 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+harbor/harbor-core-77d59fb69f-bbsxn container=core restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+harbor/harbor-database-0 container=database restartCount=2 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+harbor/harbor-database-0 container=data-permissions-ensurer restartCount=1 lastReason= lastFinished=
+harbor/harbor-jobservice-86d499464c-pkbzf container=jobservice restartCount=3 lastReason=Error lastFinished=2026-10-23T06:20:45Z
+harbor/harbor-nginx-5ddc854b7b-7bv72 container=nginx restartCount=2 lastReason=Error lastFinished=2026-10-23T06:17:25Z
+harbor/harbor-portal-68cc7987df-dgxbg container=portal restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+harbor/harbor-redis-0 container=redis restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+harbor/harbor-registry-6b6f46bbf8-xv4d6 container=registry restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+harbor/harbor-registry-6b6f46bbf8-xv4d6 container=registryctl restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+harbor/harbor-trivy-0 container=trivy restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+istio-system/cluster-local-gateway-b864d5f84-vl8w7 container=istio-proxy restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+istio-system/istio-ingressgateway-767869c44b-696cl container=istio-proxy restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+istio-system/istiod-864c8d5fb6-vtw64 container=discovery restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+knative-eventing/eventing-controller-7c47fb9964-ck5sk container=eventing-controller restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+knative-eventing/eventing-webhook-87cf6d654-t5xrq container=eventing-webhook restartCount=2 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+knative-eventing/job-sink-79669c95fb-tfbcl container=job-sink restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+knative-serving/activator-55cb9b4d6-rkp7d container=activator restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+knative-serving/activator-55cb9b4d6-rkp7d container=istio-validation restartCount=6 lastReason= lastFinished=
+knative-serving/autoscaler-8679dd764-4swqb container=autoscaler restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+knative-serving/autoscaler-8679dd764-4swqb container=istio-validation restartCount=6 lastReason= lastFinished=
+knative-serving/controller-5c59f5f8cf-5f2n6 container=controller restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+knative-serving/controller-5c59f5f8cf-5f2n6 container=istio-validation restartCount=6 lastReason= lastFinished=
+knative-serving/net-istio-controller-57d89b44cb-7mpwf container=controller restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+knative-serving/net-istio-webhook-6d74cdc9fb-wc2f2 container=webhook restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+knative-serving/net-istio-webhook-6d74cdc9fb-wc2f2 container=istio-validation restartCount=6 lastReason= lastFinished=
+knative-serving/webhook-6bfd79d4bf-x6w4f container=webhook restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+knative-serving/webhook-6bfd79d4bf-x6w4f container=istio-validation restartCount=6 lastReason= lastFinished=
+kube-system/calico-kube-controllers-595d6b7ffd-b26bl container=calico-kube-controllers restartCount=4 lastReason=Error lastFinished=2026-10-14T02:34:26Z
+kube-system/calico-node-76227 container=calico-node restartCount=1 lastReason=Unknown lastFinished=2026-02-09T00:52:40Z
+kube-system/calico-node-76227 container=upgrade-ipam restartCount=1 lastReason= lastFinished=
+kube-system/calico-node-n55p2 container=calico-node restartCount=6 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kube-system/calico-node-n55p2 container=upgrade-ipam restartCount=6 lastReason= lastFinished=
+kube-system/calico-node-qlcgp container=calico-node restartCount=20 lastReason=Unknown lastFinished=2026-05-08T17:20:38Z
+kube-system/calico-node-qlcgp container=upgrade-ipam restartCount=5 lastReason= lastFinished=
+kube-system/coredns-67c47b7fc6-k4wll container=coredns restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kube-system/csi-nfs-controller-7b8664989d-z5tcx container=csi-provisioner restartCount=3 lastReason=Error lastFinished=2026-10-14T02:31:55Z
+kube-system/csi-nfs-controller-7b8664989d-z5tcx container=csi-resizer restartCount=3 lastReason=Error lastFinished=2026-10-14T02:31:56Z
+kube-system/csi-nfs-controller-7b8664989d-z5tcx container=csi-snapshotter restartCount=3 lastReason=Error lastFinished=2026-10-14T02:31:55Z
+kube-system/csi-nfs-controller-7b8664989d-z5tcx container=liveness-probe restartCount=1 lastReason=Unknown lastFinished=2026-02-09T00:52:40Z
+kube-system/csi-nfs-controller-7b8664989d-z5tcx container=nfs restartCount=1 lastReason=Unknown lastFinished=2026-02-09T00:52:40Z
+kube-system/csi-nfs-node-4z9gm container=liveness-probe restartCount=6 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kube-system/csi-nfs-node-4z9gm container=nfs restartCount=6 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kube-system/csi-nfs-node-4z9gm container=node-driver-registrar restartCount=6 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kube-system/csi-nfs-node-chjxd container=liveness-probe restartCount=1 lastReason=Unknown lastFinished=2026-02-09T00:52:40Z
+kube-system/csi-nfs-node-chjxd container=nfs restartCount=1 lastReason=Unknown lastFinished=2026-02-09T00:52:40Z
+kube-system/csi-nfs-node-chjxd container=node-driver-registrar restartCount=1 lastReason=Unknown lastFinished=2026-02-09T00:52:40Z
+kube-system/csi-nfs-node-xhmsm container=liveness-probe restartCount=20 lastReason=Unknown lastFinished=2026-05-08T17:20:38Z
+kube-system/csi-nfs-node-xhmsm container=nfs restartCount=20 lastReason=Unknown lastFinished=2026-05-08T17:20:38Z
+kube-system/csi-nfs-node-xhmsm container=node-driver-registrar restartCount=20 lastReason=Unknown lastFinished=2026-05-08T17:20:38Z
+kube-system/etcd-master-node-storage-r620-g40 container=etcd restartCount=1 lastReason=Unknown lastFinished=2026-02-09T00:52:40Z
+kube-system/istio-cni-node-7k864 container=install-cni restartCount=6 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kube-system/istio-cni-node-jdjlm container=install-cni restartCount=1 lastReason=Unknown lastFinished=2026-02-09T00:52:40Z
+kube-system/istio-cni-node-phn2j container=install-cni restartCount=20 lastReason=Unknown lastFinished=2026-05-08T17:20:38Z
+kube-system/kube-apiserver-master-node-storage-r620-g40 container=kube-apiserver restartCount=9 lastReason=Error lastFinished=2026-10-14T02:33:33Z
+kube-system/kube-controller-manager-master-node-storage-r620-g40 container=kube-controller-manager restartCount=7 lastReason=Error lastFinished=2026-10-14T02:31:55Z
+kube-system/kube-proxy-gslnn container=kube-proxy restartCount=1 lastReason=Unknown lastFinished=2026-02-09T00:52:40Z
+kube-system/kube-proxy-mjnp8 container=kube-proxy restartCount=20 lastReason=Unknown lastFinished=2026-05-08T17:20:38Z
+kube-system/kube-proxy-wtpnp container=kube-proxy restartCount=6 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kube-system/kube-scheduler-master-node-storage-r620-g40 container=kube-scheduler restartCount=6 lastReason=Error lastFinished=2026-10-14T02:32:00Z
+kube-system/metrics-server-75bd94d6bd-kv7wj container=metrics-server restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow-user-example-com/ml-pipeline-ui-artifact-6bfdcffd5b-gvvc7 container=ml-pipeline-ui-artifact restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow-user-example-com/ml-pipeline-ui-artifact-6bfdcffd5b-gvvc7 container=istio-validation restartCount=3 lastReason= lastFinished=
+kubeflow-user-example-com/ml-pipeline-visualizationserver-8474bb66c8-9j7t7 container=ml-pipeline-visualizationserver restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow-user-example-com/ml-pipeline-visualizationserver-8474bb66c8-9j7t7 container=istio-validation restartCount=5 lastReason= lastFinished=
+kubeflow-user-example-com/pvcviewer-style-big-workspace-fd77bb7b4-5zp6v container=main restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow-user-example-com/pvcviewer-style-big-workspace-fd77bb7b4-5zp6v container=istio-validation restartCount=5 lastReason= lastFinished=
+kubeflow-user-example-com/pvcviewer-style-transfer-dataset-pvc-big-66586bc9db-wqdhj container=main restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow-user-example-com/pvcviewer-style-transfer-dataset-pvc-big-66586bc9db-wqdhj container=istio-validation restartCount=6 lastReason= lastFinished=
+kubeflow/admission-webhook-deployment-5db6dbbdb-k288c container=admission-webhook restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/cache-server-546b755978-q22x2 container=server restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/centraldashboard-798bcdf58d-d2lsp container=centraldashboard restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/centraldashboard-798bcdf58d-d2lsp container=istio-validation restartCount=6 lastReason= lastFinished=
+kubeflow/jupyter-web-app-deployment-6d665f8d7c-cjwhf container=jupyter-web-app restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/jupyter-web-app-deployment-6d665f8d7c-cjwhf container=istio-validation restartCount=7 lastReason= lastFinished=
+kubeflow/katib-controller-7d8c6f5d69-rsbbm container=katib-controller restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/katib-db-manager-669c888798-vmp2p container=katib-db-manager restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/katib-mysql-ddf4bf4c4-td6l7 container=katib-mysql restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/katib-ui-6887c86b7-rdmpz container=katib-ui restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/katib-ui-6887c86b7-rdmpz container=istio-validation restartCount=6 lastReason= lastFinished=
+kubeflow/kserve-controller-manager-7c8ff58659-swprw container=kube-rbac-proxy restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/kserve-controller-manager-7c8ff58659-swprw container=manager restartCount=7 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/kserve-localmodel-controller-manager-747b6fcb4f-t6x6w container=manager restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/kserve-localmodel-controller-manager-747b6fcb4f-t6x6w container=istio-validation restartCount=3 lastReason= lastFinished=
+kubeflow/kserve-models-web-app-5685d8bcd-xjrhj container=kserve-models-web-app restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/kserve-models-web-app-5685d8bcd-xjrhj container=istio-validation restartCount=7 lastReason= lastFinished=
+kubeflow/kubeflow-pipelines-profile-controller-544778cddd-2xb96 container=profile-controller restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/metacontroller-0 container=metacontroller restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/metadata-envoy-deployment-54494b689c-fhf5d container=container restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/metadata-grpc-deployment-dd7f9c547-zltxw container=container restartCount=8 lastReason=Error lastFinished=2026-10-23T06:32:18Z
+kubeflow/metadata-grpc-deployment-dd7f9c547-zltxw container=istio-validation restartCount=6 lastReason= lastFinished=
+kubeflow/metadata-writer-6f9f556688-ntmsc container=main restartCount=138 lastReason=Error lastFinished=2026-10-26T19:13:37Z
+kubeflow/metadata-writer-6f9f556688-ntmsc container=istio-validation restartCount=7 lastReason= lastFinished=
+kubeflow/minio-57c6487bc4-6jpxp container=minio restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/minio-57c6487bc4-6jpxp container=istio-validation restartCount=7 lastReason= lastFinished=
+kubeflow/ml-pipeline-5bd49c5f77-qwmls container=ml-pipeline-api-server restartCount=3 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/ml-pipeline-5bd49c5f77-qwmls container=istio-validation restartCount=7 lastReason= lastFinished=
+kubeflow/ml-pipeline-persistenceagent-669dff5b99-b5v5r container=ml-pipeline-persistenceagent restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/ml-pipeline-persistenceagent-669dff5b99-b5v5r container=istio-validation restartCount=7 lastReason= lastFinished=
+kubeflow/ml-pipeline-scheduledworkflow-6d8df7c4fc-d6cd7 container=ml-pipeline-scheduledworkflow restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/ml-pipeline-scheduledworkflow-6d8df7c4fc-d6cd7 container=istio-validation restartCount=7 lastReason= lastFinished=
+kubeflow/ml-pipeline-ui-97bcccf56-znmp7 container=ml-pipeline-ui restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/ml-pipeline-ui-97bcccf56-znmp7 container=istio-validation restartCount=6 lastReason= lastFinished=
+kubeflow/ml-pipeline-viewer-crd-649d4cc87b-jflhv container=ml-pipeline-viewer-crd restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/ml-pipeline-viewer-crd-649d4cc87b-jflhv container=istio-validation restartCount=6 lastReason= lastFinished=
+kubeflow/ml-pipeline-visualizationserver-6bcf457b54-xbzsh container=ml-pipeline-visualizationserver restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/ml-pipeline-visualizationserver-6bcf457b54-xbzsh container=istio-validation restartCount=7 lastReason= lastFinished=
+kubeflow/mysql-c5bd6955f-hjbkr container=mysql restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/mysql-c5bd6955f-hjbkr container=istio-validation restartCount=7 lastReason= lastFinished=
+kubeflow/notebook-controller-deployment-784cbb5698-9256k container=manager restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/notebook-controller-deployment-784cbb5698-9256k container=istio-validation restartCount=7 lastReason= lastFinished=
+kubeflow/profiles-deployment-5df9ff88dc-659bq container=kfam restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/profiles-deployment-5df9ff88dc-659bq container=manager restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/profiles-deployment-5df9ff88dc-659bq container=istio-validation restartCount=7 lastReason= lastFinished=
+kubeflow/pvcviewer-controller-manager-7f5dcf8949-p2h7n container=kube-rbac-proxy restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/pvcviewer-controller-manager-7f5dcf8949-p2h7n container=manager restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/pvcviewer-controller-manager-7f5dcf8949-p2h7n container=istio-validation restartCount=3 lastReason= lastFinished=
+kubeflow/spark-operator-controller-c84ffdddb-jrvjf container=spark-operator-controller restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/spark-operator-webhook-8465868f8d-lxdx4 container=spark-operator-webhook restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/tensorboard-controller-deployment-55949b996b-vdk7l container=kube-rbac-proxy restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/tensorboard-controller-deployment-55949b996b-vdk7l container=manager restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/tensorboard-controller-deployment-55949b996b-vdk7l container=istio-validation restartCount=6 lastReason= lastFinished=
+kubeflow/tensorboards-web-app-deployment-8695f564d4-jwvx6 container=tensorboards-web-app restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/tensorboards-web-app-deployment-8695f564d4-jwvx6 container=istio-validation restartCount=6 lastReason= lastFinished=
+kubeflow/training-operator-86b5684f96-kr2h5 container=training-operator restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/volumes-web-app-deployment-cbc9f8978-772tr container=volumes-web-app restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/volumes-web-app-deployment-cbc9f8978-772tr container=istio-validation restartCount=6 lastReason= lastFinished=
+kubeflow/workflow-controller-5897878c9-7cfcj container=workflow-controller restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kubeflow/workflow-controller-5897878c9-7cfcj container=istio-validation restartCount=4 lastReason= lastFinished=
+kyverno/kyverno-admission-controller-6fd54f56b6-hzm6p container=kyverno restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kyverno/kyverno-admission-controller-6fd54f56b6-hzm6p container=kyverno-pre restartCount=1 lastReason= lastFinished=
+kyverno/kyverno-background-controller-67769669f5-68455 container=controller restartCount=2 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kyverno/kyverno-cleanup-controller-7b7d766f96-8j8hd container=controller restartCount=3 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+kyverno/kyverno-reports-controller-5c9dfff85b-v4w8h container=controller restartCount=2 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+local-path-storage/local-path-provisioner-54849588b5-5zmkd container=local-path-provisioner restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+logging/event-exporter-kubernetes-event-exporter-84f9cc9d64-hqpkp container=event-exporter restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+logging/fluent-bit-jgr5t container=fluent-bit restartCount=20 lastReason=Unknown lastFinished=2026-05-08T17:20:38Z
+logging/fluent-bit-pb5br container=fluent-bit restartCount=8 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+logging/loki-0 container=loki restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+logging/loki-0 container=loki-sc-rules restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+logging/loki-canary-csq6j container=loki-canary restartCount=6 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+logging/loki-canary-hdwfj container=loki-canary restartCount=20 lastReason=Unknown lastFinished=2026-05-08T17:20:38Z
+logging/loki-chunks-cache-0 container=exporter restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+logging/loki-chunks-cache-0 container=memcached restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+logging/loki-gateway-84c695b6f8-n7h4g container=nginx restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+logging/loki-results-cache-0 container=exporter restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+logging/loki-results-cache-0 container=memcached restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+monitoring/prometheus-kube-state-metrics-7bf6b764d4-xscb9 container=kube-state-metrics restartCount=6 lastReason=Error lastFinished=2026-10-14T02:34:11Z
+monitoring/prometheus-prometheus-node-exporter-5dxm5 container=node-exporter restartCount=7 lastReason=Error lastFinished=2026-10-14T02:34:53Z
+monitoring/prometheus-prometheus-node-exporter-pskmn container=node-exporter restartCount=15 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+monitoring/prometheus-prometheus-node-exporter-w8kn7 container=node-exporter restartCount=25 lastReason=Error lastFinished=2026-10-14T02:34:45Z
+oauth2-proxy/oauth2-proxy-5d44fddb44-2qwxz container=oauth2-proxy restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+oauth2-proxy/oauth2-proxy-5d44fddb44-cfqng container=oauth2-proxy restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user1-example-com/ml-pipeline-ui-artifact-77ccccc54f-t8n42 container=ml-pipeline-ui-artifact restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user1-example-com/ml-pipeline-ui-artifact-77ccccc54f-t8n42 container=istio-validation restartCount=3 lastReason= lastFinished=
+user1-example-com/ml-pipeline-visualizationserver-569cc88775-8vxkq container=ml-pipeline-visualizationserver restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user1-example-com/ml-pipeline-visualizationserver-569cc88775-8vxkq container=istio-validation restartCount=3 lastReason= lastFinished=
+user2-example-com/ml-pipeline-ui-artifact-7cccc7d5dd-tz9zb container=ml-pipeline-ui-artifact restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user2-example-com/ml-pipeline-ui-artifact-7cccc7d5dd-tz9zb container=istio-validation restartCount=7 lastReason= lastFinished=
+user2-example-com/ml-pipeline-visualizationserver-5996658578-qj2pn container=ml-pipeline-visualizationserver restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user2-example-com/ml-pipeline-visualizationserver-5996658578-qj2pn container=istio-validation restartCount=3 lastReason= lastFinished=
+user2-example-com/mni-test-0104-0 container=mni-test-0104 restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user2-example-com/mni-test-0104-0 container=istio-validation restartCount=5 lastReason= lastFinished=
+user2-example-com/mni-test-qw-260106-0 container=mni-test-qw-260106 restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user2-example-com/mni-test-qw-260106-0 container=istio-validation restartCount=4 lastReason= lastFinished=
+user2-example-com/pvcviewer-mni-test-qw-260106-datavol-1-846f4dc658-9wt8z container=main restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user2-example-com/pvcviewer-mni-test-qw-260106-datavol-1-846f4dc658-9wt8z container=istio-validation restartCount=4 lastReason= lastFinished=
+user2-example-com/pvcviewer-qwen-model-b94d54d9d-dqcq6 container=main restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user2-example-com/pvcviewer-qwen-model-b94d54d9d-dqcq6 container=istio-validation restartCount=4 lastReason= lastFinished=
+user2-example-com/pvcviewer-qwen-tunning-data-564fdbd6f6-brhr2 container=main restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user2-example-com/pvcviewer-qwen-tunning-data-564fdbd6f6-brhr2 container=istio-validation restartCount=4 lastReason= lastFinished=
+user3-example-com/ml-pipeline-ui-artifact-6bfdcffd5b-ql2tr container=ml-pipeline-ui-artifact restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user3-example-com/ml-pipeline-ui-artifact-6bfdcffd5b-ql2tr container=istio-validation restartCount=5 lastReason= lastFinished=
+user3-example-com/ml-pipeline-visualizationserver-8474bb66c8-t92tr container=ml-pipeline-visualizationserver restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user3-example-com/ml-pipeline-visualizationserver-8474bb66c8-t92tr container=istio-validation restartCount=4 lastReason= lastFinished=
+user3-example-com/pvcviewer-nndet-v2-datavol-1-6cd668d985-sqqsv container=main restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user3-example-com/pvcviewer-nndet-v2-datavol-1-6cd668d985-sqqsv container=istio-validation restartCount=4 lastReason= lastFinished=
+user3-example-com/pvcviewer-nndetection-datavol-1-68684c9f77-2pvcd container=main restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user3-example-com/pvcviewer-nndetection-datavol-1-68684c9f77-2pvcd container=istio-validation restartCount=5 lastReason= lastFinished=
+user3-example-com/pvcviewer-nndetection-workspace-995cc7f7c-68blk container=main restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user3-example-com/pvcviewer-nndetection-workspace-995cc7f7c-68blk container=istio-validation restartCount=4 lastReason= lastFinished=
+user3-example-com/pvcviewer-nndetetion-gt-workspace-d8cdbdc45-sdb85 container=main restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user3-example-com/pvcviewer-nndetetion-gt-workspace-d8cdbdc45-sdb85 container=istio-validation restartCount=5 lastReason= lastFinished=
+user4-example-com/ml-pipeline-ui-artifact-6bfdcffd5b-dkb9d container=ml-pipeline-ui-artifact restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user4-example-com/ml-pipeline-ui-artifact-6bfdcffd5b-dkb9d container=istio-validation restartCount=6 lastReason= lastFinished=
+user4-example-com/ml-pipeline-visualizationserver-8474bb66c8-jslm7 container=ml-pipeline-visualizationserver restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user4-example-com/ml-pipeline-visualizationserver-8474bb66c8-jslm7 container=istio-validation restartCount=6 lastReason= lastFinished=
+user4-example-com/pvcviewer-huashan-test-datavol-1-cfc9bf88d-68p5t container=main restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user4-example-com/pvcviewer-huashan-test-datavol-1-cfc9bf88d-68p5t container=istio-validation restartCount=1 lastReason= lastFinished=
+user5-example-com/ml-pipeline-ui-artifact-6bfdcffd5b-6cz6p container=ml-pipeline-ui-artifact restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user5-example-com/ml-pipeline-ui-artifact-6bfdcffd5b-6cz6p container=istio-validation restartCount=6 lastReason= lastFinished=
+user5-example-com/ml-pipeline-visualizationserver-8474bb66c8-54lh4 container=ml-pipeline-visualizationserver restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+user5-example-com/ml-pipeline-visualizationserver-8474bb66c8-54lh4 container=istio-validation restartCount=6 lastReason= lastFinished=
+velero/minio-6798b9d95f-vz7b2 container=minio restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+velero/node-agent-ccm6x container=node-agent restartCount=6 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+velero/node-agent-rlcxf container=node-agent restartCount=20 lastReason=Unknown lastFinished=2026-05-08T17:20:38Z
+velero/velero-78ccc846c8-tk5gx container=velero restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+velero/velero-78ccc846c8-tk5gx container=velero-velero-plugin-for-aws restartCount=1 lastReason= lastFinished=
+zenml/zenml-server-7c4999867-p2h6f container=zenml restartCount=1 lastReason=Unknown lastFinished=2026-10-23T06:19:54Z
+
+Pending
+user5-example-com/spline-yolov8-train-sj7sw-train-103964838 phase=Pending reason=
+
+Failed
+kubeflow-user-example-com/qwen38-27b-mtp-predictor-5969dff6b5-t62fn phase=Failed reason=UnexpectedAdmissionError
+user3-example-com/of-ab-flash-formal-20261025-v1-a-1 phase=Failed reason=
+user3-example-com/of-ab-flash-formal-20261025-v1-a-2 phase=Failed reason=
+user3-example-com/of-ab-flash-formal-20261025-v1-a-3 phase=Failed reason=
+user3-example-com/of-ab-flash-formal-20261025-v1-a-4 phase=Failed reason=
+user3-example-com/of-ab-flash-formal-20261025-v1-a-extra-owner phase=Failed reason=
+user3-example-com/of-ab-flash-formal-20261025-v1-a-user-owner phase=Failed reason=
+user3-example-com/of-ab-flash-formal-20261025-v1-b-1 phase=Failed reason=
+user3-example-com/of-ab-flash-formal-20261025-v1-b-2 phase=Failed reason=
+user3-example-com/of-ab-flash-formal-20261025-v1-custodian-a1 phase=Failed reason=
+user3-example-com/of-ab-flash-formal-20261025-v1-owner phase=Failed reason=
+user3-example-com/of-ab-flash-formal-20261025-v1-owner-r1 phase=Failed reason=
+user3-example-com/of-ab-flash-formal-20261025-v1-owner-r2 phase=Failed reason=
+user3-example-com/of-ab-flash-formal-20261025-v1-owner-r3 phase=Failed reason=
+user3-example-com/of-ab-flash-formal-20261025-v1-owner-r4 phase=Failed reason=
+user3-example-com/of-ab-flash-formal-20261025-v1-owner-r5 phase=Failed reason=
+user3-example-com/of-ab-formal-20261024-v1-a-2 phase=Failed reason=
+user3-example-com/of-attention-profile-20261025-operator-b phase=Failed reason=
+user3-example-com/of-attention-profile-20261025-v1-a phase=Failed reason=
+user3-example-com/of-ddp-profile-20261024-v1-pro phase=Failed reason=
+user3-example-com/ofab-cpu-inline-fjsrf phase=Failed reason=
+user3-example-com/pengwin-fragment-b-refine-20261014-v1-prepare phase=Failed reason=DeadlineExceeded
+user3-example-com/pengwin-fragment-overfit-20261013-v3-prepare phase=Failed reason=DeadlineExceeded
+user3-example-com/pengwin-fragment-pq-audit-20261012-v2-readonly-cpu phase=Failed reason=DeadlineExceeded
+user3-example-com/pengwin-fragment-pq-audit-20261012-v3-storage-init phase=Failed reason=DeadlineExceeded
+user3-example-com/pengwin-fragment-surface-refine-20261015-v3-prepare phase=Failed reason=
+user3-example-com/pengwin-of-ab-formal-20261024-flash-status-a-extra-amp-accl89nn-worker-system-container-impl-1321505640 phase=Failed reason=
+user3-example-com/pengwin-of-ab-formal-20261024-flash-status-a-extra-custodyqx4cx-system-dag-driver-857556359 phase=Failed reason=
+user3-example-com/pengwin-of-ab-formal-20261024-flash-status-a-extra-failurem7mzp-system-dag-driver-2089652229 phase=Failed reason=
+user3-example-com/pengwin-task3-beta-20261019-3gpu-v1-3090-a-check-child-3a49ff phase=Failed reason=
+user3-example-com/pengwin-task3-beta-20261019-3gpu-v1-3090-b-check-child-83f1b7 phase=Failed reason=
+user3-example-com/pengwin-task3-beta-20261019-3gpu-v2-3090-a-check-child-55a34b phase=Failed reason=
+user3-example-com/pengwin-task3-beta-20261019-3gpu-v2-3090-b-check-child-1c3579 phase=Failed reason=
+user3-example-com/pengwin-task3-beta-20261019-3gpu-v4-3090-a-train-child-830975 phase=Failed reason=
+user3-example-com/pengwin-task3-beta-20261019-3gpu-v4-3090-b-train-child-462c7a phase=Failed reason=
+user3-example-com/pengwin-task3-beta0-a6000-branch-20261021-v1-child phase=Failed reason=
+user3-example-com/pengwin-task3-beta0-latest-resume-20261022-v3-child phase=Failed reason=
+user3-example-com/pengwin-task3-beta0-prefix-diag-20261022-v1-child phase=Failed reason=
+user3-example-com/pengwin-task3-beta01-migration-preflight-20261023-v1-child-1749ba phase=Failed reason=
+user3-example-com/pengwin-task3-beta1-latest-resume-20261022-v3-child phase=Failed reason=
+
+Evicted
+未发现 Evicted
+
+OOMKilled
+未发现 OOMKilled

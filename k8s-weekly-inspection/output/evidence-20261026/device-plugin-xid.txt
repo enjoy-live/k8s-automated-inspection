@@ -1,0 +1,44 @@
+=== plugin pods ===
+gpu-feature-discovery-44fkk                                  1/1     Running     1094 (3d9h ago)   294d   10.244.86.168    worker-node01-pro6000          <none>           <none>
+gpu-feature-discovery-vpcb7                                  1/1     Running     19 (170d ago)     221d   10.244.195.108   worker-node02-3090             <none>           <none>
+gpu-operator-node-feature-discovery-gc-67474f8744-c8vgh      1/1     Running     1 (3d8h ago)      12d    10.244.86.148    worker-node01-pro6000          <none>           <none>
+gpu-operator-node-feature-discovery-master-7f9c56cbc-zsr2z   1/1     Running     3 (12d ago)       294d   10.244.31.37     master-node-storage-r620-g40   <none>           <none>
+gpu-operator-node-feature-discovery-worker-rrjhf             1/1     Running     9 (12d ago)       294d   10.244.31.36     master-node-storage-r620-g40   <none>           <none>
+gpu-operator-node-feature-discovery-worker-s7hcs             1/1     Running     43 (12d ago)      221d   10.244.195.78    worker-node02-3090             <none>           <none>
+gpu-operator-node-feature-discovery-worker-wc497             1/1     Running     22 (3d8h ago)     294d   10.244.86.170    worker-node01-pro6000          <none>           <none>
+nvidia-device-plugin-daemonset-7vm7c                         1/1     Running     6 (3d8h ago)      294d   10.244.86.127    worker-node01-pro6000          <none>           <none>
+nvidia-device-plugin-daemonset-97sjf                         1/1     Running     19 (170d ago)     221d   10.244.195.72    worker-node02-3090             <none>           <none>
+=== node01 current tail xid ===
+    "failOnInitError": true,
+time="2026-10-23T06:21:46Z" level=warning msg="Ignoring error in locating libnvidia-sandboxutils.so.1: pattern libnvidia-sandboxutils.so.1 not found\nlibnvidia-sandboxutils.so.1: not found"
+=== node01 previous ===
+I1019 13:23:47.452680       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.452708       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.452729       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.452760       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.452782       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.452818       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.452843       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.452862       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.452888       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.452901       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.452914       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453096       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453137       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453160       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453184       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453213       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453236       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453258       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453274       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453305       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453328       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453353       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453400       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453411       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453429       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453484       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453530       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453539       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453554       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1023 06:16:34.271032       1 main.go:311] Received signal "terminated", shutting down.

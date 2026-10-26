@@ -1,0 +1,16 @@
+--- gpu-operator/nvidia-dcgm-exporter-c2zwk ---
+Defaulted container "nvidia-dcgm-exporter" out of: nvidia-dcgm-exporter, toolkit-validation (init)
+0, NVIDIA RTX PRO 6000 Blackwell Server Edition, GPU-2e6829ca-a897-7b4d-a86c-590920ac3509, 00000000:38:00.0, 32, 84.47 W, 90028 MiB, 0 %
+1, NVIDIA RTX PRO 6000 Blackwell Server Edition, GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f, 00000000:98:00.0, 47, 318.16 W, 14876 MiB, 20 %
+-- apps --
+Defaulted container "nvidia-dcgm-exporter" out of: nvidia-dcgm-exporter, toolkit-validation (init)
+--- gpu-operator/nvidia-dcgm-exporter-x7zrx ---
+Defaulted container "nvidia-dcgm-exporter" out of: nvidia-dcgm-exporter, toolkit-validation (init)
+0, NVIDIA GeForce RTX 3090, GPU-09f9029d-378f-0d6c-e79d-9b041c8bff8a, 00000000:18:00.0, 29, 29.24 W, 0 MiB, 0 %
+1, NVIDIA GeForce RTX 3090, GPU-6a0810ea-670a-1637-b761-bf978024871f, 00000000:3B:00.0, 31, 27.47 W, 0 MiB, 0 %
+2, NVIDIA GeForce RTX 3090, GPU-ec736c0b-8186-7aad-ac88-a4c7a2db4226, 00000000:86:00.0, 70, 271.56 W, 3055 MiB, 23 %
+3, NVIDIA GeForce RTX 3090, GPU-128360a2-7e24-2bf8-f411-f1b686a6555d, 00000000:AF:00.0, 73, 275.15 W, 3055 MiB, 0 %
+-- apps --
+Defaulted container "nvidia-dcgm-exporter" out of: nvidia-dcgm-exporter, toolkit-validation (init)
+GPU-ec736c0b-8186-7aad-ac88-a4c7a2db4226, 1768924, [Not Found], 3046 MiB
+GPU-128360a2-7e24-2bf8-f411-f1b686a6555d, 1768925, [Not Found], 3046 MiB

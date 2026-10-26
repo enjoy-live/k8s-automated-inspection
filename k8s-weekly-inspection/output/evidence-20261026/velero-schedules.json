@@ -1,0 +1,140 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Schedule",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"kubeflow-weekly-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 2 * * 0\",\"template\":{\"excludedResources\":[\"events\",\"events.events.k8s.io\"],\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"*\"],\"labelSelector\":{\"matchLabels\":{\"velero.io/backup\":\"true\"}},\"metadata\":{\"labels\":{\"backup-type\":\"kubeflow\",\"schedule\":\"weekly\"}},\"ttl\":\"720h0m0s\"}}}\n"
+                },
+                "creationTimestamp": "2026-01-27T09:45:04Z",
+                "generation": 41,
+                "name": "kubeflow-weekly-backup",
+                "namespace": "velero",
+                "resourceVersion": "317250544",
+                "uid": "e65b9669-3dc5-4a6a-9124-9332e5be889a"
+            },
+            "spec": {
+                "schedule": "0 2 * * 0",
+                "skipImmediately": false,
+                "template": {
+                    "excludedResources": [
+                        "events",
+                        "events.events.k8s.io"
+                    ],
+                    "includedNamespaces": [
+                        "kubeflow"
+                    ],
+                    "includedResources": [
+                        "*"
+                    ],
+                    "labelSelector": {
+                        "matchLabels": {
+                            "velero.io/backup": "true"
+                        }
+                    },
+                    "metadata": {
+                        "labels": {
+                            "backup-type": "kubeflow",
+                            "schedule": "weekly"
+                        }
+                    },
+                    "ttl": "720h0m0s"
+                }
+            },
+            "status": {
+                "lastBackup": "2026-10-25T02:00:21Z",
+                "phase": "Enabled"
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Schedule",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n"
+                },
+                "creationTimestamp": "2026-01-27T09:58:17Z",
+                "generation": 273,
+                "name": "minio-daily-backup",
+                "namespace": "velero",
+                "resourceVersion": "318415707",
+                "uid": "e61e88d4-fb0b-4d4b-944d-6304474fff97"
+            },
+            "spec": {
+                "schedule": "0 4 * * *",
+                "skipImmediately": false,
+                "template": {
+                    "includedNamespaces": [
+                        "kubeflow"
+                    ],
+                    "includedResources": [
+                        "persistentvolumeclaims",
+                        "persistentvolumes",
+                        "deployments",
+                        "services",
+                        "configmaps",
+                        "secrets"
+                    ],
+                    "labelSelector": {
+                        "matchLabels": {
+                            "app": "minio"
+                        }
+                    },
+                    "metadata": {
+                        "labels": {
+                            "backup-type": "minio",
+                            "schedule": "daily"
+                        }
+                    },
+                    "ttl": "720h0m0s"
+                }
+            },
+            "status": {
+                "lastBackup": "2026-10-26T04:00:22Z",
+                "phase": "Enabled"
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Schedule",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"pvc-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 3 * * *\",\"template\":{\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\"],\"labelSelector\":{},\"metadata\":{\"labels\":{\"backup-type\":\"pvc\",\"schedule\":\"daily\"}},\"ttl\":\"168h0m0s\"}}}\n"
+                },
+                "creationTimestamp": "2026-01-27T09:52:28Z",
+                "generation": 274,
+                "name": "pvc-daily-backup",
+                "namespace": "velero",
+                "resourceVersion": "318370728",
+                "uid": "3221c9f4-9b2d-442b-b84f-5991c0af8def"
+            },
+            "spec": {
+                "schedule": "0 3 * * *",
+                "skipImmediately": false,
+                "template": {
+                    "includedResources": [
+                        "persistentvolumeclaims",
+                        "persistentvolumes"
+                    ],
+                    "metadata": {
+                        "labels": {
+                            "backup-type": "pvc",
+                            "schedule": "daily"
+                        }
+                    },
+                    "ttl": "168h0m0s"
+                }
+            },
+            "status": {
+                "lastBackup": "2026-10-26T03:00:22Z",
+                "phase": "Enabled"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

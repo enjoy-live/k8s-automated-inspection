@@ -1,0 +1,6 @@
+周期: 2026-10-19 00:00 - 2026-10-26 23:59 Asia/Shanghai
+采集时间: 2026-10-26 18:00 CST 前后（周期最后约 6 小时尚未发生，不在本次数据内）
+上下文: kubernetes-admin@kubernetes (https://12.12.12.1:6443)
+方式: 只读 kubectl / Prometheus API(port-forward) / 已有 dcgm-exporter 与 gpu-operator Pod 日志 / openssl / Harbor 只读 API
+不创建、不修改、不删除任何集群资源
+重点跟进: node01 GPU1 (PCI 98:00.0) 10/19 Xid 79 后是否恢复; node02 10/14 Ready 翻转是否复现; 上期遗留项

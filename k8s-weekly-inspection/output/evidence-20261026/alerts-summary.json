@@ -1,0 +1,58 @@
+[
+  [
+    "KubeAggregatedAPIDown",
+    "warning",
+    1,
+    "10-23 14:25",
+    "10-23 14:25",
+    1.0
+  ],
+  [
+    "KubeContainerWaiting",
+    "warning",
+    315,
+    "10-25 02:50",
+    "10-26 05:00",
+    4.0
+  ],
+  [
+    "KubeDaemonSetRolloutStuck",
+    "warning",
+    1040,
+    "10-19 21:45",
+    "10-23 14:50",
+    1.0
+  ],
+  [
+    "KubeMemoryOvercommit",
+    "warning",
+    2294,
+    "10-19 00:00",
+    "10-26 23:15",
+    1.0
+  ],
+  [
+    "KubePodCrashLooping",
+    "warning",
+    1065,
+    "10-19 21:45",
+    "10-23 14:25",
+    1.0
+  ],
+  [
+    "KubePodNotReady",
+    "warning",
+    2296,
+    "10-19 00:00",
+    "10-26 23:15",
+    2.0
+  ],
+  [
+    "KubeStatefulSetReplicasMismatch",
+    "warning",
+    4,
+    "10-23 14:35",
+    "10-23 14:50",
+    1.0
+  ]
+]

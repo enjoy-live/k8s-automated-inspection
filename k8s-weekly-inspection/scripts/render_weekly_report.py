@@ -3,11 +3,13 @@
 """按 template/design-language.yaml 把维护周报 Markdown 渲染为 PDF。
 
 样式以 2026-09-21 / 09-30 / 10-12 交付 PDF 为基线，并叠加 YAML 里的强调规则：
-本周重点红色有序列表、严重标题与核心行红字、警告行和异常/复发行整行红字加浅红底。
+本周重点红色有序列表、严重标题与核心行红字、异常/复发行整行红字加浅红底。
+含 [!]、⚠️ 或「警告」的整行加黄色波浪下划线。
 改视觉或判定词只改 YAML，不在本脚本里另写色值或关键词。
 """
 from __future__ import annotations
 
+import math
 import re
 import sys
 from pathlib import Path
@@ -21,6 +23,7 @@ from reportlab.lib.units import mm
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import (
+    Flowable,
     HRFlowable,
     Paragraph,
     SimpleDocTemplate,
@@ -57,6 +60,13 @@ DEFAULT_RULES = {
         "无复发",
         "未复发",
         "不再复发",
+    ],
+    "wave_negations": [
+        "没有出现警告",
+        "未出现警告",
+        "没有警告",
+        "不是警告",
+        "无警告",
     ],
 }
 
@@ -196,19 +206,106 @@ def cell_token(cell: str) -> str:
 def row_kind(cells: list[str], rules: dict) -> str:
     if alert_hit(" ".join(cells), rules):
         return "full"
-    warning = {item.lower() for item in rules.get("warning_tokens") or []}
     critical = {item.lower() for item in rules.get("critical_tokens") or []}
     tokens = [cell_token(cell) for cell in cells]
-    if any(token in warning for token in tokens):
-        return "full"
     if any(token in critical for token in tokens):
         return "core"
     return ""
 
 
+def wants_wave(text: str, rules: dict) -> bool:
+    if "⚠️" in text or "⚠" in text or "[!]" in text:
+        return True
+    cleaned = text
+    negations = sorted(rules.get("wave_negations") or [], key=len, reverse=True)
+    for phrase in negations:
+        cleaned = cleaned.replace(phrase, "")
+    if "警告" in cleaned:
+        return True
+    warning = {item.lower() for item in rules.get("warning_tokens") or []}
+    return any(token.lower() in warning for token in re.findall(r"[A-Za-z]+", cleaned))
+
+
+def wave_style(design: dict) -> tuple[colors.Color, dict]:
+    spec = dict(design.get("wave") or {})
+    color_ref = spec.get("color") or "wave_warn"
+    return resolve_color(design, color_ref), spec
+
+
+def draw_wave(canv, x0: float, y: float, width: float, color: colors.Color, spec: dict) -> None:
+    if width <= 4 or color is None:
+        return
+    amplitude = float(spec.get("amplitude", 1.15))
+    wavelength = float(spec.get("wavelength", 6.5)) or 6.5
+    stroke = float(spec.get("stroke", 1.2))
+    canv.saveState()
+    canv.setStrokeColor(color)
+    canv.setLineWidth(stroke)
+    canv.setLineCap(1)
+    canv.setLineJoin(1)
+    path = canv.beginPath()
+    steps = max(4, int(width / (wavelength / 4.0)))
+    path.moveTo(x0, y)
+    for i in range(1, steps + 1):
+        x = x0 + width * i / steps
+        yy = y + amplitude * math.sin(2 * math.pi * (x - x0) / wavelength)
+        path.lineTo(x, yy)
+    canv.drawPath(path, stroke=1, fill=0)
+    canv.restoreState()
+
+
+class WavyTable(Table):
+    """跨页拆分后仍能从单元格上的标记画出整行波浪线。"""
+
+    def draw(self):
+        Table.draw(self)
+        bottoms = self._rowpositions[1:]
+        for index, row in enumerate(self._cellvalues):
+            marked = []
+            for cell in row:
+                parts = cell if isinstance(cell, (list, tuple)) else [cell]
+                marked.extend(part for part in parts if getattr(part, "_wavy", False))
+            if not marked or index >= len(bottoms):
+                continue
+            color = getattr(marked[0], "_wave_color", None)
+            spec = getattr(marked[0], "_wave_spec", {}) or {}
+            draw_wave(self.canv, 1.5, bottoms[index] + 1.2, self._width - 3, color, spec)
+
+
+class WavyParagraph(Flowable):
+    """表格外的一整行：文字下方按行距重复黄色波浪线。"""
+
+    def __init__(self, paragraph: Paragraph, color: colors.Color, spec: dict):
+        super().__init__()
+        self.paragraph = paragraph
+        self.color = color
+        self.spec = spec
+        self.spaceBefore = paragraph.style.spaceBefore or 0
+        self.spaceAfter = paragraph.style.spaceAfter or 0
+
+    def wrap(self, availWidth, availHeight):
+        _, height = self.paragraph.wrap(availWidth, availHeight)
+        self.width = availWidth
+        self.height = height
+        return availWidth, height
+
+    def draw(self):
+        self.paragraph.drawOn(self.canv, 0, 0)
+        lines = 1
+        block = getattr(self.paragraph, "blPara", None)
+        if block is not None and getattr(block, "lines", None):
+            lines = max(1, len(block.lines))
+        leading = self.paragraph.style.leading or self.paragraph.style.fontSize
+        for index in range(lines):
+            y = self.height - (index + 1) * leading + 1.0
+            draw_wave(self.canv, 0, max(0.6, y), self.width, self.color, self.spec)
+
+
 def make_table(rows: list[list[str]], design: dict, styles: dict, font_base: str, glyphs: dict) -> Table:
     rules = rules_of(design)
+    wave_color, wave_spec = wave_style(design)
     kinds = [""] + [row_kind(row, rules) for row in rows[1:]]
+    waves = [False] + [any(wants_wave(cell, rules) for cell in row) for row in rows[1:]]
     body = []
     for index, row in enumerate(rows):
         if index == 0:
@@ -219,13 +316,21 @@ def make_table(rows: list[list[str]], design: dict, styles: dict, font_base: str
             cell_style = styles["td_core"]
         else:
             cell_style = styles["td"]
-        body.append([Paragraph(esc(cell, font_base, glyphs), cell_style) for cell in row])
+        paragraphs = []
+        for cell in row:
+            paragraph = Paragraph(esc(cell, font_base, glyphs), cell_style)
+            if waves[index]:
+                paragraph._wavy = True
+                paragraph._wave_color = wave_color
+                paragraph._wave_spec = wave_spec
+            paragraphs.append(paragraph)
+        body.append(paragraphs)
     width = max(len(row) for row in rows)
     for row in body:
         while len(row) < width:
             row.append(Paragraph("", styles["td"]))
     tbl_cfg = design["table"]
-    table = Table(body, repeatRows=1 if tbl_cfg.get("repeat_header", True) else 0)
+    table = WavyTable(body, repeatRows=1 if tbl_cfg.get("repeat_header", True) else 0)
     pad = tbl_cfg["padding"]
     commands = [
         ("BACKGROUND", (0, 0), (-1, 0), resolve_color(design, tbl_cfg["header_background"])),
@@ -283,18 +388,8 @@ def is_core_line(text: str, rules: dict) -> bool:
     return any(visible.startswith(prefix + "：") or visible.startswith(prefix + ":") for prefix in prefixes)
 
 
-def is_warning_line(text: str, rules: dict) -> bool:
-    if text.strip().startswith("#"):
-        return False
-    marker = rules.get("warning_line_marker") or "【警告】"
-    visible = plain_text(text)
-    if marker and marker in text:
-        return True
-    return visible.startswith("警告：") or visible.startswith("警告:")
-
-
 def text_role(text: str, in_critical: bool, rules: dict) -> str:
-    if alert_hit(text, rules) or is_warning_line(text, rules):
+    if alert_hit(text, rules):
         return "alert"
     if in_critical and is_core_line(text, rules):
         return "core"
@@ -340,6 +435,13 @@ def build(src: str, out: str, design_path: Path = DESIGN_PATH) -> None:
     hr_cfg = design["hr"]
     margins = design["page"]["margins_mm"]
     indent_cache: dict = {}
+    wave_color, wave_spec = wave_style(design)
+
+    def emit(paragraph: Paragraph, source: str) -> None:
+        if wants_wave(source, rules):
+            story.append(WavyParagraph(paragraph, wave_color, wave_spec))
+        else:
+            story.append(paragraph)
 
     lines = open(src, encoding="utf-8").read().split("\n")
     story = []
@@ -354,7 +456,7 @@ def build(src: str, out: str, design_path: Path = DESIGN_PATH) -> None:
         nonlocal highlight_n
         number, body = parse_ordered_item(text, highlight_n)
         highlight_n = number
-        story.append(Paragraph(f"{number}. " + esc(body, font_base, glyphs), styles["highlight"]))
+        emit(Paragraph(f"{number}. " + esc(body, font_base, glyphs), styles["highlight"]), body)
 
     while index < len(lines):
         line = lines[index]
@@ -408,7 +510,10 @@ def build(src: str, out: str, design_path: Path = DESIGN_PATH) -> None:
             in_highlight = True
             highlight_n = 0
             allow_bare_highlight = True
-            story.append(Paragraph(esc(rules.get("highlight_label") or "本周重点", font_base, glyphs), styles["highlight_title"]))
+            emit(
+                Paragraph(esc(rules.get("highlight_label") or "本周重点", font_base, glyphs), styles["highlight_title"]),
+                rules.get("highlight_label") or "本周重点",
+            )
             if label_rest:
                 add_highlight_item(label_rest)
             index += 1
@@ -418,24 +523,24 @@ def build(src: str, out: str, design_path: Path = DESIGN_PATH) -> None:
             in_critical = (rules.get("critical_marker") or "【严重】") in stripped
             style = styles["title"] if not first_h1_done else styles["h1_alert" if heading_is_alert(stripped, rules) else "h1"]
             first_h1_done = True
-            story.append(Paragraph(esc(stripped[2:], font_base, glyphs), style))
+            emit(Paragraph(esc(stripped[2:], font_base, glyphs), style), stripped[2:])
         elif stripped.startswith("## "):
             in_critical = (rules.get("critical_marker") or "【严重】") in stripped
             style = styles["h1_alert"] if heading_is_alert(stripped, rules) else styles["h1"]
-            story.append(Paragraph(esc(stripped[3:], font_base, glyphs), style))
+            emit(Paragraph(esc(stripped[3:], font_base, glyphs), style), stripped[3:])
         elif stripped.startswith("### "):
             in_critical = (rules.get("critical_marker") or "【严重】") in stripped
             style = styles["h2_alert"] if heading_is_alert(stripped, rules) else styles["h2"]
-            story.append(Paragraph(esc(stripped[4:], font_base, glyphs), style))
+            emit(Paragraph(esc(stripped[4:], font_base, glyphs), style), stripped[4:])
         elif stripped.startswith("#### "):
             in_critical = (rules.get("critical_marker") or "【严重】") in stripped
             style = styles["h3_alert"] if heading_is_alert(stripped, rules) else styles["h3"]
-            story.append(Paragraph(esc(stripped[5:], font_base, glyphs), style))
+            emit(Paragraph(esc(stripped[5:], font_base, glyphs), style), stripped[5:])
         elif quote_body(stripped) is not None:
             body = quote_body(stripped) or ""
             role = text_role(body, in_critical, rules)
             style = styles["quote_alert"] if role == "alert" else styles["quote"]
-            story.append(Paragraph(esc(body, font_base, glyphs), style))
+            emit(Paragraph(esc(body, font_base, glyphs), style), body)
         else:
             ordered = re.match(r"^(\s*)(\d+)\.\s+(.*)$", line.rstrip("\n"))
             bullet_line = re.match(r"^(\s*)[-*]\s+(.*)$", line.rstrip("\n"))
@@ -443,18 +548,18 @@ def build(src: str, out: str, design_path: Path = DESIGN_PATH) -> None:
                 spaces = len(ordered.group(1))
                 role = text_role(ordered.group(3), in_critical, rules)
                 base = styles[{"alert": "list_alert", "core": "list_core"}.get(role, "list")]
-                story.append(Paragraph(
+                emit(Paragraph(
                     f"{ordered.group(2)}. " + esc(ordered.group(3).strip(), font_base, glyphs),
                     indented(base, spaces, indent_cache),
-                ))
+                ), ordered.group(3))
             elif bullet_line:
                 spaces = len(bullet_line.group(1))
                 role = text_role(bullet_line.group(2), in_critical, rules)
                 base = styles[{"alert": "list_alert", "core": "list_core"}.get(role, "list")]
-                story.append(Paragraph(
+                emit(Paragraph(
                     bullet + " " + esc(bullet_line.group(2).strip(), font_base, glyphs),
                     indented(base, spaces, indent_cache),
-                ))
+                ), bullet_line.group(2))
             elif stripped.startswith("---"):
                 story.append(HRFlowable(
                     width="100%",
@@ -466,7 +571,7 @@ def build(src: str, out: str, design_path: Path = DESIGN_PATH) -> None:
             else:
                 role = text_role(stripped, in_critical, rules)
                 style = styles[{"alert": "body_alert", "core": "body_core"}.get(role, "body")]
-                story.append(Paragraph(esc(stripped, font_base, glyphs), style))
+                emit(Paragraph(esc(stripped, font_base, glyphs), style), stripped)
         index += 1
 
     title = "维护周报"

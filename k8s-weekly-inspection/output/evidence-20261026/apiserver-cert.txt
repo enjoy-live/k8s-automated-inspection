@@ -1,0 +1,4 @@
+notBefore=Dec 26 04:46:48 2025 GMT
+notAfter=Dec 26 04:51:48 2026 GMT
+subject=CN = kube-apiserver
+issuer=CN = kubernetes

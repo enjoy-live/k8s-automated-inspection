@@ -1,0 +1,287 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "cert-manager.io/v1",
+            "kind": "Certificate",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"cert-manager.io/v1\",\"kind\":\"Certificate\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"poddefaults\",\"app.kubernetes.io/component\":\"poddefaults\",\"app.kubernetes.io/name\":\"poddefaults\",\"kustomize.component\":\"poddefaults\"},\"name\":\"admission-webhook-cert\",\"namespace\":\"kubeflow\"},\"spec\":{\"commonName\":\"admission-webhook-service.kubeflow.svc\",\"dnsNames\":[\"admission-webhook-service.kubeflow.svc\",\"admission-webhook-service.kubeflow.svc.cluster.local\"],\"isCA\":true,\"issuerRef\":{\"kind\":\"Issuer\",\"name\":\"admission-webhook-selfsigned-issuer\"},\"secretName\":\"webhook-certs\"}}\n"
+                },
+                "creationTimestamp": "2025-12-26T06:27:03Z",
+                "generation": 1,
+                "labels": {
+                    "app": "poddefaults",
+                    "app.kubernetes.io/component": "poddefaults",
+                    "app.kubernetes.io/name": "poddefaults",
+                    "kustomize.component": "poddefaults"
+                },
+                "name": "admission-webhook-cert",
+                "namespace": "kubeflow",
+                "resourceVersion": "314238046",
+                "uid": "3c0eabf6-08d1-4989-bdbf-fcfed8ac936e"
+            },
+            "spec": {
+                "commonName": "admission-webhook-service.kubeflow.svc",
+                "dnsNames": [
+                    "admission-webhook-service.kubeflow.svc",
+                    "admission-webhook-service.kubeflow.svc.cluster.local"
+                ],
+                "isCA": true,
+                "issuerRef": {
+                    "kind": "Issuer",
+                    "name": "admission-webhook-selfsigned-issuer"
+                },
+                "secretName": "webhook-certs"
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2025-12-26T06:27:03Z",
+                        "message": "Certificate is up to date and has not expired",
+                        "observedGeneration": 1,
+                        "reason": "Ready",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "notAfter": "2027-01-20T06:27:03Z",
+                "notBefore": "2026-10-22T06:27:03Z",
+                "renewalTime": "2026-12-21T06:27:03Z",
+                "revision": 6
+            }
+        },
+        {
+            "apiVersion": "cert-manager.io/v1",
+            "kind": "Certificate",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"cert-manager.io/v1\",\"kind\":\"Certificate\",\"metadata\":{\"annotations\":{},\"name\":\"katib-webhook-cert\",\"namespace\":\"kubeflow\"},\"spec\":{\"commonName\":\"katib-controller.kubeflow.svc\",\"dnsNames\":[\"katib-controller.kubeflow.svc\",\"katib-controller.kubeflow.svc.cluster.local\"],\"isCA\":true,\"issuerRef\":{\"kind\":\"Issuer\",\"name\":\"katib-selfsigned-issuer\"},\"secretName\":\"katib-webhook-cert\"}}\n"
+                },
+                "creationTimestamp": "2025-12-26T06:26:25Z",
+                "generation": 1,
+                "name": "katib-webhook-cert",
+                "namespace": "kubeflow",
+                "resourceVersion": "314237568",
+                "uid": "63781d41-4a62-4a28-a960-f8f56616abfe"
+            },
+            "spec": {
+                "commonName": "katib-controller.kubeflow.svc",
+                "dnsNames": [
+                    "katib-controller.kubeflow.svc",
+                    "katib-controller.kubeflow.svc.cluster.local"
+                ],
+                "isCA": true,
+                "issuerRef": {
+                    "kind": "Issuer",
+                    "name": "katib-selfsigned-issuer"
+                },
+                "secretName": "katib-webhook-cert"
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2025-12-26T06:26:25Z",
+                        "message": "Certificate is up to date and has not expired",
+                        "observedGeneration": 1,
+                        "reason": "Ready",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "notAfter": "2027-01-20T06:26:25Z",
+                "notBefore": "2026-10-22T06:26:25Z",
+                "renewalTime": "2026-12-21T06:26:25Z",
+                "revision": 6
+            }
+        },
+        {
+            "apiVersion": "cert-manager.io/v1",
+            "kind": "Certificate",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"cert-manager.io/v1\",\"kind\":\"Certificate\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"cache-server-cert-manager\"},\"name\":\"kfp-cache-cert\",\"namespace\":\"kubeflow\"},\"spec\":{\"commonName\":\"kfp-cache-cert\",\"dnsNames\":[\"cache-server\",\"cache-server.kubeflow\",\"cache-server.kubeflow.svc\"],\"isCA\":true,\"issuerRef\":{\"kind\":\"Issuer\",\"name\":\"kfp-cache-selfsigned-issuer\"},\"secretName\":\"webhook-server-tls\"}}\n"
+                },
+                "creationTimestamp": "2025-12-26T06:23:41Z",
+                "generation": 1,
+                "labels": {
+                    "app": "cache-server-cert-manager"
+                },
+                "name": "kfp-cache-cert",
+                "namespace": "kubeflow",
+                "resourceVersion": "314235500",
+                "uid": "03ec011c-5e34-44d3-87d5-6ac393660b87"
+            },
+            "spec": {
+                "commonName": "kfp-cache-cert",
+                "dnsNames": [
+                    "cache-server",
+                    "cache-server.kubeflow",
+                    "cache-server.kubeflow.svc"
+                ],
+                "isCA": true,
+                "issuerRef": {
+                    "kind": "Issuer",
+                    "name": "kfp-cache-selfsigned-issuer"
+                },
+                "secretName": "webhook-server-tls"
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2025-12-26T06:23:42Z",
+                        "message": "Certificate is up to date and has not expired",
+                        "observedGeneration": 1,
+                        "reason": "Ready",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "notAfter": "2027-01-20T06:23:42Z",
+                "notBefore": "2026-10-22T06:23:42Z",
+                "renewalTime": "2026-12-21T06:23:42Z",
+                "revision": 6
+            }
+        },
+        {
+            "apiVersion": "cert-manager.io/v1",
+            "kind": "Certificate",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"cert-manager.io/v1\",\"kind\":\"Certificate\",\"metadata\":{\"annotations\":{},\"name\":\"kubeflow-trainer-cert\",\"namespace\":\"kubeflow\"},\"spec\":{\"dnsNames\":[\"kubeflow-trainer-controller-manager.kubeflow.svc\",\"kubeflow-trainer-controller-manager.kubeflow.svc.cluster.local\"],\"issuerRef\":{\"kind\":\"Issuer\",\"name\":\"selfsigned-issuer\"},\"secretName\":\"kubeflow-trainer-webhook-certs\"}}\n"
+                },
+                "creationTimestamp": "2026-01-15T07:38:35Z",
+                "generation": 1,
+                "name": "kubeflow-trainer-cert",
+                "namespace": "kubeflow",
+                "resourceVersion": "271677967",
+                "uid": "dc4ced1f-b4f2-43bc-adee-3130fd90a998"
+            },
+            "spec": {
+                "dnsNames": [
+                    "kubeflow-trainer-controller-manager.kubeflow.svc",
+                    "kubeflow-trainer-controller-manager.kubeflow.svc.cluster.local"
+                ],
+                "issuerRef": {
+                    "kind": "Issuer",
+                    "name": "selfsigned-issuer"
+                },
+                "secretName": "kubeflow-trainer-webhook-certs"
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2026-01-15T07:38:36Z",
+                        "message": "Certificate is up to date and has not expired",
+                        "observedGeneration": 1,
+                        "reason": "Ready",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "notAfter": "2026-12-11T07:38:35Z",
+                "notBefore": "2026-09-12T07:38:35Z",
+                "renewalTime": "2026-11-11T07:38:35Z",
+                "revision": 5
+            }
+        },
+        {
+            "apiVersion": "cert-manager.io/v1",
+            "kind": "Certificate",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"cert-manager.io/v1\",\"kind\":\"Certificate\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"pvcviewer\",\"app.kubernetes.io/component\":\"certificate\",\"app.kubernetes.io/created-by\":\"pvc-viewer\",\"app.kubernetes.io/instance\":\"serving-cert\",\"app.kubernetes.io/managed-by\":\"kustomize\",\"app.kubernetes.io/name\":\"certificate\",\"app.kubernetes.io/part-of\":\"pvc-viewer\"},\"name\":\"pvcviewer-serving-cert\",\"namespace\":\"kubeflow\"},\"spec\":{\"dnsNames\":[\"pvcviewer-webhook-service.kubeflow.svc\",\"pvcviewer-webhook-service.kubeflow.svc.cluster.local\"],\"issuerRef\":{\"kind\":\"Issuer\",\"name\":\"pvcviewer-selfsigned-issuer\"},\"secretName\":\"webhook-server-cert\"}}\n"
+                },
+                "creationTimestamp": "2025-12-26T06:28:24Z",
+                "generation": 1,
+                "labels": {
+                    "app": "pvcviewer",
+                    "app.kubernetes.io/component": "certificate",
+                    "app.kubernetes.io/created-by": "pvc-viewer",
+                    "app.kubernetes.io/instance": "serving-cert",
+                    "app.kubernetes.io/managed-by": "kustomize",
+                    "app.kubernetes.io/name": "certificate",
+                    "app.kubernetes.io/part-of": "pvc-viewer"
+                },
+                "name": "pvcviewer-serving-cert",
+                "namespace": "kubeflow",
+                "resourceVersion": "314239073",
+                "uid": "58d712a5-e56b-42eb-9e82-8619a39c7d12"
+            },
+            "spec": {
+                "dnsNames": [
+                    "pvcviewer-webhook-service.kubeflow.svc",
+                    "pvcviewer-webhook-service.kubeflow.svc.cluster.local"
+                ],
+                "issuerRef": {
+                    "kind": "Issuer",
+                    "name": "pvcviewer-selfsigned-issuer"
+                },
+                "secretName": "webhook-server-cert"
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2025-12-26T06:28:24Z",
+                        "message": "Certificate is up to date and has not expired",
+                        "observedGeneration": 1,
+                        "reason": "Ready",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "notAfter": "2027-01-20T06:28:24Z",
+                "notBefore": "2026-10-22T06:28:24Z",
+                "renewalTime": "2026-12-21T06:28:24Z",
+                "revision": 6
+            }
+        },
+        {
+            "apiVersion": "cert-manager.io/v1",
+            "kind": "Certificate",
+            "metadata": {
+                "creationTimestamp": "2025-12-26T06:25:02Z",
+                "generation": 1,
+                "labels": {
+                    "app": "kserve",
+                    "app.kubernetes.io/name": "kserve"
+                },
+                "name": "serving-cert",
+                "namespace": "kubeflow",
+                "resourceVersion": "314236527",
+                "uid": "bb8ff11a-33db-40d2-82ef-3a5f4411caa0"
+            },
+            "spec": {
+                "commonName": "kserve-webhook-server-service.kubeflow.svc",
+                "dnsNames": [
+                    "kserve-webhook-server-service.kubeflow.svc"
+                ],
+                "issuerRef": {
+                    "kind": "Issuer",
+                    "name": "selfsigned-issuer"
+                },
+                "secretName": "kserve-webhook-server-cert"
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastTransitionTime": "2025-12-26T06:25:03Z",
+                        "message": "Certificate is up to date and has not expired",
+                        "observedGeneration": 1,
+                        "reason": "Ready",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "notAfter": "2027-01-20T06:25:03Z",
+                "notBefore": "2026-10-22T06:25:03Z",
+                "renewalTime": "2026-12-21T06:25:03Z",
+                "revision": 6
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

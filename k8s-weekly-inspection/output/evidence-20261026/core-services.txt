@@ -1,0 +1,7 @@
+Kubernetes 控制平面：Running。etcd、kube-apiserver、kube-scheduler、kube-controller-manager 均为 1/1 Running（pods.txt，节点 master-node-storage-r620-g40）。
+Kubeflow Dashboard：Running。kubeflow/centraldashboard-798bcdf58d-d2lsp 2/2 Running（pods.txt）。
+Istio 网关：Running。istio-system/istio-ingressgateway-767869c44b-696cl 1/1 Running（pods.txt）。
+监控系统 (Prometheus/Grafana)：Running。monitoring/prometheus-prometheus-kube-prometheus-prometheus-0 2/2 Running，monitoring/prometheus-grafana-758cd4495-s9zqh 3/3 Running（pods.txt）。
+存储供给 (local-path-provisioner)：Running。local-path-storage/local-path-provisioner-54849588b5-5zmkd 1/1 Running（pods.txt）。
+镜像仓库 (Harbor 代理缓存)：healthy。harbor-health.json 的 status 为 healthy，core、database、jobservice、portal、redis、registry、registryctl、trivy 均为 healthy。Harbor Pod 均为 Running（pods.txt）。
+GPU 驱动：Running。worker-node01 与 worker-node02 的 nvidia-device-plugin 与 nvidia-dcgm-exporter 均为 1/1 Running（pods.txt）；S6 已对这两个 dcgm-exporter Pod 执行 nvidia-smi 并写入 gpu-smi.txt。

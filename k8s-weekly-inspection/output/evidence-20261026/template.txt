@@ -1,0 +1,248 @@
+维护周报-20261012
+Kubeflow AI 平台运行周报
+ • 报告周期： 2026 年 10 月 05 日 - 2026 年 10 月 12 日
+ • 运维负责人： unix
+ 本周重点： 9 月 GPU 掉总线故障（Xid 79）的观察期已圆满结束。worker-node01 自 9 月 18 日维护后
+ 连续稳定运行 24 天，期间零 Xid 错误、零重启、ECC 零错误，该故障判定为闭环。
+ 本周期集群无任何宕机，SLA 100%，无新增故障。
+ 需要关注的是：上期工作计划中的 178 个 Released PV（9.22 TiB）回收尚未执行，
+ 同时控制平面证书剩余有效期已降至 75 天，轮换窗口趋紧。
+
+
+1. 集群健康度概览 (Cluster Health Summary)
+本模块用于给领导层快速浏览，展示系统整体稳定性。
+ • 集群可用率 (SLA)：100%（本周期无计划内及非计划停机，无节点重启）
+ • 节点状态：3/3 Ready（Master x1, Worker x2）
+ • 核心组件状态：
+ • Kubernetes 控制平面 (v1.32.10)：[OK] 正常（etcd / apiserver / scheduler / controller-manager 全部
+ Running）
+ • Kubeflow Dashboard：[OK] 正常（已稳定 24 天）
+ • Istio 网关：[OK] 正常（已稳定 30 天）
+ • 监控系统 (Prometheus/Grafana)：[OK] 正常（已稳定 167 天）
+ • 存储供给 (local-path-provisioner)：[OK] 正常（已稳定 47 天）
+ • 镜像仓库 (Harbor 代理缓存)：[OK] 正常（6 个代理项目全部在线）
+ • GPU 驱动 (NVIDIA 580.126.09)：[OK] 正常，本周期无 Xid 错误
+
+
+2. 资源消耗统计 (Resource Utilization)
+展示硬件利用率，帮助客户判断是否需要扩容。
+
+资源类型                       峰值利用率                 周期平均利用率                 峰值时剩余可用量
+CPU                        ~7.0%                 ~2.3%                   约 208 核
+内存                         ~21.3%                ~9.2%                   约 0.56 TiB
+                                                                         4 张（6 张中 2
+GPU (NVIDIA)               100%                  ~5.2%                   张被调度占用，其中 1
+                                                                         张空载）
+                                                                         Bound 6.13 TiB，另有
+存储 (PV)                    ~8.4%                 ~7.6%
+                                                                         Released 9.22 TiB 待回收
+
+节点详情：
+
+节点                           角色           CPU     内存使用        GPU         当前 Pod 数    根分区
+master-node-storage-r620-g40 control-plane 56c    27%         0           21          48.5%
+节点                            角色               CPU          内存使用           GPU             当前 Pod 数    根分区
+                                                                           2x RTX PRO
+                                                                           6000
+worker-node01-pro6000         worker           128c         12%                            30          38.1%
+                                                                           Blackwell
+                                                                           (96GB)
+                                                                           4x RTX 3090
+worker-node02-3090            worker           40c          45%                            107         74.8%
+                                                                           (24GB)
+
+GPU 实际带载情况（本周期无变化）：
+
+节点                 GPU                 显存占用                温度                    功耗               带载业务
+node01             GPU0                90844 MiB           28℃                   82 W             qwen38-27b-mtp
+node01             GPU1                14 MiB              22℃                   33 W             空闲
+node02             GPU0-3              0 MiB               22-26℃                25-29 W          全部空闲
+
+  • 全集群实际仅 1 张 GPU 真正带载。csj-spine-detection 虽在调度层占用 node02 一张 3090，
+但 nvidia-smi 显示 0 MiB、无进程，属占位空载，与上期结论一致
+  • 存储总量：PV 共 221 个 / 15719 GiB，较上期 14819 GiB 增加 900 GiB
+
+PV 状态                        数量                            容量                              较上期
+                                                                                           +5 个 / +900
+Bound                        43                            6275 GiB (6.13 TiB)
+                                                                                           GiB（新业务数据卷）
+Released                     178                           9444 GiB (9.22 TiB)             无变化，回收未执行
+
+  • Bound 卷按存储类分布：nfs-csi-ssd 4107 GiB、nfs-csi 1108 GiB、nfs-csi-kubeflow 580 GiB、
+local-path 380 GiB、local-prometheus 100 GiB
+  • 节点负载倾斜依然存在：worker-node02 承载 107 个 Pod（上期 109），worker-node01 仅 30 个，
+倾斜格局未改变，回迁操作未执行
+
+
+3. AI 业务运行数据 (AI Workflow Stats)
+体现 Kubeflow 平台的实际产出。
+  • Notebook 运行数：注册 9 个，本周活跃 6 个，状态均为 Running
+  • kubeflow-user-example-com/style-big、kubeflow-user-example-com/vs
+  • user2-example-com/mni-test-0104、user2-example-com/mni-test-qw-260106
+  • user4-example-com/awgs-builder、user5-example-com/csj-spine-detection
+  • 其余 3 个（user3 的 nndet-v2、nndetection、p60001）处于休眠状态，属正常资源回收
+  • Pipeline 运行数：本周期恢复活跃，新增 Pod 5 个，成功 4 个、运行中 1 个、失败 0 个
+  • user3-example-com/pengwin-fragment-labels-full-import-20261010-v1 运行中（已执行约 2 小时），
+各 DAG 子任务（driver / impl）正常流转
+  • 这是连续两个周期（9/21-9/30 均为 0 次）后首次出现新的 Pipeline Run，平台使用率回升
+  • KServe 模型推理：在线模型 2 个，全部状态 Ready
+  • qwen38-27b-mtp（在线服务，实际带载）
+  • detect-digits-2（Ready，replicas 已缩容为 0）
+  • 新增业务数据卷 5 个，反映 user3 团队本周期有密集的新项目启动：
+
+PVC 名称                                 命名空间                       创建时间                          用途推测
+xray2pelvic-r2-migration-20261006      user3-example-com          10-05                         数据迁移
+PVC 名称                                命名空间                      创建时间                 用途推测
+deepsdf-dictionary-migration-20261006 user3-example-com         10-05                数据迁移
+pengwin-multitask-20261009-v1         user3-example-com         10-08                多任务训练
+pengwin-fragment-labels-20261010-v1   user3-example-com         10-10                标注数据导入
+pengwin-fragment-train-20261010-v1    user3-example-com         10-10                训练数据集
+
+  • radar-inference-api-v2（9/23 缩容至 0）本周期仍保持 0 副本，未重新拉起。
+其配套资源仍完整保留：Service radar-inference-v2、NodePort radar-inference-v2-nodeport(31891)、
+PVC radar-model-cache(100 GiB) 与 radar-workspace(100 GiB)。
+建议向业务方确认是临时停用还是已废弃，若废弃可回收 200 GiB 存储与 1 个 NodePort
+
+
+4. 故障处理与告警记录 (Incidents & Alerts)
+展示你的专业性，以及你解决了哪些隐患。
+
+4.1 GPU 掉总线故障正式闭环
+结论：9/18 维护后已连续 24 天零故障，本周期零 Xid，该故障判定为闭环。
+
+核查项                                   核查方法                               结果
+                                      遍历 node01
+是否再发生 Xid 错误                          现存及归档内核日志（覆盖 9/13 至                0条
+                                      10/12）
+是否再发生重启                               /proc/uptime                       开机 24.0 天（9/18 至今未重启）
+                                      检索 Machine Check / Hardware Error /
+是否存在其它硬件错误                                                                0条
+                                      EDAC / Uncorrected
+GPU ECC 健康度                           nvidia-smi 累计未修正 ECC 错误            GPU0 / GPU1 均为 0
+                                      /var/run/reboot-required 及 /boot   无待重启项，运行内核 6.8.0-90
+是否有待重启的内核更新
+                                      内核镜像                               为唯一已装内核
+
+重要提醒：闭环结论存在一个前提限制。 故障原始触发条件是 vLLM 驱动双卡高负载，
+而自 9/23 radar-inference-api-v2 缩容后，node01 GPU1 一直空闲，24
+天的稳定期从未复现"双卡同时满载"工况。
+因此本次闭环可确认"硬件维护未引入新问题、空载/单卡工况稳定"，但尚不能完全排除高负载下复发的可能。
+若后续有新 LLM 服务上线，建议优先调度至 node01 GPU1 并把其后 1-2 周作为补充验证窗口。
+巡检方法修正：本次统计节点启动次数时，日志中出现 9 月 30 日 19:53 前后 3 条疑似启动记录，
+但 uptime 显示其间并无重启。追查原文后确认为误报——这些是 kubelet 将某个诊断 Pod 的命令行文本
+写入了 syslog，而该命令行中恰好包含 Linux version 字样。
+ 后续巡检应使用 grep 'kernel: Linux version' 限定内核来源，并始终以 /proc/uptime 交叉验证。
+
+4.2 上期工作计划落实情况
+上期（9/30）报告列出 7 项计划，本次核查结果如下：
+
+上期计划事项                                状态                                 核查依据
+排期 K8s 证书轮换                           [X] 未执行                            证书仍为 2026-12-26 到期，剩余 75 天
+                                                                         Released PV 仍为 178 个 / 9444
+回收 178 个 Released PV（~9.2 TiB）        [X] 未执行
+                                                                         GiB，数量容量均无变化
+回收孤儿 PVC qwen36-cache（120
+                                      [X] 未执行                            仍为 Bound 状态，已存续 103 天
+GiB）
+上期计划事项                                   状态                              核查依据
+跟进 csj-spine-base:v1.0                                                   spline-yolov8-train 仍
+                                         [X] 未执行
+补推或下线任务                                                                  ImagePullBackOff，已阻塞 116 天
+                                                                         node02 仍 107
+node02 滚动重启缓解 Pod 倾斜                     [X] 未执行
+                                                                         Pod，KubeletTooManyPods 持续触发
+                                                                         /home/data 维持 77.6%，根分区由
+排查 node02 磁盘水位                           [!] 部分
+                                                                         73.0% 升至 74.8%，仍在缓慢增长
+radar 重新启用后观察双卡稳定性                       — 不适用                           radar 未重新启用，无观察样本
+
+说明：上述事项均为需要业务方确认或需停机窗口的操作，非平台侧可单方面执行。
+建议优先推动证书轮换与 Released PV 回收两项——前者有硬性时间约束，后者可释放 9.2 TiB 存储。
+
+4.3 常规告警与遗留问题
+ • 关键告警：当前 firing 4 条（周期内平均 6 条、峰值 12 条），无 critical 级别，与上期持平
+
+告警名称                        级别                     对象                    说明
+Watchdog                    none                   —                     监控链路自检，设计上长期触发，非故障
+                                                                         内存 request
+KubeMemoryOvercommit warning                       集群                    总和超单节点容量，实际使用仅
+                                                                         9.2%，暂无风险
+KubePodNotReady             warning                spline-yolov8-train   见下方遗留问题
+KubeletTooManyPods          info                   worker-node02         Pod 数接近单节点上限，由负载倾斜导致
+
+遗留问题跟踪：
+
+问题                 持续时长               较上期变化              建议
+spline-yolov8-train                                      私有镜像 csj-spine-base:v1.0 在 Harbor
+                    116 天             +11 天，持续恶化
+镜像拉取失败                                                   中确认不存在，属业务侧从未推送；建议限期补推或下线任务
+178 个 Released                                           回收策略为 Retain，NFS
+                   —                  无变化
+PV 占用 9.22 TiB                                           数据目录不会自动清理；核查无引用后批量回收
+孤儿 PVC
+qwen36-cache       103 天              无变化                建议确认后回收
+(120 GiB)
+radar-*
+零副本资源 (200         20 天               无变化                与业务方确认是否废弃
+GiB + NodePort)
+节点负载倾斜 (107
+                   24 天               109→107，无实质改善 低峰期滚动重启无状态负载促使重新调度
+vs 30 Pod)
+node02 磁盘水位        —                  根分区 73.0%→74.8%    镜像层占 153 GB，建议执行镜像垃圾回收
+
+ • 累计可回收存储约 9.53 TiB（Released PV 9.22 TiB + qwen36-cache 120 GiB + radar-* 200 GiB）
+ • 异常 Pod 统计：全集群仅 user5-example-com 1 个
+ • 容器重启计数 Top：kubeflow/metadata-writer 107 次（长期累计值，当前 Running 稳定），
+其余均为 GPU Operator 与 CNI 组件的历史累计，本周期内无新增重启
+
+4.4 镜像源治理成果复核
+ • local-path-provisioner helper 镜像持续指向内网 Harbor（172.16.1.72:30002/library/busybox），PVC
+ 供给正常
+ • 本周期新建 5 个 PVC 全部供给成功，是对该改造的又一次实战检验
+ • Kyverno 策略 inject-kaniko-registry-mirror 运行正常（Ready，已部署 47 天）
+ • Harbor 代理缓存项目全部在线，仓库数由 208 增至 224，存储用量 185.71 GB
+代理项目                                           缓存仓库数
+dockerhub                                      33
+gcr                                            14
+ghcr                                           4
+k8s                                            2
+nvcr                                           1
+quay                                           1
+
+ • 本周期全集群无任何因外网镜像源导致的 ImagePullBackOff（业务侧 csj-spine-base 除外），
+镜像内网化改造持续有效
+
+
+5. 数据备份与安全巡检 (Backup & Security)
+让客户对数据资产放心。
+ • Velero 集群备份：[OK] 正常（本周期 15 次任务全部 Completed，失败 0 次，0 warnings）
+
+备份计划                     周期 (UTC)              保留策略                 本周期执行
+pvc-daily-backup         每日 03:00              TTL 168h / 保留 7 份    7次
+minio-daily-backup       每日 04:00              TTL 720h / 保留 30 份   7次
+kubeflow-weekly-backup   每周日 02:00             TTL 720h / 保留 30 份   1次
+
+ • 最近一次：minio-daily-backup-20261011040031 — Completed (0 errors)
+ • 当前仓库中共保留 42 份有效备份
+ • 说明：备份 cron 按 UTC 执行（03:00 UTC = 11:00 CST），10/12 当日任务尚未到执行时间，属正常
+ • MinIO 模型数据备份：[OK] 正常
+ • K8s 证书检查：控制平面证书剩余有效期 75 天（统一于 2026-12-26 到期，CA 有效期至 2035 年）
+ • [!] 较上期减少 11.7 天。上期建议的"10 月内排定轮换窗口"尚未落实，本月仅剩约 2.5 周，
+建议本周内确定轮换时间并启动变更审批，避免临近到期仓促操作
+ • 节点磁盘水位：worker-node02 根分区 74.8%（较上期 +1.8 个百分点，持续缓慢增长），
+/home/data 维持 77.6%
+ • 容器镜像层占用 153 GB，建议执行一次镜像垃圾回收
+ • 超过 80% 将触发 kubelet 镜像驱逐，按当前增速约 2 个月内触及阈值
+ • 镜像扫描：Harbor Trivy 组件运行中，本周未执行主动扫描
+
+
+6. 下周工作计划 (Next Week's Plan)
+ • 暂无安排
+
+ • 报告生成时间：2026-10-12 10:52 CST
+ • 数据来源：kubectl、集群内 Prometheus API（DCGM / node-exporter）、Velero CR、Harbor API、
+节点内核日志 (kern.log / syslog 含归档)、nvidia-smi、openssl s_client
+ • 中间数据：maintenance_weekly_report_data_20261012.json
+ • 备注：上一期报告覆盖至 2026-09-30，本期覆盖 10-05 起，其间 10-01 至 10-04
+ 为国庆假期，未单独出具报告
+

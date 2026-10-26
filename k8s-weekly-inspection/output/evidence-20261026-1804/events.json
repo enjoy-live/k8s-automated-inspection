@@ -1,0 +1,638 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 69,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-23T06:32:18Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{main}",
+                "kind": "Pod",
+                "name": "metadata-writer-6f9f556688-ntmsc",
+                "namespace": "kubeflow",
+                "resourceVersion": "315297813",
+                "uid": "049fbd26-ba33-46da-af4a-0b2530a3024a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:15:14Z",
+            "message": "Container image \"ghcr.io/kubeflow/kfp-metadata-writer:2.4.1\" already present on machine",
+            "metadata": {
+                "creationTimestamp": "2026-10-24T22:30:22Z",
+                "name": "metadata-writer-6f9f556688-ntmsc.18e114edd104ca2b",
+                "namespace": "kubeflow",
+                "resourceVersion": "318648484",
+                "uid": "8906d439-7095-4471-b49f-595584613984"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "worker-node01-pro6000",
+            "source": {
+                "component": "kubelet",
+                "host": "worker-node01-pro6000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 69,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-23T06:32:18Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{main}",
+                "kind": "Pod",
+                "name": "metadata-writer-6f9f556688-ntmsc",
+                "namespace": "kubeflow",
+                "resourceVersion": "315297813",
+                "uid": "049fbd26-ba33-46da-af4a-0b2530a3024a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:15:14Z",
+            "message": "Created container: main",
+            "metadata": {
+                "creationTimestamp": "2026-10-24T22:30:22Z",
+                "name": "metadata-writer-6f9f556688-ntmsc.18e114edd2397cf5",
+                "namespace": "kubeflow",
+                "resourceVersion": "318648487",
+                "uid": "073a0770-aa29-4a74-867b-2d71ce5a9f03"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "worker-node01-pro6000",
+            "source": {
+                "component": "kubelet",
+                "host": "worker-node01-pro6000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 69,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-23T06:32:18Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{main}",
+                "kind": "Pod",
+                "name": "metadata-writer-6f9f556688-ntmsc",
+                "namespace": "kubeflow",
+                "resourceVersion": "315297813",
+                "uid": "049fbd26-ba33-46da-af4a-0b2530a3024a"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:15:14Z",
+            "message": "Started container main",
+            "metadata": {
+                "creationTimestamp": "2026-10-24T22:30:22Z",
+                "name": "metadata-writer-6f9f556688-ntmsc.18e114eddb358cd0",
+                "namespace": "kubeflow",
+                "resourceVersion": "318648492",
+                "uid": "6fbc8382-0445-441b-8304-78ea1634f894"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "worker-node01-pro6000",
+            "source": {
+                "component": "kubelet",
+                "host": "worker-node01-pro6000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-26T09:44:12Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Workflow",
+                "name": "ofab-cpu-inline-gz7nz",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669895",
+                "uid": "24fb32ae-d1fa-48f6-994a-86184e64d2d7"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:44:12Z",
+            "message": "Workflow Running",
+            "metadata": {
+                "creationTimestamp": "2026-10-26T09:44:13Z",
+                "name": "ofab-cpu-inline-gz7nz.18e20b247d509bae",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669896",
+                "uid": "2567729b-1364-4580-9870-f09268189db2"
+            },
+            "reason": "WorkflowRunning",
+            "reportingComponent": "",
+            "reportingInstance": "",
+            "source": {
+                "component": "workflow-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-26T09:44:13Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "ofab-cpu-inline-gz7nz",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669899",
+                "uid": "b8a350a8-be66-4c8c-a8e2-4fe3869e7ec1"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:44:13Z",
+            "message": "Successfully assigned user3-example-com/ofab-cpu-inline-gz7nz to worker-node02-3090",
+            "metadata": {
+                "creationTimestamp": "2026-10-26T09:44:13Z",
+                "name": "ofab-cpu-inline-gz7nz.18e20b2485f06470",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669902",
+                "uid": "b21b7b6f-c4a4-42b5-9822-4d3031f2b93c"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-26T09:44:14Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{init}",
+                "kind": "Pod",
+                "name": "ofab-cpu-inline-gz7nz",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669900",
+                "uid": "b8a350a8-be66-4c8c-a8e2-4fe3869e7ec1"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:44:14Z",
+            "message": "Container image \"gcr.io/ml-pipeline/argoexec:v3.4.17-license-compliance\" already present on machine",
+            "metadata": {
+                "creationTimestamp": "2026-10-26T09:44:14Z",
+                "name": "ofab-cpu-inline-gz7nz.18e20b24b9f181d5",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669916",
+                "uid": "7a66352f-9e30-4a0d-a2df-1e8bbcc9694b"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "worker-node02-3090",
+            "source": {
+                "component": "kubelet",
+                "host": "worker-node02-3090"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-26T09:44:14Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{init}",
+                "kind": "Pod",
+                "name": "ofab-cpu-inline-gz7nz",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669900",
+                "uid": "b8a350a8-be66-4c8c-a8e2-4fe3869e7ec1"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:44:14Z",
+            "message": "Created container: init",
+            "metadata": {
+                "creationTimestamp": "2026-10-26T09:44:14Z",
+                "name": "ofab-cpu-inline-gz7nz.18e20b24bbf2de08",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669918",
+                "uid": "e99f47b6-2eab-4554-9317-4100d32da5a0"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "worker-node02-3090",
+            "source": {
+                "component": "kubelet",
+                "host": "worker-node02-3090"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-26T09:44:14Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{init}",
+                "kind": "Pod",
+                "name": "ofab-cpu-inline-gz7nz",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669900",
+                "uid": "b8a350a8-be66-4c8c-a8e2-4fe3869e7ec1"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:44:14Z",
+            "message": "Started container init",
+            "metadata": {
+                "creationTimestamp": "2026-10-26T09:44:14Z",
+                "name": "ofab-cpu-inline-gz7nz.18e20b24c2affe53",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669923",
+                "uid": "18ff0e42-cc39-4738-9e00-17bfd6f2552b"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "worker-node02-3090",
+            "source": {
+                "component": "kubelet",
+                "host": "worker-node02-3090"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-26T09:44:16Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{wait}",
+                "kind": "Pod",
+                "name": "ofab-cpu-inline-gz7nz",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669900",
+                "uid": "b8a350a8-be66-4c8c-a8e2-4fe3869e7ec1"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:44:16Z",
+            "message": "Container image \"gcr.io/ml-pipeline/argoexec:v3.4.17-license-compliance\" already present on machine",
+            "metadata": {
+                "creationTimestamp": "2026-10-26T09:44:16Z",
+                "name": "ofab-cpu-inline-gz7nz.18e20b25439bf5ed",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669964",
+                "uid": "9c526953-4005-4188-a16c-a97f6aedfcea"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "worker-node02-3090",
+            "source": {
+                "component": "kubelet",
+                "host": "worker-node02-3090"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-26T09:44:16Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{wait}",
+                "kind": "Pod",
+                "name": "ofab-cpu-inline-gz7nz",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669900",
+                "uid": "b8a350a8-be66-4c8c-a8e2-4fe3869e7ec1"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:44:16Z",
+            "message": "Created container: wait",
+            "metadata": {
+                "creationTimestamp": "2026-10-26T09:44:16Z",
+                "name": "ofab-cpu-inline-gz7nz.18e20b2546d9bd62",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669967",
+                "uid": "ca9424df-658f-4d8f-8bd9-5ea7c6888ff3"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "worker-node02-3090",
+            "source": {
+                "component": "kubelet",
+                "host": "worker-node02-3090"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-26T09:44:16Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{wait}",
+                "kind": "Pod",
+                "name": "ofab-cpu-inline-gz7nz",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669900",
+                "uid": "b8a350a8-be66-4c8c-a8e2-4fe3869e7ec1"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:44:16Z",
+            "message": "Started container wait",
+            "metadata": {
+                "creationTimestamp": "2026-10-26T09:44:16Z",
+                "name": "ofab-cpu-inline-gz7nz.18e20b254b2878cf",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669970",
+                "uid": "609e0fee-2f75-40b8-83e3-f0ae9e5f86cd"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "worker-node02-3090",
+            "source": {
+                "component": "kubelet",
+                "host": "worker-node02-3090"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-26T09:44:16Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{main}",
+                "kind": "Pod",
+                "name": "ofab-cpu-inline-gz7nz",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669900",
+                "uid": "b8a350a8-be66-4c8c-a8e2-4fe3869e7ec1"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:44:16Z",
+            "message": "Container image \"172.16.1.72:30002/xray2pelvic-user3/pengwin-task3-beta-runtime@sha256:968090f1d92a30ded18da496e3c98378b8827003870b4e8d6ad014f93bfd6889\" already present on machine",
+            "metadata": {
+                "creationTimestamp": "2026-10-26T09:44:16Z",
+                "name": "ofab-cpu-inline-gz7nz.18e20b254b336080",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669971",
+                "uid": "5a001a04-bed6-47da-8416-0f6f8650e133"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "worker-node02-3090",
+            "source": {
+                "component": "kubelet",
+                "host": "worker-node02-3090"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-26T09:44:16Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{main}",
+                "kind": "Pod",
+                "name": "ofab-cpu-inline-gz7nz",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669900",
+                "uid": "b8a350a8-be66-4c8c-a8e2-4fe3869e7ec1"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:44:16Z",
+            "message": "Created container: main",
+            "metadata": {
+                "creationTimestamp": "2026-10-26T09:44:16Z",
+                "name": "ofab-cpu-inline-gz7nz.18e20b254d20de7e",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669972",
+                "uid": "34622ebc-ef4a-4257-b22f-c515332febac"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "worker-node02-3090",
+            "source": {
+                "component": "kubelet",
+                "host": "worker-node02-3090"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-26T09:44:16Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{main}",
+                "kind": "Pod",
+                "name": "ofab-cpu-inline-gz7nz",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669900",
+                "uid": "b8a350a8-be66-4c8c-a8e2-4fe3869e7ec1"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:44:16Z",
+            "message": "Started container main",
+            "metadata": {
+                "creationTimestamp": "2026-10-26T09:44:16Z",
+                "name": "ofab-cpu-inline-gz7nz.18e20b25513b1edf",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669976",
+                "uid": "6837d7c2-453b-4afc-a138-3ad22f32d2b9"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "worker-node02-3090",
+            "source": {
+                "component": "kubelet",
+                "host": "worker-node02-3090"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-26T09:44:23Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Workflow",
+                "name": "ofab-cpu-inline-gz7nz",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318669901",
+                "uid": "24fb32ae-d1fa-48f6-994a-86184e64d2d7"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:44:23Z",
+            "message": "Workflow completed",
+            "metadata": {
+                "creationTimestamp": "2026-10-26T09:44:23Z",
+                "name": "ofab-cpu-inline-gz7nz.18e20b26d942ec71",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318670052",
+                "uid": "be6e8c29-2cd6-4dc4-84b2-f8898aa830d7"
+            },
+            "reason": "WorkflowSucceeded",
+            "reportingComponent": "",
+            "reportingInstance": "",
+            "source": {
+                "component": "workflow-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-26T09:44:23Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Workflow",
+                "name": "ofab-cpu-inline-gz7nz",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318670054",
+                "uid": "24fb32ae-d1fa-48f6-994a-86184e64d2d7"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:44:23Z",
+            "message": "Running node ofab-cpu-inline-gz7nz",
+            "metadata": {
+                "annotations": {
+                    "workflows.argoproj.io/node-id": "ofab-cpu-inline-gz7nz",
+                    "workflows.argoproj.io/node-name": "ofab-cpu-inline-gz7nz",
+                    "workflows.argoproj.io/node-start-time": "1793007852000000000",
+                    "workflows.argoproj.io/node-type": "Pod"
+                },
+                "creationTimestamp": "2026-10-26T09:44:23Z",
+                "name": "ofab-cpu-inline-gz7nz.18e20b26dd413313",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318670055",
+                "uid": "9b165fe0-d8d8-457b-8f03-dfc513d26b58"
+            },
+            "reason": "WorkflowNodeRunning",
+            "reportingComponent": "",
+            "reportingInstance": "",
+            "source": {
+                "component": "workflow-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-26T09:44:23Z",
+            "involvedObject": {
+                "apiVersion": "argoproj.io/v1alpha1",
+                "kind": "Workflow",
+                "name": "ofab-cpu-inline-gz7nz",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318670054",
+                "uid": "24fb32ae-d1fa-48f6-994a-86184e64d2d7"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:44:23Z",
+            "message": "Succeeded node ofab-cpu-inline-gz7nz",
+            "metadata": {
+                "annotations": {
+                    "workflows.argoproj.io/node-id": "ofab-cpu-inline-gz7nz",
+                    "workflows.argoproj.io/node-name": "ofab-cpu-inline-gz7nz",
+                    "workflows.argoproj.io/node-start-time": "1793007852000000000",
+                    "workflows.argoproj.io/node-type": "Pod"
+                },
+                "creationTimestamp": "2026-10-26T09:44:23Z",
+                "name": "ofab-cpu-inline-gz7nz.18e20b26dd41787c",
+                "namespace": "user3-example-com",
+                "resourceVersion": "318670057",
+                "uid": "cae67da1-44fa-4457-8265-20128d06c485"
+            },
+            "reason": "WorkflowNodeSucceeded",
+            "reportingComponent": "",
+            "reportingInstance": "",
+            "source": {
+                "component": "workflow-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 78112,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-14T03:21:23Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{main}",
+                "kind": "Pod",
+                "name": "spline-yolov8-train-sj7sw-train-103964838",
+                "namespace": "user5-example-com",
+                "resourceVersion": "305589118",
+                "uid": "9cab6ecd-aa6d-425e-82c7-52588e642d4d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:56:24Z",
+            "message": "Back-off pulling image \"172.16.1.72:30002/private_library/csj-spine-base:v1.0\"",
+            "metadata": {
+                "creationTimestamp": "2026-10-14T03:21:23Z",
+                "name": "spline-yolov8-train-sj7sw-train-103964838.18de4749b7cf9e37",
+                "namespace": "user5-example-com",
+                "resourceVersion": "318678957",
+                "uid": "5e80b065-4000-4ba9-a197-25faea7f00c4"
+            },
+            "reason": "BackOff",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "worker-node02-3090",
+            "source": {
+                "component": "kubelet",
+                "host": "worker-node02-3090"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 78111,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-14T03:21:23Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{main}",
+                "kind": "Pod",
+                "name": "spline-yolov8-train-sj7sw-train-103964838",
+                "namespace": "user5-example-com",
+                "resourceVersion": "305589118",
+                "uid": "9cab6ecd-aa6d-425e-82c7-52588e642d4d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-26T09:56:12Z",
+            "message": "Error: ImagePullBackOff",
+            "metadata": {
+                "creationTimestamp": "2026-10-14T03:21:23Z",
+                "name": "spline-yolov8-train-sj7sw-train-103964838.18de4749b7d0093a",
+                "namespace": "user5-example-com",
+                "resourceVersion": "318678817",
+                "uid": "41c9aa01-d383-4028-b70e-c7ca903938cb"
+            },
+            "reason": "Failed",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "worker-node02-3090",
+            "source": {
+                "component": "kubelet",
+                "host": "worker-node02-3090"
+            },
+            "type": "Warning"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}
