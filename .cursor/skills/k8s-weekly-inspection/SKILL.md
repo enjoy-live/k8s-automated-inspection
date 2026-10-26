@@ -15,7 +15,7 @@ description: >-
 
 - 开始：`PERIOD_START`，当天 `00:00`（Asia/Shanghai）
 - 结束：`PERIOD_END`，当天 `23:59`（Asia/Shanghai）
-- 模板：`/home/storage/k8s-weekly-inspection/template/维护周报-20260921.pdf`
+- 模板：`/home/storage/k8s-weekly-inspection/template/维护周报.pdf`
 - PDF 设计语言（强制）：`/home/storage/k8s-weekly-inspection/template/design-language.yaml`
 - 正文：`/home/storage/k8s-weekly-inspection/output/维护周报-YYYYMMDD.md`
 - PDF：`/home/storage/k8s-weekly-inspection/output/维护周报-YYYYMMDD.pdf`
@@ -31,7 +31,7 @@ description: >-
 
 请读取并参考以下维护周报模板：
 
-`/home/storage/k8s-weekly-inspection/template/维护周报-20260921.pdf`
+`/home/storage/k8s-weekly-inspection/template/维护周报.pdf`
 
 任务目标：
 对内网环境中的 Kubernetes 集群执行巡检，巡检统计周期为调用参数给出的开始日 00:00 至结束日 23:59（Asia/Shanghai）。

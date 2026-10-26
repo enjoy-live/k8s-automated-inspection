@@ -1,12 +1,12 @@
 # 维护周报 PDF 设计语言（定稿）
-# 以 2026-09-21 / 09-30 / 10-12 各期交付 PDF 为基准，后续渲染必须读取本文件，禁止临时改色改字号。
+# 以 维护周报.pdf 和 2026-09-21 / 09-30 / 10-12 各期交付 PDF 为基准，后续渲染必须读取本文件，禁止临时改色改字号。
 # 配套脚本：scripts/render_weekly_report.py
 
 version: 1
 name: kubeflow-maintenance-weekly-report
 baseline_pdfs:
+  - 维护周报.pdf
   - 维护周报-20260921.pdf
-  - 维护周报-20260930.pdf
   - 维护周报-20261012.pdf
 
 page:

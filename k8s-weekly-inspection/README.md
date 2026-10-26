@@ -15,7 +15,7 @@
 
 模板与设计语言：
 
-- 章节样例 PDF：`/home/storage/k8s-weekly-inspection/template/维护周报-20260921.pdf`
+- 章节样例 PDF：`/home/storage/k8s-weekly-inspection/template/维护周报.pdf`
 - PDF 视觉定稿：`/home/storage/k8s-weekly-inspection/template/design-language.yaml`（色板、字号、表格、状态符回退；改样式只改此文件）
 
 技能文件：
