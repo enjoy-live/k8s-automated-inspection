@@ -1,0 +1,115 @@
+=== 周期内创建的 Pod 按 phase/命名空间 ===
+  {'Succeeded': 140, 'Running': 4, 'Failed': 31}
+   ('gpu-operator', 'Succeeded') 1
+   ('kubeflow-user-example-com', 'Running') 1
+   ('user3-example-com', 'Failed') 31
+   ('user3-example-com', 'Running') 2
+   ('user3-example-com', 'Succeeded') 139
+   ('user4-example-com', 'Running') 1
+
+=== 周期内失败 Pod 的终止原因 / 退出码 / 归属 ===
+  (reason, exitCode) 计数:
+     ('Error', 1) 34
+     ('ContainerStatusUnknown', 137) 1
+  归属类型: {'ReplicaSet': 1, '(无,裸Pod)': 32, 'Workflow': 2}
+  OOMKilled: 0
+  基础设施相关（驱逐/准入拒绝/状态丢失）: 2
+     ('kubeflow-user-example-com', 'qwen38-27b-mtp-predictor-5969dff6b5-t62fn', 'UnexpectedAdmissionError', 'Pod was rejected: Allocate failed due to no healthy devices present; cannot allocate unhea')
+     ('kubeflow-user-example-com', 'qwen38-27b-mtp-predictor-5969dff6b5-t62fn', 'ContainerStatusUnknown', '')
+
+=== 周期内非业务容器重启（系统命名空间）===
+   auth/dex-8666d8cf4c-pwcs5 [dex] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   cert-manager/cert-manager-855969d7b8-q78lw [cert-manager-controller] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   cert-manager/cert-manager-cainjector-b967cbd4c-sn8p2 [cert-manager-cainjector] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   cert-manager/cert-manager-webhook-74f6779b6d-6t8mp [cert-manager-webhook] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   gpu-operator/gpu-feature-discovery-44fkk [gpu-feature-discovery] restarts=1094 last=Error/1 @ 10-23 14:15 node=worker-node01-pro6000
+   gpu-operator/gpu-operator-node-feature-discovery-gc-67474f8744- [gc] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   gpu-operator/gpu-operator-node-feature-discovery-worker-wc497 [worker] restarts=22 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   gpu-operator/nvidia-container-toolkit-daemonset-ngjqf [nvidia-container-toolkit-ctr] restarts=6 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   gpu-operator/nvidia-dcgm-exporter-c2zwk [nvidia-dcgm-exporter] restarts=6 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   gpu-operator/nvidia-device-plugin-daemonset-7vm7c [nvidia-device-plugin] restarts=6 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   gpu-operator/nvidia-mig-manager-5gqq9 [nvidia-mig-manager] restarts=6 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   gpu-operator/nvidia-operator-validator-zstwn [nvidia-operator-validator] restarts=6 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   harbor/harbor-core-77d59fb69f-bbsxn [core] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   harbor/harbor-database-0 [database] restarts=2 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   harbor/harbor-jobservice-86d499464c-pkbzf [jobservice] restarts=3 last=Error/2 @ 10-23 14:20 node=worker-node01-pro6000
+   harbor/harbor-nginx-5ddc854b7b-7bv72 [nginx] restarts=2 last=Error/1 @ 10-23 14:17 node=worker-node02-3090
+   harbor/harbor-portal-68cc7987df-dgxbg [portal] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   harbor/harbor-redis-0 [redis] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   harbor/harbor-registry-6b6f46bbf8-xv4d6 [registry] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   harbor/harbor-registry-6b6f46bbf8-xv4d6 [registryctl] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   harbor/harbor-trivy-0 [trivy] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   istio-system/cluster-local-gateway-b864d5f84-vl8w7 [istio-proxy] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   istio-system/istio-ingressgateway-767869c44b-696cl [istio-proxy] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   istio-system/istiod-864c8d5fb6-vtw64 [discovery] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   knative-serving/activator-55cb9b4d6-rkp7d [activator] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   knative-serving/autoscaler-8679dd764-4swqb [autoscaler] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   knative-serving/controller-5c59f5f8cf-5f2n6 [controller] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   knative-serving/net-istio-controller-57d89b44cb-7mpwf [controller] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   knative-serving/net-istio-webhook-6d74cdc9fb-wc2f2 [webhook] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   knative-serving/webhook-6bfd79d4bf-x6w4f [webhook] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kube-system/calico-node-n55p2 [calico-node] restarts=6 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kube-system/coredns-67c47b7fc6-k4wll [coredns] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kube-system/csi-nfs-node-4z9gm [liveness-probe] restarts=6 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kube-system/csi-nfs-node-4z9gm [nfs] restarts=6 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kube-system/csi-nfs-node-4z9gm [node-driver-registrar] restarts=6 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kube-system/istio-cni-node-7k864 [install-cni] restarts=6 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kube-system/kube-proxy-wtpnp [kube-proxy] restarts=6 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kube-system/metrics-server-75bd94d6bd-kv7wj [metrics-server] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/admission-webhook-deployment-5db6dbbdb-k288c [admission-webhook] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/cache-server-546b755978-q22x2 [server] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/centraldashboard-798bcdf58d-d2lsp [centraldashboard] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/jupyter-web-app-deployment-6d665f8d7c-cjwhf [jupyter-web-app] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/katib-controller-7d8c6f5d69-rsbbm [katib-controller] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/katib-db-manager-669c888798-vmp2p [katib-db-manager] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/katib-mysql-ddf4bf4c4-td6l7 [katib-mysql] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/katib-ui-6887c86b7-rdmpz [katib-ui] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/kserve-controller-manager-7c8ff58659-swprw [kube-rbac-proxy] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/kserve-controller-manager-7c8ff58659-swprw [manager] restarts=7 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/kserve-localmodel-controller-manager-747b6fcb4f-t6 [manager] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/kserve-models-web-app-5685d8bcd-xjrhj [kserve-models-web-app] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/kubeflow-pipelines-profile-controller-544778cddd-2 [profile-controller] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/metacontroller-0 [metacontroller] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/metadata-envoy-deployment-54494b689c-fhf5d [container] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/metadata-grpc-deployment-dd7f9c547-zltxw [container] restarts=8 last=Error/139 @ 10-23 14:32 node=worker-node01-pro6000
+   kubeflow/metadata-writer-6f9f556688-ntmsc [main] restarts=130 last=Error/1 @ 10-26 17:15 node=worker-node01-pro6000
+   kubeflow/minio-57c6487bc4-6jpxp [minio] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/ml-pipeline-5bd49c5f77-qwmls [ml-pipeline-api-server] restarts=3 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/ml-pipeline-persistenceagent-669dff5b99-b5v5r [ml-pipeline-persistenceagent] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/ml-pipeline-scheduledworkflow-6d8df7c4fc-d6cd7 [ml-pipeline-scheduledworkflow] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/ml-pipeline-ui-97bcccf56-znmp7 [ml-pipeline-ui] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/ml-pipeline-viewer-crd-649d4cc87b-jflhv [ml-pipeline-viewer-crd] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/ml-pipeline-visualizationserver-6bcf457b54-xbzsh [ml-pipeline-visualizationserver] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/mysql-c5bd6955f-hjbkr [mysql] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/notebook-controller-deployment-784cbb5698-9256k [manager] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/profiles-deployment-5df9ff88dc-659bq [kfam] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/profiles-deployment-5df9ff88dc-659bq [manager] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/pvcviewer-controller-manager-7f5dcf8949-p2h7n [kube-rbac-proxy] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/pvcviewer-controller-manager-7f5dcf8949-p2h7n [manager] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/spark-operator-controller-c84ffdddb-jrvjf [spark-operator-controller] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/spark-operator-webhook-8465868f8d-lxdx4 [spark-operator-webhook] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/tensorboard-controller-deployment-55949b996b-vdk7l [kube-rbac-proxy] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/tensorboard-controller-deployment-55949b996b-vdk7l [manager] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/tensorboards-web-app-deployment-8695f564d4-jwvx6 [tensorboards-web-app] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/training-operator-86b5684f96-kr2h5 [training-operator] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/volumes-web-app-deployment-cbc9f8978-772tr [volumes-web-app] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kubeflow/workflow-controller-5897878c9-7cfcj [workflow-controller] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kyverno/kyverno-admission-controller-6fd54f56b6-hzm6p [kyverno] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kyverno/kyverno-background-controller-67769669f5-68455 [controller] restarts=2 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kyverno/kyverno-cleanup-controller-7b7d766f96-8j8hd [controller] restarts=3 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   kyverno/kyverno-reports-controller-5c9dfff85b-v4w8h [controller] restarts=2 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   local-path-storage/local-path-provisioner-54849588b5-5zmkd [local-path-provisioner] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   logging/event-exporter-kubernetes-event-exporter-84f9cc9d6 [event-exporter] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   logging/fluent-bit-pb5br [fluent-bit] restarts=8 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   logging/loki-0 [loki] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   logging/loki-0 [loki-sc-rules] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   logging/loki-canary-csq6j [loki-canary] restarts=6 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   logging/loki-chunks-cache-0 [exporter] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   logging/loki-chunks-cache-0 [memcached] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   logging/loki-gateway-84c695b6f8-n7h4g [nginx] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   logging/loki-results-cache-0 [exporter] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   logging/loki-results-cache-0 [memcached] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   monitoring/prometheus-prometheus-node-exporter-pskmn [node-exporter] restarts=15 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   velero/minio-6798b9d95f-vz7b2 [minio] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   velero/node-agent-ccm6x [node-agent] restarts=6 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000
+   velero/velero-78ccc846c8-tk5gx [velero] restarts=1 last=Unknown/255 @ 10-23 14:19 node=worker-node01-pro6000

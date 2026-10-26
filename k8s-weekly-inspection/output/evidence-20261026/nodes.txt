@@ -1,0 +1,4 @@
+NAME                           STATUS   ROLES           AGE    VERSION    INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION       CONTAINER-RUNTIME
+master-node-storage-r620-g40   Ready    control-plane   304d   v1.32.10   12.12.12.1    <none>        Ubuntu 22.04.5 LTS   6.8.0-94-generic     containerd://1.7.25
+worker-node01-pro6000          Ready    <none>          293d   v1.32.10   12.12.12.2    <none>        Ubuntu 22.04.5 LTS   6.8.0-90-generic     containerd://1.7.25
+worker-node02-3090             Ready    <none>          221d   v1.32.10   12.12.12.3    <none>        Ubuntu 22.04.5 LTS   5.15.0-177-generic   containerd://1.7.25

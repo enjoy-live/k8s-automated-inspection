@@ -1,0 +1,82 @@
+{
+ "cpu": {
+  "avg": 1.8931837757181809,
+  "max": 3.918353174603374,
+  "min": 1.5812334656088882,
+  "n": 192
+ },
+ "mem": {
+  "avg": 9.145384951404912,
+  "max": 12.45376525501619,
+  "min": 8.697157929203321,
+  "n": 192
+ },
+ "gpu": {
+  "avg": 4.037326388888888,
+  "max": 49.333333333333336,
+  "min": 0.0,
+  "n": 192
+ },
+ "gpumax": {
+  "avg": 20.213541666666668,
+  "max": 100.0,
+  "min": 0.0,
+  "n": 192
+ },
+ "pvc": {
+  "avg": 8.471868143136449,
+  "max": 9.706036678709301,
+  "min": 7.539999576265142,
+  "n": 192
+ },
+ "alerts": {
+  "avg": 4.078125,
+  "max": 47.0,
+  "min": 3.0,
+  "n": 192
+ },
+ "alerts_now": 5.0,
+ "boot": {
+  "12.12.12.2:9100": {
+   "boot_cst": "2026-09-18T10:48:14+08:00",
+   "uptime_days": 33.0
+  },
+  "12.12.12.3:9100": {
+   "boot_cst": "2026-05-09T01:20:02+08:00",
+   "uptime_days": 165.4
+  },
+  "12.12.12.1:9100": {
+   "boot_cst": "2026-02-09T08:52:14+08:00",
+   "uptime_days": 254.1
+  }
+ },
+ "alert_list": [
+  "[none] Watchdog /",
+  "[warning] KubeMemoryOvercommit /",
+  "[warning] KubePodNotReady user5-example-com/spline-yolov8-train-sj7sw-train-103964838",
+  "[warning] KubeDaemonSetRolloutStuck gpu-operator/prometheus-kube-state-metrics-7bf6b764d4-xscb9",
+  "[warning] KubePodCrashLooping gpu-operator/gpu-feature-discovery-44fkk"
+ ],
+ "disks": [
+  {
+   "instance": "12.12.12.2:9100",
+   "mp": "/",
+   "pct": 38.4
+  },
+  {
+   "instance": "12.12.12.3:9100",
+   "mp": "/home/data",
+   "pct": 77.9
+  },
+  {
+   "instance": "12.12.12.3:9100",
+   "mp": "/",
+   "pct": 75.0
+  },
+  {
+   "instance": "12.12.12.1:9100",
+   "mp": "/",
+   "pct": 48.6
+  }
+ ]
+}

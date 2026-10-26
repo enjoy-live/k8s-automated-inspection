@@ -1,0 +1,29 @@
+=== metadata-writer 崩溃原因（最近一次退出前日志）===
+restarts=130 last=Error/1 started=2026-10-26T08:15:51Z finished=2026-10-26T09:15:13Z
+Kubernetes Pod event:  ADDED pengwin-of-ab-formal-20261024-flash-status-20261025121500-kp6lf-system-container-driver-371320488 317715074
+Kubernetes Pod event:  ADDED pengwin-of-ab-formal-20261024-flash-status-20261025121500-kp6lf-system-dag-driver-1248920586 317714909
+Kubernetes Pod event:  ADDED pengwin-of-ab-formal-20261024-flash-status-20261025121500-kp6lf-worker-system-container-impl-1786700877 317715423
+Kubernetes Pod event:  ADDED pengwin-of-ab-formal-20261024-flash-status-20261025153000-wlxtl-system-container-driver-2246735076 317858884
+Kubernetes Pod event:  ADDED pengwin-of-ab-formal-20261024-flash-status-20261025153000-wlxtl-system-dag-driver-1467877774 317858709
+Kubernetes Pod event:  ADDED pengwin-of-ab-formal-20261024-flash-status-20261025153000-wlxtl-worker-system-container-impl-3559646289 317859235
+Kubernetes Pod event:  ADDED pengwin-of-ab-formal-20261024-flash-status-20261025163000-vt8lk-system-container-driver-3030441609 317904100
+Kubernetes Pod event:  ADDED pengwin-of-ab-formal-20261024-flash-status-20261025163000-vt8lk-system-dag-driver-73089277 317903934
+Kubernetes Pod event:  ADDED pengwin-of-ab-formal-20261024-flash-status-20261025163000-vt8lk-worker-system-container-impl-3799203706 317904422
+Kubernetes Pod event:  ADDED pengwin-of-ab-formal-20261024-flash-status-20261025171500-rxj9z-system-container-driver-2473700539 317945465
+Kubernetes Pod event:  ADDED pengwin-of-ab-formal-20261024-flash-status-20261025171500-rxj9z-system-dag-driver-2183180523 317945294
+Traceback (most recent call last):
+  File "/kfp/metadata_writer/metadata_writer.py", line 185, in <module>
+    os.remove(debug_paths.popleft())
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pod_pengwin-of-ab-formal-20261024-flash-status-20261025081500-np55s-system-container-driver-200509329_317536791'
+
+=== 10/14 控制面 / node-exporter 重启时刻（周期外，对照上期 node02 事件）===
+  etcd-master-node-storage-r620-g40                    node=master-node-storage-r6 last=Unknown/255 finished=02-09 08:52:40
+  kube-apiserver-master-node-storage-r620-g40          node=master-node-storage-r6 last=Error/137 finished=10-14 10:33:33
+  kube-controller-manager-master-node-storage-r620-g40 node=master-node-storage-r6 last=Error/1 finished=10-14 10:31:55
+  kube-scheduler-master-node-storage-r620-g40          node=master-node-storage-r6 last=Error/1 finished=10-14 10:32:00
+  prometheus-prometheus-node-exporter-5dxm5            node=master-node-storage-r6 last=Error/143 finished=10-14 10:34:53
+  prometheus-prometheus-node-exporter-pskmn            node=worker-node01-pro6000  last=Unknown/255 finished=10-23 14:19:54
+  prometheus-prometheus-node-exporter-w8kn7            node=worker-node02-3090     last=Error/143 finished=10-14 10:34:45
+
+=== KubeContainerWaiting 涉及的 Pod 是否还在 ===
+(无输出表示已被清理)

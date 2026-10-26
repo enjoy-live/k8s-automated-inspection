@@ -1,0 +1,2988 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"kubeflow-weekly-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 2 * * 0\",\"template\":{\"excludedResources\":[\"events\",\"events.events.k8s.io\"],\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"*\"],\"labelSelector\":{\"matchLabels\":{\"velero.io/backup\":\"true\"}},\"metadata\":{\"labels\":{\"backup-type\":\"kubeflow\",\"schedule\":\"weekly\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-09-27T02:00:12Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "kubeflow",
+                    "schedule": "weekly",
+                    "velero.io/schedule-name": "kubeflow-weekly-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "kubeflow-weekly-backup-20260927020012",
+                "namespace": "velero",
+                "resourceVersion": "287385264",
+                "uid": "60f3dae6-e6a5-4d58-995e-fd4b292ec5bc"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "events",
+                    "events.events.k8s.io",
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "*"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "velero.io/backup": "true"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "kubeflow",
+                        "schedule": "weekly",
+                        "velero.io/schedule-name": "kubeflow-weekly-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-09-27T02:00:14Z",
+                "expiration": "2026-10-27T02:00:12Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-09-27T02:00:12Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"kubeflow-weekly-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 2 * * 0\",\"template\":{\"excludedResources\":[\"events\",\"events.events.k8s.io\"],\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"*\"],\"labelSelector\":{\"matchLabels\":{\"velero.io/backup\":\"true\"}},\"metadata\":{\"labels\":{\"backup-type\":\"kubeflow\",\"schedule\":\"weekly\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-04T02:00:21Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "kubeflow",
+                    "schedule": "weekly",
+                    "velero.io/schedule-name": "kubeflow-weekly-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "kubeflow-weekly-backup-20261004020021",
+                "namespace": "velero",
+                "resourceVersion": "294833365",
+                "uid": "d2534642-b343-4b55-9aaa-68df4e399ceb"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "events",
+                    "events.events.k8s.io",
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "*"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "velero.io/backup": "true"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "kubeflow",
+                        "schedule": "weekly",
+                        "velero.io/schedule-name": "kubeflow-weekly-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-04T02:00:23Z",
+                "expiration": "2026-11-03T02:00:21Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-04T02:00:21Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"kubeflow-weekly-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 2 * * 0\",\"template\":{\"excludedResources\":[\"events\",\"events.events.k8s.io\"],\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"*\"],\"labelSelector\":{\"matchLabels\":{\"velero.io/backup\":\"true\"}},\"metadata\":{\"labels\":{\"backup-type\":\"kubeflow\",\"schedule\":\"weekly\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-11T02:00:31Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "kubeflow",
+                    "schedule": "weekly",
+                    "velero.io/schedule-name": "kubeflow-weekly-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "kubeflow-weekly-backup-20261011020031",
+                "namespace": "velero",
+                "resourceVersion": "302325882",
+                "uid": "c1b080a4-bb37-4610-96fa-375c6b0a2ff7"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "events",
+                    "events.events.k8s.io",
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "*"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "velero.io/backup": "true"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "kubeflow",
+                        "schedule": "weekly",
+                        "velero.io/schedule-name": "kubeflow-weekly-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-11T02:00:33Z",
+                "expiration": "2026-11-10T02:00:31Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-11T02:00:31Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"kubeflow-weekly-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 2 * * 0\",\"template\":{\"excludedResources\":[\"events\",\"events.events.k8s.io\"],\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"*\"],\"labelSelector\":{\"matchLabels\":{\"velero.io/backup\":\"true\"}},\"metadata\":{\"labels\":{\"backup-type\":\"kubeflow\",\"schedule\":\"weekly\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-18T02:00:16Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "kubeflow",
+                    "schedule": "weekly",
+                    "velero.io/schedule-name": "kubeflow-weekly-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "kubeflow-weekly-backup-20261018020016",
+                "namespace": "velero",
+                "resourceVersion": "309780284",
+                "uid": "75a19a90-fbb9-472a-99b0-f9bee112c174"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "events",
+                    "events.events.k8s.io",
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "*"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "velero.io/backup": "true"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "kubeflow",
+                        "schedule": "weekly",
+                        "velero.io/schedule-name": "kubeflow-weekly-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-18T02:00:18Z",
+                "expiration": "2026-11-17T02:00:16Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-18T02:00:16Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-09-21T04:00:04Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20260921040004",
+                "namespace": "velero",
+                "resourceVersion": "281090592",
+                "uid": "d9602389-cad2-494e-8444-3201510a71f2"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-09-21T04:00:05Z",
+                "expiration": "2026-10-21T04:00:04Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-09-21T04:00:04Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-09-22T04:00:05Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20260922040005",
+                "namespace": "velero",
+                "resourceVersion": "282154650",
+                "uid": "e15290b0-23d2-471b-9651-1fa241b46534"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-09-22T04:00:07Z",
+                "expiration": "2026-10-22T04:00:05Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-09-22T04:00:05Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-09-23T04:00:07Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20260923040007",
+                "namespace": "velero",
+                "resourceVersion": "283218107",
+                "uid": "68a519ef-cf79-4577-8f9e-eaad653a493e"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-09-23T04:00:08Z",
+                "expiration": "2026-10-23T04:00:07Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-09-23T04:00:07Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-09-24T04:00:08Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20260924040008",
+                "namespace": "velero",
+                "resourceVersion": "284282222",
+                "uid": "b3ffbaa6-b00c-4be6-9764-541a6efbb4d9"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-09-24T04:00:09Z",
+                "expiration": "2026-10-24T04:00:08Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-09-24T04:00:08Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-09-25T04:00:09Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20260925040009",
+                "namespace": "velero",
+                "resourceVersion": "285346090",
+                "uid": "c2d9df38-f9f0-4035-b6cb-e680ca8979bb"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-09-25T04:00:10Z",
+                "expiration": "2026-10-25T04:00:09Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-09-25T04:00:09Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-09-26T04:00:11Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20260926040011",
+                "namespace": "velero",
+                "resourceVersion": "286409989",
+                "uid": "730c5a2a-0dd1-46d3-b206-9e4bce154009"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-09-26T04:00:12Z",
+                "expiration": "2026-10-26T04:00:11Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-09-26T04:00:11Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-09-27T04:00:12Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20260927040012",
+                "namespace": "velero",
+                "resourceVersion": "287473950",
+                "uid": "ab8c895f-5de3-40ee-8e42-3f485cdd7b36"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-09-27T04:00:13Z",
+                "expiration": "2026-10-27T04:00:12Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-09-27T04:00:12Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-09-28T04:00:13Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20260928040013",
+                "namespace": "velero",
+                "resourceVersion": "288537753",
+                "uid": "7137f583-5228-4de8-a5a1-abf049363361"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-09-28T04:00:15Z",
+                "expiration": "2026-10-28T04:00:13Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-09-28T04:00:13Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-09-29T04:00:15Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20260929040015",
+                "namespace": "velero",
+                "resourceVersion": "289601750",
+                "uid": "454c1b06-257d-454c-ac24-f61ee9df6351"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-09-29T04:00:16Z",
+                "expiration": "2026-10-29T04:00:15Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-09-29T04:00:15Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-09-30T04:00:16Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20260930040016",
+                "namespace": "velero",
+                "resourceVersion": "290665899",
+                "uid": "23100b54-b6d6-4755-a8b9-e4c1d9562798"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-09-30T04:00:17Z",
+                "expiration": "2026-10-30T04:00:16Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-09-30T04:00:16Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-01T04:00:17Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261001040017",
+                "namespace": "velero",
+                "resourceVersion": "291729965",
+                "uid": "65bcfe5d-e301-4fc5-b5c5-02dc1e546923"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-01T04:00:19Z",
+                "expiration": "2026-10-31T04:00:18Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-01T04:00:18Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-02T04:00:19Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261002040019",
+                "namespace": "velero",
+                "resourceVersion": "292794111",
+                "uid": "ecac8feb-6aa7-45b2-80dc-be6be643a38b"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-02T04:00:20Z",
+                "expiration": "2026-11-01T04:00:19Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-02T04:00:19Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-03T04:00:20Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261003040020",
+                "namespace": "velero",
+                "resourceVersion": "293857988",
+                "uid": "6c1729b0-8191-4a8d-8c7b-eb472c342791"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-03T04:00:22Z",
+                "expiration": "2026-11-02T04:00:20Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-03T04:00:20Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-04T04:00:22Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261004040022",
+                "namespace": "velero",
+                "resourceVersion": "294922042",
+                "uid": "a651c0b7-054f-4c4c-924e-0fe3f22dac88"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-04T04:00:23Z",
+                "expiration": "2026-11-03T04:00:22Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-04T04:00:22Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-05T04:00:23Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261005040023",
+                "namespace": "velero",
+                "resourceVersion": "295986511",
+                "uid": "1b4bab27-67be-4b54-a2d6-c5a1cb2bfacd"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-05T04:00:24Z",
+                "expiration": "2026-11-04T04:00:23Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-05T04:00:23Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-06T04:00:24Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261006040024",
+                "namespace": "velero",
+                "resourceVersion": "297057996",
+                "uid": "1b56063b-5f7f-41b4-a287-50565caa215f"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-06T04:00:25Z",
+                "expiration": "2026-11-05T04:00:24Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-06T04:00:24Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-07T04:00:26Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261007040026",
+                "namespace": "velero",
+                "resourceVersion": "298134558",
+                "uid": "42bdedfa-67e2-4992-8df7-933c7e41aaeb"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-07T04:00:27Z",
+                "expiration": "2026-11-06T04:00:26Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-07T04:00:26Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-08T04:00:27Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261008040027",
+                "namespace": "velero",
+                "resourceVersion": "299208979",
+                "uid": "b9c9600e-5852-4876-a7ea-b8fa73f7dd29"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-08T04:00:28Z",
+                "expiration": "2026-11-07T04:00:27Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-08T04:00:27Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-09T04:00:28Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261009040028",
+                "namespace": "velero",
+                "resourceVersion": "300277730",
+                "uid": "da402da6-7c16-49b9-86ca-bffc5df2f1b2"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-09T04:00:29Z",
+                "expiration": "2026-11-08T04:00:28Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-09T04:00:28Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-10T04:00:30Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261010040030",
+                "namespace": "velero",
+                "resourceVersion": "301347841",
+                "uid": "8422b676-98e0-4202-bc2a-40273c3ba52e"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-10T04:00:31Z",
+                "expiration": "2026-11-09T04:00:30Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-10T04:00:30Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-11T04:00:31Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261011040031",
+                "namespace": "velero",
+                "resourceVersion": "302414674",
+                "uid": "8092c92b-4fc0-4328-8945-8f9db2f2c425"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-11T04:00:32Z",
+                "expiration": "2026-11-10T04:00:31Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-11T04:00:31Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-12T04:00:32Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261012040032",
+                "namespace": "velero",
+                "resourceVersion": "303480666",
+                "uid": "0621e45f-ffce-42b2-ad33-6e0198f5cc9b"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-12T04:00:33Z",
+                "expiration": "2026-11-11T04:00:32Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-12T04:00:32Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-13T04:00:34Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261013040034",
+                "namespace": "velero",
+                "resourceVersion": "304549873",
+                "uid": "99623e8f-2dbf-4dcd-9bd1-cde2545c614d"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-13T04:00:35Z",
+                "expiration": "2026-11-12T04:00:34Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-13T04:00:34Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-14T04:00:12Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261014040012",
+                "namespace": "velero",
+                "resourceVersion": "305618547",
+                "uid": "a9aee9fd-cfac-4972-bacc-a37bbdc4b011"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-14T04:00:13Z",
+                "expiration": "2026-11-13T04:00:12Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-14T04:00:12Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-15T04:00:13Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261015040013",
+                "namespace": "velero",
+                "resourceVersion": "306681516",
+                "uid": "df4bf4e9-3921-40d8-9a32-9a1506fca48a"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-15T04:00:14Z",
+                "expiration": "2026-11-14T04:00:13Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-15T04:00:13Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-16T04:00:14Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261016040014",
+                "namespace": "velero",
+                "resourceVersion": "307744624",
+                "uid": "e13ad782-211a-4d85-8e0e-cfe33825c4b0"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-16T04:00:15Z",
+                "expiration": "2026-11-15T04:00:14Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-16T04:00:14Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-17T04:00:15Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261017040015",
+                "namespace": "velero",
+                "resourceVersion": "308806717",
+                "uid": "9bdcfa81-1315-4e6e-ada6-88629f92f337"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-17T04:00:16Z",
+                "expiration": "2026-11-16T04:00:15Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-17T04:00:15Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-18T04:00:16Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261018040016",
+                "namespace": "velero",
+                "resourceVersion": "309868769",
+                "uid": "ad50c791-83c9-43c7-b619-b3bb8a44c91d"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-18T04:00:17Z",
+                "expiration": "2026-11-17T04:00:16Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-18T04:00:16Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-19T04:00:18Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261019040018",
+                "namespace": "velero",
+                "resourceVersion": "310930752",
+                "uid": "4994df86-8442-4937-a97e-e6cd14279de6"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-19T04:00:19Z",
+                "expiration": "2026-11-18T04:00:18Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-19T04:00:18Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"minio-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 4 * * *\",\"template\":{\"includedNamespaces\":[\"kubeflow\"],\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\",\"deployments\",\"services\",\"configmaps\",\"secrets\"],\"labelSelector\":{\"matchLabels\":{\"app\":\"minio\"}},\"metadata\":{\"labels\":{\"backup-type\":\"minio\",\"schedule\":\"daily\"}},\"ttl\":\"720h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-20T04:00:19Z",
+                "generation": 6,
+                "labels": {
+                    "backup-type": "minio",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "minio-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "minio-daily-backup-20261020040019",
+                "namespace": "velero",
+                "resourceVersion": "311999080",
+                "uid": "ea206d51-9880-48f4-9c55-a7becef312aa"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedNamespaces": [
+                    "kubeflow"
+                ],
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes",
+                    "deployments",
+                    "services",
+                    "configmaps",
+                    "secrets"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "labelSelector": {
+                    "matchLabels": {
+                        "app": "minio"
+                    }
+                },
+                "metadata": {
+                    "labels": {
+                        "backup-type": "minio",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "minio-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "720h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-20T04:00:20Z",
+                "expiration": "2026-11-19T04:00:19Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 1,
+                    "totalItems": 1
+                },
+                "startTimestamp": "2026-10-20T04:00:19Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"pvc-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 3 * * *\",\"template\":{\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\"],\"labelSelector\":{},\"metadata\":{\"labels\":{\"backup-type\":\"pvc\",\"schedule\":\"daily\"}},\"ttl\":\"168h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-14T03:00:12Z",
+                "generation": 24,
+                "labels": {
+                    "backup-type": "pvc",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "pvc-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "pvc-daily-backup-20261014030012",
+                "namespace": "velero",
+                "resourceVersion": "305572581",
+                "uid": "6007aa1d-fda6-49db-88ae-8d228fa7f4ca"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "metadata": {
+                    "labels": {
+                        "backup-type": "pvc",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "pvc-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "168h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-14T03:00:31Z",
+                "expiration": "2026-10-21T03:00:12Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 272,
+                    "totalItems": 272
+                },
+                "startTimestamp": "2026-10-14T03:00:12Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"pvc-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 3 * * *\",\"template\":{\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\"],\"labelSelector\":{},\"metadata\":{\"labels\":{\"backup-type\":\"pvc\",\"schedule\":\"daily\"}},\"ttl\":\"168h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-15T03:00:13Z",
+                "generation": 18,
+                "labels": {
+                    "backup-type": "pvc",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "pvc-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "pvc-daily-backup-20261015030013",
+                "namespace": "velero",
+                "resourceVersion": "306637409",
+                "uid": "f3094893-171f-4ae3-861b-2db94bf84941"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "metadata": {
+                    "labels": {
+                        "backup-type": "pvc",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "pvc-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "168h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-15T03:00:26Z",
+                "expiration": "2026-10-22T03:00:13Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 276,
+                    "totalItems": 276
+                },
+                "startTimestamp": "2026-10-15T03:00:13Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"pvc-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 3 * * *\",\"template\":{\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\"],\"labelSelector\":{},\"metadata\":{\"labels\":{\"backup-type\":\"pvc\",\"schedule\":\"daily\"}},\"ttl\":\"168h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-16T03:00:14Z",
+                "generation": 14,
+                "labels": {
+                    "backup-type": "pvc",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "pvc-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "pvc-daily-backup-20261016030014",
+                "namespace": "velero",
+                "resourceVersion": "307700465",
+                "uid": "12674f8b-8f21-4288-868b-baca34a7a3ab"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "metadata": {
+                    "labels": {
+                        "backup-type": "pvc",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "pvc-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "168h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-16T03:00:23Z",
+                "expiration": "2026-10-23T03:00:14Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 280,
+                    "totalItems": 280
+                },
+                "startTimestamp": "2026-10-16T03:00:14Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"pvc-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 3 * * *\",\"template\":{\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\"],\"labelSelector\":{},\"metadata\":{\"labels\":{\"backup-type\":\"pvc\",\"schedule\":\"daily\"}},\"ttl\":\"168h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-17T03:00:15Z",
+                "generation": 11,
+                "labels": {
+                    "backup-type": "pvc",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "pvc-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "pvc-daily-backup-20261017030015",
+                "namespace": "velero",
+                "resourceVersion": "308762551",
+                "uid": "d5a02c23-0365-45ef-afb4-891f78000792"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "metadata": {
+                    "labels": {
+                        "backup-type": "pvc",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "pvc-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "168h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-17T03:00:22Z",
+                "expiration": "2026-10-24T03:00:15Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 280,
+                    "totalItems": 280
+                },
+                "startTimestamp": "2026-10-17T03:00:15Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"pvc-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 3 * * *\",\"template\":{\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\"],\"labelSelector\":{},\"metadata\":{\"labels\":{\"backup-type\":\"pvc\",\"schedule\":\"daily\"}},\"ttl\":\"168h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-18T03:00:16Z",
+                "generation": 11,
+                "labels": {
+                    "backup-type": "pvc",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "pvc-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "pvc-daily-backup-20261018030016",
+                "namespace": "velero",
+                "resourceVersion": "309824577",
+                "uid": "c8a76fb1-c2f3-429d-8f47-0ef2fa97cc40"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "metadata": {
+                    "labels": {
+                        "backup-type": "pvc",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "pvc-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "168h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-18T03:00:23Z",
+                "expiration": "2026-10-25T03:00:16Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 280,
+                    "totalItems": 280
+                },
+                "startTimestamp": "2026-10-18T03:00:16Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"pvc-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 3 * * *\",\"template\":{\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\"],\"labelSelector\":{},\"metadata\":{\"labels\":{\"backup-type\":\"pvc\",\"schedule\":\"daily\"}},\"ttl\":\"168h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-19T03:00:18Z",
+                "generation": 11,
+                "labels": {
+                    "backup-type": "pvc",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "pvc-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "pvc-daily-backup-20261019030018",
+                "namespace": "velero",
+                "resourceVersion": "310886549",
+                "uid": "805c3f94-c8ac-4135-899e-a57202de5939"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "metadata": {
+                    "labels": {
+                        "backup-type": "pvc",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "pvc-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "168h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-19T03:00:25Z",
+                "expiration": "2026-10-26T03:00:18Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 280,
+                    "totalItems": 280
+                },
+                "startTimestamp": "2026-10-19T03:00:18Z",
+                "version": 1
+            }
+        },
+        {
+            "apiVersion": "velero.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"velero.io/v1\",\"kind\":\"Schedule\",\"metadata\":{\"annotations\":{},\"name\":\"pvc-daily-backup\",\"namespace\":\"velero\"},\"spec\":{\"schedule\":\"0 3 * * *\",\"template\":{\"includedResources\":[\"persistentvolumeclaims\",\"persistentvolumes\"],\"labelSelector\":{},\"metadata\":{\"labels\":{\"backup-type\":\"pvc\",\"schedule\":\"daily\"}},\"ttl\":\"168h0m0s\"}}}\n",
+                    "velero.io/resource-timeout": "10m0s",
+                    "velero.io/source-cluster-k8s-gitversion": "v1.32.1",
+                    "velero.io/source-cluster-k8s-major-version": "1",
+                    "velero.io/source-cluster-k8s-minor-version": "32"
+                },
+                "creationTimestamp": "2026-10-20T03:00:19Z",
+                "generation": 31,
+                "labels": {
+                    "backup-type": "pvc",
+                    "schedule": "daily",
+                    "velero.io/schedule-name": "pvc-daily-backup",
+                    "velero.io/storage-location": "default"
+                },
+                "name": "pvc-daily-backup-20261020030019",
+                "namespace": "velero",
+                "resourceVersion": "311955029",
+                "uid": "a49239ee-e0ba-420d-a263-5ca97cc6bb5d"
+            },
+            "spec": {
+                "csiSnapshotTimeout": "10m0s",
+                "defaultVolumesToFsBackup": true,
+                "excludedResources": [
+                    "volumesnapshots.snapshot.storage.k8s.io",
+                    "volumesnapshotcontents.snapshot.storage.k8s.io"
+                ],
+                "hooks": {},
+                "includedResources": [
+                    "persistentvolumeclaims",
+                    "persistentvolumes"
+                ],
+                "itemOperationTimeout": "4h0m0s",
+                "metadata": {
+                    "labels": {
+                        "backup-type": "pvc",
+                        "schedule": "daily",
+                        "velero.io/schedule-name": "pvc-daily-backup"
+                    }
+                },
+                "snapshotMoveData": false,
+                "storageLocation": "default",
+                "ttl": "168h0m0s",
+                "volumeGroupSnapshotLabelKey": "velero.io/volume-group"
+            },
+            "status": {
+                "completionTimestamp": "2026-10-20T03:00:45Z",
+                "expiration": "2026-10-27T03:00:19Z",
+                "formatVersion": "1.1.0",
+                "hookStatus": {},
+                "phase": "Completed",
+                "progress": {
+                    "itemsBackedUp": 284,
+                    "totalItems": 284
+                },
+                "startTimestamp": "2026-10-20T03:00:19Z",
+                "version": 1
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

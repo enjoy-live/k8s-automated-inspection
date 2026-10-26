@@ -1,0 +1,26 @@
+=== node02 describe Ready/conditions ===
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Sat, 09 May 2026 01:20:55 +0800   Sat, 09 May 2026 01:20:55 +0800   CalicoIsUp                   Calico is running on this node
+  MemoryPressure       False   Wed, 21 Oct 2026 10:20:10 +0800   Wed, 14 Oct 2026 11:20:45 +0800   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Wed, 21 Oct 2026 10:20:10 +0800   Wed, 14 Oct 2026 11:20:45 +0800   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Wed, 21 Oct 2026 10:20:10 +0800   Wed, 14 Oct 2026 11:20:45 +0800   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Wed, 21 Oct 2026 10:20:10 +0800   Wed, 14 Oct 2026 11:20:45 +0800   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:  12.12.12.3
+  Hostname:    worker-node02-3090
+Capacity:
+  cpu:                40
+  ephemeral-storage:  925158856Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             131641960Ki
+  nvidia.com/gpu:     4
+  pods:               110
+Allocatable:
+  cpu:                40
+=== node02 events ===
+=== cluster events around 10/14 ===
+  count=0
+=== node01 Ready still 9/18 ===

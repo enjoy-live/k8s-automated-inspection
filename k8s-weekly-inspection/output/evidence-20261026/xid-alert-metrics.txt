@@ -1,0 +1,7 @@
+DCGM_FI_DEV_XID_ERRORS 当前序列数: 0
+  10/19-10/23 {'Hostname': 'worker-node01-pro6000', 'gpu': '1'} 取值集合 ['79']
+allocatable 序列: 1 取值 ['1', '2']
+capacity 序列: 1 取值 ['2']
+  capacity-allocatable>0 worker-node01-pro6000 10-19 21:30 ~ 10-23 14:00
+  capacity-allocatable>0 worker-node02-3090 无
+现有规则中与 GPU/Xid 相关: 无

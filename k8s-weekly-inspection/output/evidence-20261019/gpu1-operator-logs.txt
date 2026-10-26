@@ -1,0 +1,67 @@
+=== gpu-feature-discovery logs (tail) ===
+Defaulted container "gpu-feature-discovery" out of: gpu-feature-discovery, toolkit-validation (init)
+Running with config:
+{
+  "version": "v1",
+  "flags": {
+    "migStrategy": "single",
+    "failOnInitError": true,
+    "gdrcopyEnabled": null,
+    "gdsEnabled": null,
+    "mofedEnabled": null,
+    "useNodeFeatureAPI": false,
+    "deviceDiscoveryStrategy": "auto",
+    "plugin": {
+      "passDeviceSpecs": null,
+      "deviceListStrategy": null,
+      "deviceIDStrategy": null,
+      "cdiAnnotationPrefix": null,
+      "nvidiaCTKPath": null,
+      "containerDriverRoot": "/driver-root"
+    },
+    "gfd": {
+      "oneshot": false,
+      "noTimestamp": false,
+      "sleepInterval": "1m0s",
+      "outputFile": "/etc/kubernetes/node-feature-discovery/features.d/gfd",
+      "machineTypeFile": "/sys/class/dmi/id/product_name"
+    }
+  },
+  "resources": {
+    "gpus": null
+  },
+  "sharing": {
+    "timeSlicing": {}
+  },
+  "imex": {}
+}
+I1021 02:21:54.518726       1 factory.go:58] Using NVML manager
+I1021 02:21:54.518745       1 main.go:213] Start running
+W1021 02:21:54.526977       1 main.go:252] Error removing output file: failed to remove output file: remove /etc/kubernetes/node-feature-discovery/features.d/gfd: no such file or directory
+I1021 02:21:54.526987       1 main.go:159] Exiting
+E1021 02:21:54.526995       1 main.go:126] error creating labeler: error getting devices: error getting device handle for index '1': Unknown Error
+=== device-plugin logs mentioning GPU/error ===
+I1019 13:23:47.453213       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453241       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.453236       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453258       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453274       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453286       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.453305       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453328       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453335       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.453353       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453380       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.453400       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453411       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453429       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453465       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.453484       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453511       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.453530       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453539       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453554       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+=== node01 allocatable history via events (if any) ===
+LAST SEEN   TYPE      REASON    OBJECT                            MESSAGE
+3m1s        Warning   BackOff   pod/gpu-feature-discovery-44fkk   Back-off restarting failed container gpu-feature-discovery in pod gpu-feature-discovery-44fkk_gpu-operator(c3bc0616-c95e-4f51-824a-5da3befca0d2)
+44s         Normal    Pulled    pod/gpu-feature-discovery-44fkk   Container image "nvcr.io/nvidia/k8s-device-plugin:v0.18.1" already present on machine

@@ -1,0 +1,4 @@
+周期: 2026-10-19 00:00 至 2026-10-25 23:59
+提示词: /home/storage/k8s-weekly-inspection/logs/prompt-20261025-20261026-080001.txt
+Not logged in
+Cursor Agent 未登录。请先执行 agent login，或在 /home/storage/k8s-weekly-inspection/cursor.env 中设置 CURSOR_API_KEY 后重试。

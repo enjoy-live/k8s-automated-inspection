@@ -1,0 +1,35 @@
+=== GPU 状态 ===
+--- worker-node01-pro6000 (pod/nvidia-dcgm-exporter-c2zwk) ---
+  0, NVIDIA RTX PRO 6000 Blackwell Server Edition, 29, 83.07 W, 90844 MiB, 0 %, 0
+--- worker-node02-3090 (pod/nvidia-dcgm-exporter-x7zrx) ---
+  0, NVIDIA GeForce RTX 3090, 70, 268.78 W, 18097 MiB, 97 %, [N/A]
+  1, NVIDIA GeForce RTX 3090, 30, 27.47 W, 0 MiB, 0 %, [N/A]
+  2, NVIDIA GeForce RTX 3090, 26, 27.34 W, 0 MiB, 0 %, [N/A]
+  3, NVIDIA GeForce RTX 3090, 71, 346.02 W, 18097 MiB, 100 %, [N/A]
+=== GPU 工作负载 ===
+  kubeflow-user-example-com/qwen38-27b-mtp-predictor-5969dff6b5-t62fn               gpu=1 node=worker-node01-pro6000 Running
+  user3-example-com/pengwin-fragment-b-continue-20261013-v1-smoke           gpu=1 node=worker-node01-pro6000 Succeeded
+  user3-example-com/pengwin-fragment-b-continue-20261013-v1-train           gpu=1 node=worker-node01-pro6000 Succeeded
+  user3-example-com/pengwin-fragment-b-refine-20261014-v2-smoke             gpu=1 node=worker-node01-pro6000 Succeeded
+  user3-example-com/pengwin-fragment-b-refine-20261014-v2-train             gpu=1 node=worker-node01-pro6000 Succeeded
+  user3-example-com/pengwin-fragment-overfit-20261013-v4-smoke              gpu=1 node=worker-node01-pro6000 Succeeded
+  user3-example-com/pengwin-fragment-overfit-20261013-v4-train              gpu=1 node=worker-node01-pro6000 Succeeded
+  user3-example-com/pengwin-fragment-surface-refine-20261015-v4-smoke       gpu=1 node=worker-node01-pro6000 Succeeded
+  user3-example-com/pengwin-fragment-surface-refine-20261015-v4-traincontro gpu=1 node=worker-node01-pro6000 Succeeded
+  user3-example-com/pengwin-fragment-surface-refine-20261015-v4-trainsurfac gpu=1 node=worker-node01-pro6000 Succeeded
+  user3-example-com/pengwin-task3-beta-20261019-3gpu-v1-3090-a-check-child- gpu=1 node=worker-node02-3090 Failed
+  user3-example-com/pengwin-task3-beta-20261019-3gpu-v1-3090-b-check-child- gpu=1 node=worker-node02-3090 Failed
+  user3-example-com/pengwin-task3-beta-20261019-3gpu-v2-3090-a-check-child- gpu=1 node=worker-node02-3090 Failed
+  user3-example-com/pengwin-task3-beta-20261019-3gpu-v2-3090-b-check-child- gpu=1 node=worker-node02-3090 Failed
+  user3-example-com/pengwin-task3-beta-20261019-3gpu-v4-3090-a-check-child- gpu=1 node=worker-node02-3090 Succeeded
+  user3-example-com/pengwin-task3-beta-20261019-3gpu-v4-3090-a-train-child- gpu=1 node=worker-node02-3090 Failed
+  user3-example-com/pengwin-task3-beta-20261019-3gpu-v4-3090-b-check-child- gpu=1 node=worker-node02-3090 Succeeded
+  user3-example-com/pengwin-task3-beta-20261019-3gpu-v4-3090-b-train-child- gpu=1 node=worker-node02-3090 Failed
+  user3-example-com/pengwin-task3-beta-20261019-v1-smoke-child-546ada       gpu=1 node=worker-node01-pro6000 Succeeded
+  user3-example-com/pengwin-task3-beta0p25-resume-20261021-v2-child         gpu=1 node=worker-node02-3090 Running
+  user3-example-com/pengwin-task3-beta0p5-resume-20261021-v2-child          gpu=1 node=worker-node02-3090 Running
+  user5-example-com/csj-spine-detection-0                                   gpu=1 node=worker-node02-3090 Running
+=== Pod 分布 ===
+  master-node-storage-r620-g40: 21
+  worker-node01-pro6000: 118
+  worker-node02-3090: 22

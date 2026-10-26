@@ -1,0 +1,13 @@
+NAMESPACE           NAME                                                   STATUS      AGE     MESSAGE
+user3-example-com   pengwin-task3-amp-retire-unstarted-v1-20261021-p4hjn   Succeeded   14m     
+user3-example-com   pengwin-task3-beta-20261019-3gpu-v4-3090-a-tddg2       Failed      36h     
+user3-example-com   pengwin-task3-beta-20261019-3gpu-v4-3090-b-8s7nj       Failed      36h     
+user3-example-com   pengwin-task3-beta-20261020-pro-retry-v11-zz2hk        Failed      20h     
+user3-example-com   pengwin-task3-beta025-audit-20261021-v1-tj7jk          Succeeded   9h      
+user3-example-com   pengwin-task3-beta05-audit-20261021-v1-7rpgg           Succeeded   8h      
+user3-example-com   pengwin-task3-beta0p25-resume-20261021-v1-lmksp        Failed      20m     
+user3-example-com   pengwin-task3-beta0p25-resume-20261021-v2-kzmmh        Running     12m     
+user3-example-com   pengwin-task3-beta0p5-resume-20261021-v1-fft6h         Failed      20m     
+user3-example-com   pengwin-task3-beta0p5-resume-20261021-v2-hk4l2         Running     12m     
+user3-example-com   pengwin-task3-pro-manual-20261021-v1-4kh7z             Succeeded   5m36s   
+user5-example-com   spline-yolov8-train-sj7sw                              Running     125d    

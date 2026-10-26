@@ -1,0 +1,2487 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2025-12-26T09:10:36Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app": "harbor",
+                    "chart": "harbor",
+                    "component": "redis",
+                    "heritage": "Helm",
+                    "release": "harbor"
+                },
+                "name": "data-harbor-redis-0",
+                "namespace": "harbor",
+                "resourceVersion": "98742",
+                "uid": "d613d303-394f-47c9-aba6-c94695d1ea1e"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "1Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-d613d303-394f-47c9-aba6-c94695d1ea1e"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "1Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2025-12-26T09:10:36Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app": "harbor",
+                    "chart": "harbor",
+                    "component": "trivy",
+                    "heritage": "Helm",
+                    "release": "harbor"
+                },
+                "name": "data-harbor-trivy-0",
+                "namespace": "harbor",
+                "resourceVersion": "98721",
+                "uid": "2a4083f0-4b5c-41bb-851d-98f7074d6dfb"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "5Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-2a4083f0-4b5c-41bb-851d-98f7074d6dfb"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "5Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2025-12-26T09:10:36Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app": "harbor",
+                    "chart": "harbor",
+                    "component": "database",
+                    "heritage": "Helm",
+                    "release": "harbor"
+                },
+                "name": "database-data-harbor-database-0",
+                "namespace": "harbor",
+                "resourceVersion": "98717",
+                "uid": "314d8512-a21a-4496-8e53-fd5d00428a9e"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "1Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-314d8512-a21a-4496-8e53-fd5d00428a9e"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "1Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "helm.sh/resource-policy": "keep",
+                    "meta.helm.sh/release-name": "harbor",
+                    "meta.helm.sh/release-namespace": "harbor",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2025-12-26T09:10:35Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app": "harbor",
+                    "app.kubernetes.io/component": "jobservice",
+                    "app.kubernetes.io/instance": "harbor",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "app.kubernetes.io/name": "harbor",
+                    "app.kubernetes.io/part-of": "harbor",
+                    "app.kubernetes.io/version": "2.14.1",
+                    "chart": "harbor",
+                    "component": "jobservice",
+                    "heritage": "Helm",
+                    "release": "harbor"
+                },
+                "name": "harbor-jobservice",
+                "namespace": "harbor",
+                "resourceVersion": "98592",
+                "uid": "897f250d-fd42-439f-8344-f0b48d62262f"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "1Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-897f250d-fd42-439f-8344-f0b48d62262f"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "1Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "helm.sh/resource-policy": "keep",
+                    "meta.helm.sh/release-name": "harbor",
+                    "meta.helm.sh/release-namespace": "harbor",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2025-12-29T05:55:46Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app": "harbor",
+                    "app.kubernetes.io/component": "registry",
+                    "app.kubernetes.io/instance": "harbor",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "app.kubernetes.io/name": "harbor",
+                    "app.kubernetes.io/part-of": "harbor",
+                    "app.kubernetes.io/version": "2.14.1",
+                    "chart": "harbor",
+                    "component": "registry",
+                    "heritage": "Helm",
+                    "release": "harbor"
+                },
+                "name": "harbor-registry",
+                "namespace": "harbor",
+                "resourceVersion": "2561898",
+                "uid": "0c9785d4-7fe1-4b91-a831-6f28daa30ea8"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "200Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-0c9785d4-7fe1-4b91-a831-6f28daa30ea8"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "200Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"PersistentVolumeClaim\",\"metadata\":{\"annotations\":{},\"name\":\"qwen36-cache\",\"namespace\":\"kubeflow-user-example-com\"},\"spec\":{\"accessModes\":[\"ReadWriteOnce\"],\"resources\":{\"requests\":{\"storage\":\"120Gi\"}},\"storageClassName\":\"local-path\"}}\n",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "rancher.io/local-path",
+                    "volume.kubernetes.io/selected-node": "worker-node01-pro6000",
+                    "volume.kubernetes.io/storage-provisioner": "rancher.io/local-path"
+                },
+                "creationTimestamp": "2026-06-30T09:38:30Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "qwen36-cache",
+                "namespace": "kubeflow-user-example-com",
+                "resourceVersion": "192841319",
+                "uid": "73b163f1-c393-4bba-a097-fbc5ce9dbd38"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "120Gi"
+                    }
+                },
+                "storageClassName": "local-path",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-73b163f1-c393-4bba-a097-fbc5ce9dbd38"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "120Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"PersistentVolumeClaim\",\"metadata\":{\"annotations\":{},\"name\":\"qwen38-cache\",\"namespace\":\"kubeflow-user-example-com\"},\"spec\":{\"accessModes\":[\"ReadWriteOnce\"],\"resources\":{\"requests\":{\"storage\":\"150Gi\"}},\"storageClassName\":\"local-path\"}}\n",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "rancher.io/local-path",
+                    "volume.kubernetes.io/selected-node": "worker-node01-pro6000",
+                    "volume.kubernetes.io/storage-provisioner": "rancher.io/local-path"
+                },
+                "creationTimestamp": "2026-08-18T01:08:50Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "qwen38-cache",
+                "namespace": "kubeflow-user-example-com",
+                "resourceVersion": "244728251",
+                "uid": "be000209-0265-4478-8045-fea93f47080c"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "150Gi"
+                    }
+                },
+                "storageClassName": "local-path",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-be000209-0265-4478-8045-fea93f47080c"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "150Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"PersistentVolumeClaim\",\"metadata\":{\"annotations\":{},\"labels\":{\"app.kubernetes.io/component\":\"model-cache\",\"app.kubernetes.io/name\":\"damo-radar\"},\"name\":\"radar-model-cache\",\"namespace\":\"kubeflow-user-example-com\"},\"spec\":{\"accessModes\":[\"ReadWriteOnce\"],\"resources\":{\"requests\":{\"storage\":\"100Gi\"}},\"storageClassName\":\"local-path\"}}\n",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "rancher.io/local-path",
+                    "volume.kubernetes.io/selected-node": "worker-node01-pro6000",
+                    "volume.kubernetes.io/storage-provisioner": "rancher.io/local-path"
+                },
+                "creationTimestamp": "2026-09-21T02:28:23Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/component": "model-cache",
+                    "app.kubernetes.io/name": "damo-radar"
+                },
+                "name": "radar-model-cache",
+                "namespace": "kubeflow-user-example-com",
+                "resourceVersion": "281022553",
+                "uid": "38624d28-85be-4ad0-beaa-470718e0749e"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "100Gi"
+                    }
+                },
+                "storageClassName": "local-path",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-38624d28-85be-4ad0-beaa-470718e0749e"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "100Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"PersistentVolumeClaim\",\"metadata\":{\"annotations\":{},\"labels\":{\"app.kubernetes.io/component\":\"workspace\",\"app.kubernetes.io/name\":\"damo-radar\",\"app.kubernetes.io/version\":\"0.2.0-rc1\"},\"name\":\"radar-workspace\",\"namespace\":\"kubeflow-user-example-com\"},\"spec\":{\"accessModes\":[\"ReadWriteMany\"],\"resources\":{\"requests\":{\"storage\":\"100Gi\"}},\"storageClassName\":\"nfs-csi-ssd\"}}\n",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-09-21T03:44:28Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/component": "workspace",
+                    "app.kubernetes.io/name": "damo-radar",
+                    "app.kubernetes.io/version": "0.2.0-rc1"
+                },
+                "name": "radar-workspace",
+                "namespace": "kubeflow-user-example-com",
+                "resourceVersion": "281078945",
+                "uid": "82b15190-bb66-4712-939e-226d7092f885"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "100Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-82b15190-bb66-4712-939e-226d7092f885"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "100Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-01-06T07:21:55Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "style-big-workspace",
+                "namespace": "kubeflow-user-example-com",
+                "resourceVersion": "10955467",
+                "uid": "316e752a-53b6-45b2-9fe6-8835e7da115b"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "10Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-316e752a-53b6-45b2-9fe6-8835e7da115b"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "10Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2025-12-30T01:29:58Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "style-transfer-dataset-pvc-big",
+                "namespace": "kubeflow-user-example-com",
+                "resourceVersion": "3289469",
+                "uid": "800f09d8-7d62-4251-9db4-56b69c9ea456"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "200Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-800f09d8-7d62-4251-9db4-56b69c9ea456"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "200Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-04-30T10:36:00Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "vs-workspace",
+                "namespace": "kubeflow-user-example-com",
+                "resourceVersion": "128018122",
+                "uid": "7d8f3b62-184a-4f56-9054-7bc29be97f69"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "5Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-7d8f3b62-184a-4f56-9054-7bc29be97f69"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "5Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "backup.velero.io/backup-volumes": "pvc-0b95d20c-a8fa-4c1f-9d7e-05818336c90f",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"PersistentVolumeClaim\",\"metadata\":{\"annotations\":{},\"name\":\"katib-mysql\",\"namespace\":\"kubeflow\"},\"spec\":{\"accessModes\":[\"ReadWriteOnce\"],\"resources\":{\"requests\":{\"storage\":\"10Gi\"}}}}\n",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "rancher.io/local-path",
+                    "volume.kubernetes.io/selected-node": "worker-node01-pro6000",
+                    "volume.kubernetes.io/storage-provisioner": "rancher.io/local-path"
+                },
+                "creationTimestamp": "2025-12-26T06:26:25Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "katib-mysql",
+                "namespace": "kubeflow",
+                "resourceVersion": "33156621",
+                "uid": "0b95d20c-a8fa-4c1f-9d7e-05818336c90f"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "10Gi"
+                    }
+                },
+                "storageClassName": "local-path",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-0b95d20c-a8fa-4c1f-9d7e-05818336c90f"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "10Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "backup.velero.io/backup-volumes": "minio-pvc",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"PersistentVolumeClaim\",\"metadata\":{\"annotations\":{},\"name\":\"minio-pvc\",\"namespace\":\"kubeflow\"},\"spec\":{\"accessModes\":[\"ReadWriteOnce\"],\"resources\":{\"requests\":{\"storage\":\"20Gi\"}},\"storageClassName\":\"nfs-csi\",\"volumeName\":\"minio-public-pv\"}}\n",
+                    "pv.kubernetes.io/bind-completed": "yes"
+                },
+                "creationTimestamp": "2026-01-06T06:13:18Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "minio-pvc",
+                "namespace": "kubeflow",
+                "resourceVersion": "33161906",
+                "uid": "305d9fb0-ad67-4551-b2fc-82faf2fe9c75"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "20Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi",
+                "volumeMode": "Filesystem",
+                "volumeName": "minio-public-pv"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "20Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "backup.velero.io/backup-volumes": "mysql-public-pv",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"PersistentVolumeClaim\",\"metadata\":{\"annotations\":{},\"name\":\"mysql-pv-claim\",\"namespace\":\"kubeflow\"},\"spec\":{\"accessModes\":[\"ReadWriteOnce\"],\"resources\":{\"requests\":{\"storage\":\"20Gi\"}},\"storageClassName\":\"nfs-csi\",\"volumeName\":\"mysql-public-pv\"}}\n",
+                    "pv.kubernetes.io/bind-completed": "yes"
+                },
+                "creationTimestamp": "2026-01-06T06:13:18Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "mysql-pv-claim",
+                "namespace": "kubeflow",
+                "resourceVersion": "33156624",
+                "uid": "e6ea5c1f-13ff-4a7a-bb12-11a7cc58c601"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "20Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi",
+                "volumeMode": "Filesystem",
+                "volumeName": "mysql-public-pv"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "20Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "meta.helm.sh/release-name": "grafana",
+                    "meta.helm.sh/release-namespace": "logging",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2025-12-26T10:14:15Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/instance": "grafana",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "app.kubernetes.io/name": "grafana",
+                    "app.kubernetes.io/version": "12.3.0",
+                    "helm.sh/chart": "grafana-10.4.0"
+                },
+                "name": "grafana",
+                "namespace": "logging",
+                "resourceVersion": "134509",
+                "uid": "31ae2c68-040b-4d66-b1b3-2a673df4c34f"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "50Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-31ae2c68-040b-4d66-b1b3-2a673df4c34f"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "50Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2025-12-26T10:06:48Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/component": "single-binary",
+                    "app.kubernetes.io/instance": "loki",
+                    "app.kubernetes.io/name": "loki"
+                },
+                "name": "storage-loki-0",
+                "namespace": "logging",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "StatefulSet",
+                        "name": "loki",
+                        "uid": "903fe1fa-0e89-4250-b973-3f5dc131c275"
+                    }
+                ],
+                "resourceVersion": "130234",
+                "uid": "ccb4dd71-fbbd-4c1e-af96-da881073006f"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "500Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-ccb4dd71-fbbd-4c1e-af96-da881073006f"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "500Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2025-12-26T10:58:17Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "alertmanager": "prometheus-kube-prometheus-alertmanager",
+                    "app.kubernetes.io/instance": "prometheus-kube-prometheus-alertmanager",
+                    "app.kubernetes.io/managed-by": "prometheus-operator",
+                    "app.kubernetes.io/name": "alertmanager"
+                },
+                "name": "alertmanager-prometheus-kube-prometheus-alertmanager-db-alertmanager-prometheus-kube-prometheus-alertmanager-0",
+                "namespace": "monitoring",
+                "resourceVersion": "161528",
+                "uid": "4fedace8-e8db-4d77-82df-15dd4fdf023c"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "10Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-4fedace8-e8db-4d77-82df-15dd4fdf023c"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "10Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes"
+                },
+                "creationTimestamp": "2026-04-27T08:47:11Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/instance": "prometheus-kube-prometheus-prometheus",
+                    "app.kubernetes.io/managed-by": "prometheus-operator",
+                    "app.kubernetes.io/name": "prometheus",
+                    "operator.prometheus.io/name": "prometheus-kube-prometheus-prometheus",
+                    "operator.prometheus.io/shard": "0",
+                    "prometheus": "prometheus-kube-prometheus-prometheus"
+                },
+                "name": "prometheus-prometheus-kube-prometheus-prometheus-db-prometheus-prometheus-kube-prometheus-prometheus-0",
+                "namespace": "monitoring",
+                "resourceVersion": "124743845",
+                "uid": "65a14e0d-1cb6-445a-b03b-712d3965944d"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "100Gi"
+                    }
+                },
+                "storageClassName": "local-prometheus",
+                "volumeMode": "Filesystem",
+                "volumeName": "prometheus-local-pv-master"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "100Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-01-04T08:22:04Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "mni-test-0104-workspace",
+                "namespace": "user2-example-com",
+                "resourceVersion": "8891674",
+                "uid": "3eb3fcac-f0af-49ab-a37b-b788c517bf54"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "25Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-3eb3fcac-f0af-49ab-a37b-b788c517bf54"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "25Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-01-15T02:56:43Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "mni-test-qw-20260115-datavol-big",
+                "namespace": "user2-example-com",
+                "resourceVersion": "20216907",
+                "uid": "56bdc5b9-2b43-4b0d-b695-1eca7e49b396"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "150Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-56bdc5b9-2b43-4b0d-b695-1eca7e49b396"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "150Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-01-06T06:46:17Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "mni-test-qw-260106-datavol-1",
+                "namespace": "user2-example-com",
+                "resourceVersion": "10928641",
+                "uid": "365e6245-26d9-4b63-bbb8-5c2a01e2ed85"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "47Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-365e6245-26d9-4b63-bbb8-5c2a01e2ed85"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "47Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-01-06T06:46:17Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "mni-test-qw-260106-workspace",
+                "namespace": "user2-example-com",
+                "resourceVersion": "10928630",
+                "uid": "61620e8d-dbba-481f-a9d0-694cfd2020f4"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "50Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-61620e8d-dbba-481f-a9d0-694cfd2020f4"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "50Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-01-09T06:59:26Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "qwen-model",
+                "namespace": "user2-example-com",
+                "resourceVersion": "14091655",
+                "uid": "c4a3e8c3-a54c-4258-9ce7-4bf2d8a196a4"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "30Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-c4a3e8c3-a54c-4258-9ce7-4bf2d8a196a4"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "30Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-01-09T06:59:42Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "qwen-tunning-data",
+                "namespace": "user2-example-com",
+                "resourceVersion": "14091871",
+                "uid": "53e9b3ea-6630-4847-9104-962965c26e02"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "10Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-53e9b3ea-6630-4847-9104-962965c26e02"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "10Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-01-15T06:09:35Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "tmp-dir",
+                "namespace": "user2-example-com",
+                "resourceVersion": "20369129",
+                "uid": "cbdac245-cdf0-4947-8f93-a91c8723630e"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "10Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-cbdac245-cdf0-4947-8f93-a91c8723630e"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "10Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-10-05T18:03:03Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/part-of": "xray2pelvic-company-migration"
+                },
+                "name": "deepsdf-dictionary-migration-20261006",
+                "namespace": "user3-example-com",
+                "resourceVersion": "296610989",
+                "uid": "d31da280-759b-4f6d-aad9-3ceb60028b04"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "200Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-d31da280-759b-4f6d-aad9-3ceb60028b04"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "200Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-05-11T16:07:07Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "nndet-v2-datavol-1",
+                "namespace": "user3-example-com",
+                "resourceVersion": "139944561",
+                "uid": "9bf0e120-46c4-40be-9c12-7a78cf5cc2c0"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "800Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-9bf0e120-46c4-40be-9c12-7a78cf5cc2c0"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "800Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-04-27T06:28:31Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "nndetection-datavol-1",
+                "namespace": "user3-example-com",
+                "resourceVersion": "124639422",
+                "uid": "d7f27916-840f-44a9-ada4-0d9028c8ceb4"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "250Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-d7f27916-840f-44a9-ada4-0d9028c8ceb4"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "250Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-04-27T06:28:31Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "nndetection-workspace",
+                "namespace": "user3-example-com",
+                "resourceVersion": "124639433",
+                "uid": "22e50345-22cc-4cc4-81de-3c62d378e03a"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "30Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-22e50345-22cc-4cc4-81de-3c62d378e03a"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "30Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-05-09T11:54:53Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "nndetetion-gt-workspace",
+                "namespace": "user3-example-com",
+                "resourceVersion": "137633792",
+                "uid": "478b165b-42ea-479f-b570-b2d03def20ad"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "25Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-478b165b-42ea-479f-b570-b2d03def20ad"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "25Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-06-15T02:09:05Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "p60001-datavol-1",
+                "namespace": "user3-example-com",
+                "resourceVersion": "176512968",
+                "uid": "33600fbf-c400-4de9-806a-5b4e94c05855"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "500Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-kubeflow",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-33600fbf-c400-4de9-806a-5b4e94c05855"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "500Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-06-15T02:09:05Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "p60001-workspace",
+                "namespace": "user3-example-com",
+                "resourceVersion": "176512956",
+                "uid": "e0fa0a50-9de2-49e3-9b41-e8c0d624c7b1"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "80Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-kubeflow",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-e0fa0a50-9de2-49e3-9b41-e8c0d624c7b1"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "80Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-10-13T14:46:02Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "codex-diagnostic-identity": "pengwin-fragment-b-continue-20261013-v1"
+                },
+                "name": "pengwin-fragment-b-continue-20261013-v1",
+                "namespace": "user3-example-com",
+                "resourceVersion": "305028850",
+                "uid": "d2b926d5-f319-411b-ac42-4dd4894d8007"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "40Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-d2b926d5-f319-411b-ac42-4dd4894d8007"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "40Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-10-14T13:37:53Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "codex-diagnostic-identity": "pengwin-fragment-b-refine-20261014-v1"
+                },
+                "name": "pengwin-fragment-b-refine-20261014-v1",
+                "namespace": "user3-example-com",
+                "resourceVersion": "306044847",
+                "uid": "279ab4c6-1f8b-48f3-ac5b-17238819e6ed"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "40Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-279ab4c6-1f8b-48f3-ac5b-17238819e6ed"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "40Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-10-14T13:42:35Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "codex-diagnostic-identity": "pengwin-fragment-b-refine-20261014-v2"
+                },
+                "name": "pengwin-fragment-b-refine-20261014-v2",
+                "namespace": "user3-example-com",
+                "resourceVersion": "306048468",
+                "uid": "5947cdbc-d7ca-465e-a3db-3435c9f9deac"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "40Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-5947cdbc-d7ca-465e-a3db-3435c9f9deac"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "40Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-10-10T10:44:09Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/part-of": "xray2pelvic-company-migration"
+                },
+                "name": "pengwin-fragment-labels-20261010-v1",
+                "namespace": "user3-example-com",
+                "resourceVersion": "301646995",
+                "uid": "390f43a9-4c43-4f9d-b7c8-bf6a9bbdd7ce"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "200Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-390f43a9-4c43-4f9d-b7c8-bf6a9bbdd7ce"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "200Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-10-13T05:12:06Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "codex-diagnostic-identity": "pengwin-fragment-overfit-20261013-v3"
+                },
+                "name": "pengwin-fragment-overfit-20261013-v1",
+                "namespace": "user3-example-com",
+                "resourceVersion": "304603006",
+                "uid": "dd65fdef-1183-42b6-8c5b-8b9176753930"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "40Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-dd65fdef-1183-42b6-8c5b-8b9176753930"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "40Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-10-12T12:33:55Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app": "pengwin-fragment-pq-audit"
+                },
+                "name": "pengwin-fragment-pq-audit-20261012-v2",
+                "namespace": "user3-example-com",
+                "resourceVersion": "303863319",
+                "uid": "2feee019-a3d6-4182-9844-490b9d881a81"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "5Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-2feee019-a3d6-4182-9844-490b9d881a81"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "5Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-10-12T12:38:53Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app": "pengwin-fragment-pq-audit"
+                },
+                "name": "pengwin-fragment-pq-audit-20261012-v3",
+                "namespace": "user3-example-com",
+                "resourceVersion": "303867188",
+                "uid": "3000bc94-740d-4383-93ca-44915d4b3d29"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "5Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-3000bc94-740d-4383-93ca-44915d4b3d29"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "5Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-10-15T09:39:40Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "codex-diagnostic-identity": "pengwin-fragment-surface-refine-20261015-v3"
+                },
+                "name": "pengwin-fragment-surface-refine-20261015-v3",
+                "namespace": "user3-example-com",
+                "resourceVersion": "306932029",
+                "uid": "5dd3da57-381f-4b6f-8d04-f4428cfdb2a9"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "80Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-5dd3da57-381f-4b6f-8d04-f4428cfdb2a9"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "80Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-10-15T10:07:27Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "codex-diagnostic-identity": "pengwin-fragment-surface-refine-20261015-v4"
+                },
+                "name": "pengwin-fragment-surface-refine-20261015-v4",
+                "namespace": "user3-example-com",
+                "resourceVersion": "306952706",
+                "uid": "ae02b338-3dd4-4caa-8ca8-ee197403e3c5"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "80Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-ae02b338-3dd4-4caa-8ca8-ee197403e3c5"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "80Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-10-10T11:03:06Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/part-of": "xray2pelvic-company-migration"
+                },
+                "name": "pengwin-fragment-train-20261010-v1",
+                "namespace": "user3-example-com",
+                "resourceVersion": "301661394",
+                "uid": "1c5a8a98-c4db-492d-a6a7-22e49f76347f"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "200Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-1c5a8a98-c4db-492d-a6a7-22e49f76347f"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "200Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-10-08T17:08:26Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/part-of": "xray2pelvic-company-migration"
+                },
+                "name": "pengwin-multitask-20261009-v1",
+                "namespace": "user3-example-com",
+                "resourceVersion": "299795027",
+                "uid": "dd659837-7d15-49e7-b6d3-eb6af7caae2e"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "200Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-dd659837-7d15-49e7-b6d3-eb6af7caae2e"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "200Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-10-24T10:19:16Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "of-ab-formal": "20261024-v1"
+                },
+                "name": "pengwin-of-ab-inputs-20261024-v1",
+                "namespace": "user3-example-com",
+                "resourceVersion": "316546990",
+                "uid": "172901e2-f233-4a63-b16e-d860a7858091"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "100Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-172901e2-f233-4a63-b16e-d860a7858091"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "100Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-10-24T10:19:16Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "of-ab-formal": "20261024-v1"
+                },
+                "name": "pengwin-of-ab-results-20261024-v1",
+                "namespace": "user3-example-com",
+                "resourceVersion": "316546986",
+                "uid": "b9b9ad98-b951-459e-88f9-6751049927b7"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "100Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-b9b9ad98-b951-459e-88f9-6751049927b7"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "100Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-10-19T08:58:06Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/part-of": "pengwin-task3-beta-20261019-v1"
+                },
+                "name": "pengwin-task3-beta-inputs-20261019-v1",
+                "namespace": "user3-example-com",
+                "resourceVersion": "311150896",
+                "uid": "d28ab70c-51eb-4998-adf1-eff67ef72c06"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "100Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-d28ab70c-51eb-4998-adf1-eff67ef72c06"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "100Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-10-19T08:58:06Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/part-of": "pengwin-task3-beta-20261019-v1"
+                },
+                "name": "pengwin-task3-beta-results-20261019-v1",
+                "namespace": "user3-example-com",
+                "resourceVersion": "311150902",
+                "uid": "75598e15-b667-4487-8ac4-ec05ce98322f"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "100Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-75598e15-b667-4487-8ac4-ec05ce98322f"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "100Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-10-05T16:39:47Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/part-of": "xray2pelvic-company-migration"
+                },
+                "name": "xray2pelvic-r2-migration-20261006",
+                "namespace": "user3-example-com",
+                "resourceVersion": "296547864",
+                "uid": "cc7f6f13-e0e0-4dda-9821-2d5689eddb21"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "100Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-cc7f6f13-e0e0-4dda-9821-2d5689eddb21"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "100Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-06-03T06:29:57Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "awgs-builder-workspace",
+                "namespace": "user4-example-com",
+                "resourceVersion": "163949489",
+                "uid": "286af7e3-59cf-4b37-bbfd-c52691bed379"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "500Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-286af7e3-59cf-4b37-bbfd-c52691bed379"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "500Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-05-28T08:52:23Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "huashan-test-datavol-1",
+                "namespace": "user4-example-com",
+                "resourceVersion": "157682878",
+                "uid": "84b8b4bb-fc5e-4a34-a16d-0b694e3bd13e"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "500Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-84b8b4bb-fc5e-4a34-a16d-0b694e3bd13e"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "500Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-06-12T08:08:51Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "csj-spine-detection-dataset",
+                "namespace": "user5-example-com",
+                "resourceVersion": "173587945",
+                "uid": "8d17bf66-b315-48e9-87f8-6ec478a79c74"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "250Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-8d17bf66-b315-48e9-87f8-6ec478a79c74"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "250Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-06-15T05:04:46Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "csj-spine-detection-workspace",
+                "namespace": "user5-example-com",
+                "resourceVersion": "176644855",
+                "uid": "381fa495-84ea-401d-8281-f62e16bfdf42"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "5Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-381fa495-84ea-401d-8281-f62e16bfdf42"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "5Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"PersistentVolumeClaim\",\"metadata\":{\"annotations\":{},\"name\":\"velero-backup-pvc\",\"namespace\":\"velero\"},\"spec\":{\"accessModes\":[\"ReadWriteMany\"],\"resources\":{\"requests\":{\"storage\":\"500Gi\"}},\"storageClassName\":\"nfs-csi\"}}\n",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-01-27T09:05:44Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "name": "velero-backup-pvc",
+                "namespace": "velero",
+                "resourceVersion": "33121647",
+                "uid": "8d08f61a-fb0c-478f-bb42-4584c0c01a2b"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "500Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-8d08f61a-fb0c-478f-bb42-4584c0c01a2b"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteMany"
+                ],
+                "capacity": {
+                    "storage": "500Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "helm.sh/hook": "pre-install,pre-upgrade",
+                    "helm.sh/hook-delete-policy": "before-hook-creation",
+                    "helm.sh/hook-weight": "-1",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io",
+                    "volume.kubernetes.io/storage-provisioner": "nfs.csi.k8s.io"
+                },
+                "creationTimestamp": "2026-07-16T03:04:38Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/instance": "zenml-server",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "app.kubernetes.io/name": "zenml",
+                    "app.kubernetes.io/version": "0.96.1",
+                    "helm.sh/chart": "zenml-0.96.1"
+                },
+                "name": "zenml-server-config",
+                "namespace": "zenml",
+                "resourceVersion": "209608563",
+                "uid": "3d783c7c-437e-4640-ac2f-1333df512fec"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "10Gi"
+                    }
+                },
+                "storageClassName": "nfs-csi-ssd",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-3d783c7c-437e-4640-ac2f-1333df512fec"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "10Gi"
+                },
+                "phase": "Bound"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

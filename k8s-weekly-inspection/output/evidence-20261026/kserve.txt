@@ -1,0 +1,3 @@
+NAMESPACE                   NAME              URL                                                                  READY   PREV   LATEST   PREVROLLEDOUTREVISION   LATESTREADYREVISION               AGE
+kubeflow-user-example-com   detect-digits-2   http://detect-digits-2.kubeflow-user-example-com.svc.cluster.local   True           100                              detect-digits-2-predictor-00001   299d
+kubeflow-user-example-com   qwen38-27b-mtp    http://qwen38-27b-mtp-kubeflow-user-example-com.example.com          True                                                                              69d

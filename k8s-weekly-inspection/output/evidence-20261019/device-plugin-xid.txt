@@ -1,0 +1,75 @@
+I1019 13:23:47.447391       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.447591       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.447673       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.448113       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.448137       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.448206       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.448902       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.448921       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.448974       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.448987       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.449009       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.449030       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.449863       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.449940       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.449998       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.450000       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.450069       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.450100       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.452322       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.452338       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.452357       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.452367       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.452374       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.452404       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.452497       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.452536       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.452567       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.452586       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.452596       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.452610       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.452645       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.452665       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.452680       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.452691       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.452708       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.452738       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.452729       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.452760       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.452782       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.452799       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.452818       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.452843       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.452844       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.452862       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.452884       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.452888       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.452901       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.452914       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453030       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.453096       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453137       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453140       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.453160       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453184       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453191       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.453213       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453241       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.453236       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453258       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453274       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453286       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.453305       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453328       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453335       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.453353       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453380       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.453400       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453411       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453429       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453465       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.453484       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453511       1 health.go:143] Processing event {Device:{Handle:0x6ffbee2979d8} EventType:8 EventData:79 GpuInstanceId:4294967295 ComputeInstanceId:4294967295}
+I1019 13:23:47.453530       1 health.go:169] XidCriticalError: Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f; marking device as unhealthy.
+I1019 13:23:47.453539       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+I1019 13:23:47.453554       1 server.go:278] 'nvidia.com/gpu' device marked unhealthy: GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f

@@ -1,0 +1,8 @@
+Defaulted container "nvidia-dcgm-exporter" out of: nvidia-dcgm-exporter, toolkit-validation (init)
+GPU 0: NVIDIA RTX PRO 6000 Blackwell Server Edition (UUID: GPU-2e6829ca-a897-7b4d-a86c-590920ac3509)
+Unable to determine the device handle for gpu 0000:98:00.0: Unknown Error
+command terminated with exit code 255
+Defaulted container "nvidia-dcgm-exporter" out of: nvidia-dcgm-exporter, toolkit-validation (init)
+Unable to determine the device handle for GPU1: 0000:98:00.0: Unknown Error
+index, pci.bus_id, uuid, memory.total [MiB], memory.used [MiB]
+0, 00000000:38:00.0, GPU-2e6829ca-a897-7b4d-a86c-590920ac3509, 97887 MiB, 90844 MiB

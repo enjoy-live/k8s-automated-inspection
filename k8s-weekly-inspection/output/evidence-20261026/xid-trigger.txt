@@ -1,0 +1,12 @@
+=== Prometheus 保留期 ===
+prometheus-kube-prometheus-prometheus retention=10d retentionSize=
+=== 10/19 21:22 前后在 node01 上启动、申请 GPU 的 Pod ===
+  user3-example-com/pengwin-task3-beta-20261019-v1-smoke-child-546ada start=10-19 20:53:53 phase=Succeeded
+  (10/21 快照) auth/dex-8666d8cf4c-pwcs5 Running 6d23h
+  (10/21 快照) cert-manager/cert-manager-855969d7b8-q78lw Running 6d23h
+  (10/21 快照) cert-manager/cert-manager-cainjector-b967cbd4c-sn8p2 Running 6d23h
+  (10/21 快照) cert-manager/cert-manager-webhook-74f6779b6d-6t8mp Running 6d23h
+  (10/21 快照) gpu-operator/gpu-feature-discovery-44fkk CrashLoopBackOff (3m47s
+  (10/21 快照) gpu-operator/gpu-operator-node-feature-discovery-gc-67474f8744-c8vgh Running 6d23h
+  (10/21 快照) gpu-operator/gpu-operator-node-feature-discovery-worker-wc497 Running (6d23h
+  (10/21 快照) gpu-operator/nvidia-container-toolkit-daemonset-ngjqf Running (32d

@@ -1,0 +1,143 @@
+NAMESPACE                   NAME                                                         READY   UP-TO-DATE   AVAILABLE   AGE
+auth                        deployment.apps/dex                                          1/1     1            1           298d
+cert-manager                deployment.apps/cert-manager                                 1/1     1            1           298d
+cert-manager                deployment.apps/cert-manager-cainjector                      1/1     1            1           298d
+cert-manager                deployment.apps/cert-manager-webhook                         1/1     1            1           298d
+gpu-operator                deployment.apps/gpu-operator                                 1/1     1            1           298d
+gpu-operator                deployment.apps/gpu-operator-node-feature-discovery-gc       1/1     1            1           298d
+gpu-operator                deployment.apps/gpu-operator-node-feature-discovery-master   1/1     1            1           298d
+harbor                      deployment.apps/harbor-core                                  1/1     1            1           298d
+harbor                      deployment.apps/harbor-jobservice                            1/1     1            1           298d
+harbor                      deployment.apps/harbor-nginx                                 1/1     1            1           298d
+harbor                      deployment.apps/harbor-portal                                1/1     1            1           298d
+harbor                      deployment.apps/harbor-registry                              1/1     1            1           298d
+istio-system                deployment.apps/cluster-local-gateway                        1/1     1            1           298d
+istio-system                deployment.apps/istio-ingressgateway                         1/1     1            1           298d
+istio-system                deployment.apps/istiod                                       1/1     1            1           298d
+knative-eventing            deployment.apps/eventing-controller                          1/1     1            1           298d
+knative-eventing            deployment.apps/eventing-webhook                             1/1     1            1           298d
+knative-eventing            deployment.apps/job-sink                                     1/1     1            1           298d
+knative-eventing            deployment.apps/pingsource-mt-adapter                        0/0     0            0           298d
+knative-serving             deployment.apps/activator                                    1/1     1            1           298d
+knative-serving             deployment.apps/autoscaler                                   1/1     1            1           298d
+knative-serving             deployment.apps/controller                                   1/1     1            1           298d
+knative-serving             deployment.apps/net-istio-controller                         1/1     1            1           298d
+knative-serving             deployment.apps/net-istio-webhook                            1/1     1            1           298d
+knative-serving             deployment.apps/webhook                                      1/1     1            1           298d
+kube-system                 deployment.apps/calico-kube-controllers                      1/1     1            1           298d
+kube-system                 deployment.apps/coredns                                      3/3     3            3           298d
+kube-system                 deployment.apps/csi-nfs-controller                           1/1     1            1           298d
+kube-system                 deployment.apps/metrics-server                               1/1     1            1           298d
+kubeflow-user-example-com   deployment.apps/detect-digits-2-predictor-00001-deployment   0/0     0            0           293d
+kubeflow-user-example-com   deployment.apps/ml-pipeline-ui-artifact                      1/1     1            1           280d
+kubeflow-user-example-com   deployment.apps/ml-pipeline-visualizationserver              1/1     1            1           280d
+kubeflow-user-example-com   deployment.apps/pvcviewer-style-big-workspace                1/1     1            1           173d
+kubeflow-user-example-com   deployment.apps/pvcviewer-style-transfer-dataset-pvc-big     1/1     1            1           281d
+kubeflow-user-example-com   deployment.apps/qwen38-27b-mtp-predictor                     1/1     1            1           64d
+kubeflow-user-example-com   deployment.apps/radar-inference-api-v2                       0/0     0            0           29d
+kubeflow                    deployment.apps/admission-webhook-deployment                 1/1     1            1           298d
+kubeflow                    deployment.apps/cache-server                                 1/1     1            1           298d
+kubeflow                    deployment.apps/centraldashboard                             1/1     1            1           298d
+kubeflow                    deployment.apps/jupyter-web-app-deployment                   1/1     1            1           298d
+kubeflow                    deployment.apps/katib-controller                             1/1     1            1           298d
+kubeflow                    deployment.apps/katib-db-manager                             1/1     1            1           298d
+kubeflow                    deployment.apps/katib-mysql                                  1/1     1            1           298d
+kubeflow                    deployment.apps/katib-ui                                     1/1     1            1           298d
+kubeflow                    deployment.apps/kserve-controller-manager                    1/1     1            1           298d
+kubeflow                    deployment.apps/kserve-localmodel-controller-manager         1/1     1            1           298d
+kubeflow                    deployment.apps/kserve-models-web-app                        1/1     1            1           298d
+kubeflow                    deployment.apps/kubeflow-pipelines-profile-controller        1/1     1            1           298d
+kubeflow                    deployment.apps/metadata-envoy-deployment                    1/1     1            1           298d
+kubeflow                    deployment.apps/metadata-grpc-deployment                     1/1     1            1           298d
+kubeflow                    deployment.apps/metadata-writer                              1/1     1            1           298d
+kubeflow                    deployment.apps/minio                                        1/1     1            1           298d
+kubeflow                    deployment.apps/ml-pipeline                                  1/1     1            1           298d
+kubeflow                    deployment.apps/ml-pipeline-persistenceagent                 1/1     1            1           298d
+kubeflow                    deployment.apps/ml-pipeline-scheduledworkflow                1/1     1            1           298d
+kubeflow                    deployment.apps/ml-pipeline-ui                               1/1     1            1           298d
+kubeflow                    deployment.apps/ml-pipeline-viewer-crd                       1/1     1            1           298d
+kubeflow                    deployment.apps/ml-pipeline-visualizationserver              1/1     1            1           298d
+kubeflow                    deployment.apps/mysql                                        1/1     1            1           298d
+kubeflow                    deployment.apps/notebook-controller-deployment               1/1     1            1           298d
+kubeflow                    deployment.apps/profiles-deployment                          1/1     1            1           298d
+kubeflow                    deployment.apps/pvcviewer-controller-manager                 1/1     1            1           298d
+kubeflow                    deployment.apps/spark-operator-controller                    1/1     1            1           298d
+kubeflow                    deployment.apps/spark-operator-webhook                       1/1     1            1           298d
+kubeflow                    deployment.apps/tensorboard-controller-deployment            1/1     1            1           298d
+kubeflow                    deployment.apps/tensorboards-web-app-deployment              1/1     1            1           298d
+kubeflow                    deployment.apps/training-operator                            1/1     1            1           298d
+kubeflow                    deployment.apps/volumes-web-app-deployment                   1/1     1            1           298d
+kubeflow                    deployment.apps/workflow-controller                          1/1     1            1           298d
+kyverno                     deployment.apps/kyverno-admission-controller                 1/1     1            1           294d
+kyverno                     deployment.apps/kyverno-background-controller                1/1     1            1           294d
+kyverno                     deployment.apps/kyverno-cleanup-controller                   1/1     1            1           294d
+kyverno                     deployment.apps/kyverno-reports-controller                   1/1     1            1           294d
+local-path-storage          deployment.apps/local-path-provisioner                       1/1     1            1           298d
+logging                     deployment.apps/event-exporter-kubernetes-event-exporter     1/1     1            1           293d
+logging                     deployment.apps/grafana                                      1/1     1            1           298d
+logging                     deployment.apps/loki-gateway                                 1/1     1            1           298d
+monitoring                  deployment.apps/cert-exporter-cert-manager                   1/1     1            1           204d
+monitoring                  deployment.apps/prometheus-grafana                           1/1     1            1           176d
+monitoring                  deployment.apps/prometheus-kube-prometheus-operator          1/1     1            1           298d
+monitoring                  deployment.apps/prometheus-kube-state-metrics                1/1     1            1           298d
+oauth2-proxy                deployment.apps/oauth2-proxy                                 2/2     2            2           298d
+user1-example-com           deployment.apps/ml-pipeline-ui-artifact                      1/1     1            1           297d
+user1-example-com           deployment.apps/ml-pipeline-visualizationserver              1/1     1            1           297d
+user2-example-com           deployment.apps/ml-pipeline-ui-artifact                      1/1     1            1           297d
+user2-example-com           deployment.apps/ml-pipeline-visualizationserver              1/1     1            1           297d
+user2-example-com           deployment.apps/pvcviewer-mni-test-qw-260106-datavol-1       1/1     1            1           287d
+user2-example-com           deployment.apps/pvcviewer-qwen-model                         1/1     1            1           284d
+user2-example-com           deployment.apps/pvcviewer-qwen-tunning-data                  1/1     1            1           284d
+user3-example-com           deployment.apps/ml-pipeline-ui-artifact                      1/1     1            1           179d
+user3-example-com           deployment.apps/ml-pipeline-visualizationserver              1/1     1            1           179d
+user3-example-com           deployment.apps/pvcviewer-nndet-v2-datavol-1                 1/1     1            1           162d
+user3-example-com           deployment.apps/pvcviewer-nndetection-datavol-1              1/1     1            1           176d
+user3-example-com           deployment.apps/pvcviewer-nndetection-workspace              1/1     1            1           176d
+user3-example-com           deployment.apps/pvcviewer-nndetetion-gt-workspace            1/1     1            1           162d
+user4-example-com           deployment.apps/ml-pipeline-ui-artifact                      1/1     1            1           153d
+user4-example-com           deployment.apps/ml-pipeline-visualizationserver              1/1     1            1           153d
+user4-example-com           deployment.apps/pvcviewer-huashan-test-datavol-1             1/1     1            1           145d
+user5-example-com           deployment.apps/ml-pipeline-ui-artifact                      1/1     1            1           131d
+user5-example-com           deployment.apps/ml-pipeline-visualizationserver              1/1     1            1           131d
+velero                      deployment.apps/minio                                        1/1     1            1           266d
+velero                      deployment.apps/velero                                       1/1     1            1           266d
+zenml                       deployment.apps/zenml-server                                 1/1     1            1           96d
+
+NAMESPACE                   NAME                                                                    READY   AGE
+harbor                      statefulset.apps/harbor-database                                        1/1     298d
+harbor                      statefulset.apps/harbor-redis                                           1/1     298d
+harbor                      statefulset.apps/harbor-trivy                                           1/1     298d
+kubeflow-user-example-com   statefulset.apps/style-big                                              1/1     287d
+kubeflow-user-example-com   statefulset.apps/vs                                                     1/1     173d
+kubeflow                    statefulset.apps/metacontroller                                         1/1     298d
+logging                     statefulset.apps/loki                                                   1/1     298d
+logging                     statefulset.apps/loki-chunks-cache                                      1/1     298d
+logging                     statefulset.apps/loki-results-cache                                     1/1     298d
+monitoring                  statefulset.apps/alertmanager-prometheus-kube-prometheus-alertmanager   1/1     176d
+monitoring                  statefulset.apps/prometheus-prometheus-kube-prometheus-prometheus       1/1     179d
+user2-example-com           statefulset.apps/mni-test-0104                                          1/1     289d
+user2-example-com           statefulset.apps/mni-test-qw-260106                                     1/1     287d
+user3-example-com           statefulset.apps/nndet-v2                                               0/0     162d
+user3-example-com           statefulset.apps/nndetection                                            0/0     176d
+user3-example-com           statefulset.apps/p60001                                                 0/0     128d
+user4-example-com           statefulset.apps/awgs-builder                                           1/1     139d
+user5-example-com           statefulset.apps/csj-spine-detection                                    1/1     127d
+
+NAMESPACE      NAME                                                        DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR                                                          AGE
+gpu-operator   daemonset.apps/gpu-feature-discovery                        2         2         1       2            1           nvidia.com/gpu.deploy.gpu-feature-discovery=true                       298d
+gpu-operator   daemonset.apps/gpu-operator-node-feature-discovery-worker   3         3         3       3            3           <none>                                                                 298d
+gpu-operator   daemonset.apps/nvidia-container-toolkit-daemonset           2         2         2       2            2           nvidia.com/gpu.deploy.container-toolkit=true                           298d
+gpu-operator   daemonset.apps/nvidia-dcgm-exporter                         2         2         2       2            2           nvidia.com/gpu.deploy.dcgm-exporter=true                               298d
+gpu-operator   daemonset.apps/nvidia-device-plugin-daemonset               2         2         2       2            2           nvidia.com/gpu.deploy.device-plugin=true                               298d
+gpu-operator   daemonset.apps/nvidia-device-plugin-mps-control-daemon      0         0         0       0            0           nvidia.com/gpu.deploy.device-plugin=true,nvidia.com/mps.capable=true   298d
+gpu-operator   daemonset.apps/nvidia-mig-manager                           1         1         1       1            1           nvidia.com/gpu.deploy.mig-manager=true                                 298d
+gpu-operator   daemonset.apps/nvidia-operator-validator                    2         2         2       2            2           nvidia.com/gpu.deploy.operator-validator=true                          298d
+kube-system    daemonset.apps/calico-node                                  3         3         3       3            3           kubernetes.io/os=linux                                                 298d
+kube-system    daemonset.apps/csi-nfs-node                                 3         3         3       3            3           kubernetes.io/os=linux                                                 298d
+kube-system    daemonset.apps/istio-cni-node                               3         3         3       3            3           kubernetes.io/os=linux                                                 298d
+kube-system    daemonset.apps/kube-proxy                                   3         3         3       3            3           kubernetes.io/os=linux                                                 298d
+kubeflow       daemonset.apps/kserve-localmodelnode-agent                  0         0         0       0            0           kserve/localmodel=worker                                               298d
+logging        daemonset.apps/fluent-bit                                   2         2         2       2            2           <none>                                                                 298d
+logging        daemonset.apps/loki-canary                                  2         2         2       2            2           <none>                                                                 298d
+monitoring     daemonset.apps/prometheus-prometheus-node-exporter          3         3         3       3            3           kubernetes.io/os=linux                                                 298d
+velero         daemonset.apps/node-agent                                   2         2         2       2            2           kubernetes.io/os=linux                                                 266d

@@ -1,0 +1,10 @@
+NAMESPACE                   NAME                  AGE
+kubeflow-user-example-com   style-big             287d
+kubeflow-user-example-com   vs                    173d
+user2-example-com           mni-test-0104         289d
+user2-example-com           mni-test-qw-260106    287d
+user3-example-com           nndet-v2              162d
+user3-example-com           nndetection           176d
+user3-example-com           p60001                128d
+user4-example-com           awgs-builder          139d
+user5-example-com           csj-spine-detection   127d

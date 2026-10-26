@@ -1,0 +1,27 @@
+=== KServe 与 qwen38 predictor ===
+NAMESPACE                   NAME              URL                                                                  READY   PREV   LATEST   PREVROLLEDOUTREVISION   LATESTREADYREVISION               AGE
+kubeflow-user-example-com   detect-digits-2   http://detect-digits-2.kubeflow-user-example-com.svc.cluster.local   True           100                              detect-digits-2-predictor-00001   299d
+kubeflow-user-example-com   qwen38-27b-mtp    http://qwen38-27b-mtp-kubeflow-user-example-com.example.com          True                                                                              69d
+qwen38-27b-mtp-predictor-5969dff6b5-5pscx                   1/1   Running                  0              3d3h   10.244.86.73     worker-node01-pro6000   <none>   <none>
+qwen38-27b-mtp-predictor-5969dff6b5-t62fn                   0/1   ContainerStatusUnknown   0              38d    <none>           worker-node01-pro6000   <none>   <none>
+Failed reason=UnexpectedAdmissionError msg=Pod was rejected: Allocate failed due to no healthy devices present; cannot allocate unhealthy devices nvidia.com/gpu, which is unexpected
+kserve-container state={"terminated":{"exitCode":137,"finishedAt":null,"message":"The container could not be located when the pod was terminated","reason":"ContainerStatusUnknown","startedAt":null}} 
+
+=== 当前 GPU 工作负载（Running）===
+  kubeflow-user-example-com/qwen38-27b-mtp-predictor-5969dff6b5-5pscx gpu=1 node=worker-node01-pro6000 start=2026-10-23T06:21:54Z
+  user3-example-com/of-ab-flash-formal-20261025-v1-b-3 gpu=1 node=worker-node01-pro6000 start=2026-10-25T21:18:16Z
+  user5-example-com/csj-spine-detection-0 gpu=1 node=worker-node02-3090 start=2026-10-14T03:21:03Z
+
+=== device-plugin 上一个容器实例（10/23 重启前）的 Xid 记录 ===
+      6 I0918 02:49 I0918 02:49 
+     25 I1019 13:23 I1019 13:23 
+      4 I1019 13:23 Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f
+      1 I1023 06:16   
+      1 I1023 06:16 I1023 06:16 
+     21 Xid=79 on Device=GPU-e24defb2-8a82-10d2-2b8e-bf8988e55f2f I1019 13:23
+--- 上一实例首条/末条日志时间 ---
+I0918 02:49:33.474921       1 main.go:244] "Starting NVIDIA Device Plugin" version=<
+I1023 06:16:34.271255       1 server.go:166] Stopping to serve 'nvidia.com/gpu' on /var/lib/kubelet/device-plugins/nvidia-gpu.sock
+
+=== events.json 中 node01 相关事件 ===
+  (共 0 条；事件默认保留约 1 小时，10/23 的节点事件多半已滚动)

@@ -1,0 +1,109 @@
+# 维护周报 PDF 设计语言（定稿）
+# 以 2026-09-21 / 09-30 / 10-12 各期交付 PDF 为基准，后续渲染必须读取本文件，禁止临时改色改字号。
+# 配套脚本：scripts/render_weekly_report.py
+
+version: 1
+name: kubeflow-maintenance-weekly-report
+baseline_pdfs:
+  - 维护周报-20260921.pdf
+  - 维护周报-20260930.pdf
+  - 维护周报-20261012.pdf
+
+page:
+  size: A4
+  margins_mm:
+    top: 16
+    bottom: 16
+    left: 15
+    right: 15
+  author: unix
+
+fonts:
+  # 正文字体：文泉驿微米黑（覆盖中文）
+  base:
+    path: /usr/share/fonts/truetype/wqy/wqy-microhei.ttc
+    subfont_index: 0
+    register_as: CJK
+  # 标题加粗：Noto Sans CJK Bold；缺失时回退到 base
+  bold:
+    path: /usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc
+    subfont_index: 2
+    register_as: CJK-Bold
+
+colors:
+  title: "#1a3b6e"
+  h1: "#0d47a1"
+  h2: "#1565c0"
+  h3: "#1565c0"
+  body: "#000000"
+  meta: "#555555"
+  quote: "#4a4a4a"
+  table_header_bg: "#1565c0"
+  table_header_fg: "#ffffff"
+  table_row_alt: "#eef3fb"
+  table_grid: "#b8c4d9"
+  hr: "#c9d3e5"
+  status_ok: "#1b7f3b"
+  status_warn: "#b36b00"
+  status_fail: "#c0392b"
+
+typography:
+  title:  { size: 19,   leading: 24, bold: true,  space_before: 4, space_after: 2, left_indent: 0 }
+  h1:     { size: 15,   leading: 20, bold: true,  space_before: 14, space_after: 6, left_indent: 0 }
+  h2:     { size: 12.5, leading: 17, bold: true,  space_before: 10, space_after: 4, left_indent: 0 }
+  h3:     { size: 11,   leading: 15, bold: true,  space_before: 8, space_after: 4, left_indent: 0 }
+  body:   { size: 10,   leading: 15, bold: false, space_before: 2, space_after: 4, left_indent: 0 }
+  meta:   { size: 10,   leading: 14, bold: false, space_before: 2, space_after: 4, left_indent: 0 }
+  list:   { size: 10,   leading: 15, bold: false, space_before: 2, space_after: 4, left_indent: 10 }
+  quote:  { size: 9.5,  leading: 14, bold: false, space_before: 4, space_after: 4, left_indent: 8 }
+  th:     { size: 9,    leading: 12, bold: true,  space_before: 1, space_after: 1, left_indent: 0 }
+  td:     { size: 9,    leading: 12, bold: false, space_before: 1, space_after: 1, left_indent: 0 }
+
+table:
+  header_text_color: table_header_fg
+  header_background: table_header_bg
+  stripe_background: table_row_alt
+  grid_color: table_grid
+  grid_width: 0.4
+  padding:
+    left: 4
+    right: 4
+    top: 2
+    bottom: 2
+  spacer_before: 3
+  spacer_after: 6
+  repeat_header: true
+
+hr:
+  thickness: 0.6
+  color: hr
+  space_before: 4
+  space_after: 6
+
+list:
+  bullet: "•"
+
+# WQY MicroHei / 嵌入子集缺 emoji 字形；统一替换为带色 ASCII，避免方框或乱码
+# ℃ (U+2103) 在 WQY MicroHei 中有映射但字形为空，渲染成空白，统一替换为 °C
+glyph_fallback:
+  "✅": '<font color="{status_ok}"><b>[OK]</b></font>'
+  "❌": '<font color="{status_fail}"><b>[X]</b></font>'
+  "⚠":  '<font color="{status_warn}"><b>[!]</b></font>'
+  "⚠️": '<font color="{status_warn}"><b>[!]</b></font>'
+  "℃": "°C"
+
+markdown_conventions:
+  status_ok_in_md: "✅"      # 渲染为绿色 [OK]
+  status_warn_in_md: "⚠️"   # 渲染为琥珀色 [!]
+  status_fail_in_md: "❌"   # 渲染为红色 [X]
+  approx_symbol: "≈"         # 渲染为 ~
+  celsius: "℃"               # 渲染为 °C
+  code_spans: "`...`"        # 保持等宽观感，仍用 CJK 字体面
+  bold: "**...**"
+
+do_not:
+  - 改用 Inter / Roboto / 系统默认无中文字体
+  - 改用紫色系或奶油底色主题
+  - 去掉表格斑马纹或表头蓝底
+  - 在 PDF 中直接嵌入未回退的 emoji
+  - 临时在脚本里硬编码另一套色值（改样式只改本 YAML）

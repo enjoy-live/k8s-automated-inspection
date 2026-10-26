@@ -1,0 +1,26 @@
+=== 告警时间线（step 5m，合并连续区间）===
+  KubeAggregatedAPIDown            default/v1beta1.metrics.k8s.io                           10-23 14:25~10-23 14:25
+  KubeContainerWaiting             user3-example-com/pengwin-of-ab-formal-20261024-auto-launch-v1-gfh 10-25 02:50~10-26 01:45
+  KubeContainerWaiting             user3-example-com/pengwin-of-ab-formal-20261024-auto-launch-v1-gfh 10-25 02:50~10-26 01:45
+  KubeContainerWaiting             user3-example-com/pengwin-of-ab-formal-20261024-snapshot-202610242 10-25 05:55~10-26 05:00
+  KubeContainerWaiting             user3-example-com/pengwin-of-ab-formal-20261024-snapshot-202610242 10-25 05:55~10-26 05:00
+  KubeDaemonSetRolloutStuck        gpu-operator/prometheus-kube-state-metrics-7bf6b764d4-xscb9   10-19 21:45~10-19 23:00; 10-19 23:20~10-20 04:50; 10-20 05:10~10-20 06:20; 10-20 06:40~10-20 11:45; 10-20 12:05~10-20 14:15; 10-20 14:35~10-21 10:45; 10-21 11:05~10-21 11:40; 10-21 12:05~10-21 20:30; 10-21 20:50~10-23 14:15
+  KubeDaemonSetRolloutStuck        logging/prometheus-kube-state-metrics-7bf6b764d4-xscb9   10-23 14:45~10-23 14:50
+  KubeMemoryOvercommit             -/                                                 10-19 00:00~10-23 14:20; 10-23 14:35~10-26 18:00
+  KubePodCrashLooping              gpu-operator/gpu-feature-discovery-44fkk                      10-19 21:45~10-23 14:25
+  KubePodNotReady                  user5-example-com/spline-yolov8-train-sj7sw-train-103964838        10-19 00:00~10-26 18:00
+  KubePodNotReady                  user3-example-com/pengwin-task3-beta-20261019-3gpu-v6-pro6000-chec 10-19 22:10~10-19 22:10
+  KubePodNotReady                  user3-example-com/pengwin-task3-beta-20261019-pro-retry-v7-check-c 10-20 00:15~10-20 00:30
+  KubePodNotReady                  user3-example-com/pengwin-task3-beta-20261020-pro-retry-v8-check-c 10-20 01:10~10-20 01:25
+  KubePodNotReady                  user3-example-com/pengwin-task3-beta-20261020-pro-retry-v9-check-c 10-20 02:10~10-20 02:20
+  KubePodNotReady                  user3-example-com/pengwin-task3-beta-20261020-pro-retry-v11-check- 10-20 14:00~10-20 14:10
+  KubeStatefulSetReplicasMismatch  logging/prometheus-kube-state-metrics-7bf6b764d4-xscb9   10-23 14:35~10-23 14:50
+
+=== node01 双卡负载（10/23 14:22 之后，step 5m）===
+  GPU0: 峰值功耗 602 W / 平均 85 W; 峰值利用率 100% ; 显存>1GiB 的时长约 75.6 h / 共 75.7 h
+  GPU1: 峰值功耗 409 W / 平均 176 W; 峰值利用率 100% ; 显存>1GiB 的时长约 40.1 h / 共 75.7 h
+  双卡同时有负载（显存>1GiB）累计约 40.1 h
+  双卡同时功耗 >250W 累计约 0.2 h
+
+=== 重启前（10/19 21:23 前）同口径对照：GPU1 峰值功耗 10/12~10/19 ===
+  当前时刻回看 7 天 GPU1 峰值功耗: 367 W

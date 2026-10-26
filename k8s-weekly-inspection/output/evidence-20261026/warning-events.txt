@@ -1,0 +1,2 @@
+NAMESPACE           LAST SEEN   TYPE      REASON   OBJECT                                          MESSAGE
+user5-example-com   3m29s       Warning   Failed   pod/spline-yolov8-train-sj7sw-train-103964838   Error: ImagePullBackOff

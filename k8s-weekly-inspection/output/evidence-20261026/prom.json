@@ -1,0 +1,83 @@
+{
+ "window": [
+  "2026-10-19T00:00:00+08:00",
+  "2026-10-26T18:00:13.112336+08:00"
+ ],
+ "cpu": {
+  "max": 4.04,
+  "avg": 2.6,
+  "n": 187
+ },
+ "mem": {
+  "max": 10.28,
+  "avg": 8.74,
+  "n": 187
+ },
+ "gpu_avg": {
+  "max": 66.0,
+  "avg": 24.88,
+  "n": 187
+ },
+ "gpu_max": {
+  "max": 100.0,
+  "avg": 67.25,
+  "n": 187
+ },
+ "pvc": {
+  "max": 9.44,
+  "avg": 8.72,
+  "n": 187
+ },
+ "alerts": {
+  "max": 7.0,
+  "avg": 4.44,
+  "n": 187
+ },
+ "cores": 224.0,
+ "mem_bytes": 708749889536.0,
+ "gpus": 6.0,
+ "boot": {
+  "12.12.12.2:9100": "10-23 14:19",
+  "12.12.12.3:9100": "05-09 01:20",
+  "12.12.12.1:9100": "02-09 08:52"
+ },
+ "alerts_fired": [
+  "[none] InfoInhibitor x16",
+  "[none] Watchdog x1",
+  "[warning] KubeAggregatedAPIDown x1",
+  "[warning] KubeContainerWaiting x4",
+  "[warning] KubeDaemonSetRolloutStuck x2",
+  "[warning] KubeDeploymentReplicasMismatch x7",
+  "[warning] KubeMemoryOvercommit x1",
+  "[warning] KubePodCrashLooping x1",
+  "[warning] KubePodNotReady x7",
+  "[warning] KubeStatefulSetReplicasMismatch x1"
+ ],
+ "alerts_now": [
+  "[none] Watchdog /",
+  "[warning] KubeMemoryOvercommit /",
+  "[warning] KubePodNotReady user5-example-com/spline-yolov8-train-sj7sw-train-103964838"
+ ],
+ "disks": [
+  [
+   "12.12.12.2:9100",
+   "/",
+   38.2
+  ],
+  [
+   "12.12.12.3:9100",
+   "/home/data",
+   77.9
+  ],
+  [
+   "12.12.12.3:9100",
+   "/",
+   75.0
+  ],
+  [
+   "12.12.12.1:9100",
+   "/",
+   48.8
+  ]
+ ]
+}

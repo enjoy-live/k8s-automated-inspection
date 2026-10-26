@@ -1,0 +1,29 @@
+=== 10/23 14:00-15:00 短时告警（step 30s）===
+  KubeAggregatedAPIDown            default/v1beta1.metrics.k8s.io                   10-23 14:24~10-23 14:29
+  KubeDaemonSetRolloutStuck        logging/fluent-bit                               10-23 14:41~10-23 14:53
+  KubeDaemonSetRolloutStuck        gpu-operator/gpu-feature-discovery                    10-23 14:00~10-23 14:18
+  KubeDeploymentReplicasMismatch   kubeflow/metadata-grpc-deployment                 10-23 14:33~10-23 14:33
+  KubeDeploymentReplicasMismatch   kubeflow/ml-pipeline                              10-23 14:33~10-23 14:33
+  KubeDeploymentReplicasMismatch   kubeflow/ml-pipeline-persistenceagent             10-23 14:33~10-23 14:33
+  KubeDeploymentReplicasMismatch   kubeflow/ml-pipeline-scheduledworkflow            10-23 14:33~10-23 14:33
+  KubeDeploymentReplicasMismatch   user2-example-com/ml-pipeline-ui-artifact                  10-23 14:33~10-23 14:33
+  KubeDeploymentReplicasMismatch   kubeflow/ml-pipeline-visualizationserver          10-23 14:33~10-23 14:33
+  KubeDeploymentReplicasMismatch   kubeflow/profiles-deployment                      10-23 14:33~10-23 14:33
+  KubeStatefulSetReplicasMismatch  logging/loki                                     10-23 14:33~10-23 14:52
+
+=== 10/19 20:40-21:30 GPU1 功耗/显存/温度（Xid 前，step 1m）===
+  10-19 20:40  功耗 33 W  显存 0.0 GiB  温度 22℃
+  10-19 20:45  功耗 33 W  显存 0.0 GiB  温度 22℃
+  10-19 20:50  功耗 33 W  显存 0.0 GiB  温度 22℃
+  10-19 20:55  功耗 45 W  显存 0.0 GiB  温度 26℃
+  10-19 21:00  功耗 33 W  显存 0.0 GiB  温度 22℃
+  10-19 21:05  功耗 33 W  显存 0.0 GiB  温度 22℃
+  10-19 21:10  功耗 33 W  显存 0.0 GiB  温度 22℃
+  10-19 21:15  功耗 33 W  显存 0.0 GiB  温度 22℃
+  10-19 21:20  功耗 33 W  显存 0.0 GiB  温度 22℃
+  10-19 21:25  功耗 496 W  显存 0.0 GiB  温度 81℃
+  10-19 21:30  功耗 496 W  显存 0.0 GiB  温度 81℃
+  区间峰值功耗 520 W，峰值温度 81℃
+
+=== GPU0 602 W 峰值出现时刻 ===
+  >450W 的分钟数: 14 [('10-23 14:53', 595.92), ('10-23 14:54', 595.339), ('10-26 15:25', 453.804), ('10-26 15:48', 610.158), ('10-26 17:06', 604.437), ('10-26 17:08', 587.096), ('10-26 17:09', 588.038), ('10-26 17:10', 595.299)]

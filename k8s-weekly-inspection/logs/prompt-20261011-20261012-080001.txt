@@ -1,0 +1,11 @@
+请使用 k8s-weekly-inspection 技能。先读取并严格遵守 /home/storage/.cursor/skills/k8s-weekly-inspection/SKILL.md。
+
+巡检统计周期：2026年10月05日 00:00 至 2026年10月11日 23:59（Asia/Shanghai）。
+PERIOD_START=2026-10-05
+PERIOD_END=2026-10-11
+模板文件：/home/storage/k8s-weekly-inspection/template/维护周报-20260921.pdf
+周报 Markdown：/home/storage/k8s-weekly-inspection/output/维护周报-20261011.md
+周报 PDF：/home/storage/k8s-weekly-inspection/output/维护周报-20261011.pdf
+证据目录：/home/storage/k8s-weekly-inspection/output/evidence-20261011/
+
+本次由定时触发器调用，K8S_WEEKLY_UNATTENDED=1。kubectl 只读连通性已由触发脚本检查。不要等待人工确认，直接开始只读巡检。不得修改、重启或删除任何集群资源。

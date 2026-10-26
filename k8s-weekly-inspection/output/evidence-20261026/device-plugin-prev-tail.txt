@@ -1,0 +1,3 @@
+I1023 06:16:34.271032       1 main.go:311] Received signal "terminated", shutting down.
+I1023 06:16:34.271226       1 main.go:398] Stopping plugins.
+I1023 06:16:34.271255       1 server.go:166] Stopping to serve 'nvidia.com/gpu' on /var/lib/kubelet/device-plugins/nvidia-gpu.sock

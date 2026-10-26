@@ -1,0 +1,71 @@
+=== Workflow（Pipeline）周期内 ===
+  现存 Workflow 总数 43 {'Succeeded': 38, 'Failed': 2, 'Error': 2, 'Running': 1}
+  周期内启动: {('user3-example-com', 'Succeeded'): 38, ('user3-example-com', 'Failed'): 2, ('user3-example-com', 'Error'): 2}
+  spline workflow 创建于 2026-06-17T02:55:27Z 已存续 131 天
+
+=== PV 汇总 ===
+  Bound       55 个     7005 GiB
+  Released   178 个     9444 GiB
+  合计 233 个 16449 GiB
+
+=== 周期内新建 PVC ===
+  user3-example-com/pengwin-of-ab-inputs-20261024-v1 100Gi Bound 10-24 18:19
+  user3-example-com/pengwin-of-ab-results-20261024-v1 100Gi Bound 10-24 18:19
+  user3-example-com/pengwin-task3-beta-inputs-20261019-v1 100Gi Bound 10-19 16:58
+  user3-example-com/pengwin-task3-beta-results-20261019-v1 100Gi Bound 10-19 16:58
+  合计 400 GiB
+  非 Bound PVC: 无
+
+=== Pod 分布（Running）===
+  {'worker-node01-pro6000': 117, 'worker-node02-3090': 21, 'master-node-storage-r620-g40': 21}
+  Failed 状态 Pod 对象残留: 37
+
+=== Notebook Pod ===
+  kubeflow-user-example-com/style-big: Running node=worker-node02-3090
+  kubeflow-user-example-com/vs: Running node=worker-node02-3090
+  user2-example-com/mni-test-0104: Running node=worker-node01-pro6000
+  user2-example-com/mni-test-qw-260106: Running node=worker-node01-pro6000
+  user4-example-com/awgs-builder: Running node=worker-node01-pro6000
+  user5-example-com/csj-spine-detection: Running node=worker-node02-3090
+
+=== 遗留项 ===
+qwen36-cache        Bound   pvc-73b163f1-c393-4bba-a097-fbc5ce9dbd38   120Gi   RWO   local-path    <unset>   118d
+radar-model-cache   Bound   pvc-38624d28-85be-4ad0-beaa-470718e0749e   100Gi   RWO   local-path    <unset>   35d
+radar-workspace     Bound   pvc-82b15190-bb66-4712-939e-226d7092f885   100Gi   RWX   nfs-csi-ssd   <unset>   35d
+radar replicas=0 ready=
+radar-inference-v2-nodeport   NodePort   10.105.77.13   <none>   8080:31891/TCP   35d
+
+=== 证书 ===
+  kube-apiserver notAfter=Dec 26 04:51:48 2026 GMT 剩余 60 天
+NS         NAME                     READY   NOTAFTER               RENEW
+kubeflow   admission-webhook-cert   True    2027-01-20T06:27:03Z   2026-12-21T06:27:03Z
+kubeflow   katib-webhook-cert       True    2027-01-20T06:26:25Z   2026-12-21T06:26:25Z
+kubeflow   kfp-cache-cert           True    2027-01-20T06:23:42Z   2026-12-21T06:23:42Z
+kubeflow   kubeflow-trainer-cert    True    2026-12-11T07:38:35Z   2026-11-11T07:38:35Z
+kubeflow   pvcviewer-serving-cert   True    2027-01-20T06:28:24Z   2026-12-21T06:28:24Z
+kubeflow   serving-cert             True    2027-01-20T06:25:03Z   2026-12-21T06:25:03Z
+
+=== 网络 ===
+istio-ingressgateway   NodePort   10.96.216.197   <none>   15021:31126/TCP,80:30080/TCP,443:31663/TCP   304d   app=istio-ingressgateway,istio=ingressgateway
+ingressgateway endpoints: 10.244.86.142 
+Ingress 对象: 1；Gateway 对象: 4；Service 总数: 132
+
+=== Harbor / 镜像治理 ===
+  health: healthy | 全部组件 healthy
+  仓库 230 个，存储 199.31 GB
+  代理项目: dockerhub(33), gcr(14), ghcr(4), k8s(2), nvcr(1), quay(1)
+  helper image: 172.16.1.72:30002/library/busybox:latest
+  inject-kaniko-registry-mirror   true   false   True   61d   Ready
+
+=== Velero 存储位置与周期内备份 ===
+NAME      PHASE       LASTVALID
+default   Available   2026-10-26T10:01:11Z
+NAME                     SCHEDULE    TTL        LAST                   PAUSED
+kubeflow-weekly-backup   0 2 * * 0   720h0m0s   2026-10-25T02:00:21Z   <none>
+minio-daily-backup       0 4 * * *   720h0m0s   2026-10-26T04:00:22Z   <none>
+pvc-daily-backup         0 3 * * *   168h0m0s   2026-10-26T03:00:22Z   <none>
+  周期内 16 次: {'minio-daily-backup': 8, 'pvc-daily-backup': 7, 'kubeflow-weekly-backup': 1}；状态 {'Completed': 16}；errors 合计 0；warnings 合计 0
+  仓库内现存备份 42 份: {'Completed': 42}
+  最近: minio-daily-backup-20261025040021 Completed (10-25 12:00 CST)
+  最近: pvc-daily-backup-20261026030022 Completed (10-26 11:00 CST)
+  最近: minio-daily-backup-20261026040022 Completed (10-26 12:00 CST)

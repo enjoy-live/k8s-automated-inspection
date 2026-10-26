@@ -1,0 +1,19 @@
+=== qwen36-cache ===
+qwen36-cache   Bound   pvc-73b163f1-c393-4bba-a097-fbc5ce9dbd38   120Gi   RWO   local-path   <unset>   112d
+=== radar ===
+radar-inference-api-v2   <none>   0
+qwen36-cache                     Bound   pvc-73b163f1-c393-4bba-a097-fbc5ce9dbd38   120Gi   RWO   local-path    <unset>   112d
+qwen38-cache                     Bound   pvc-be000209-0265-4478-8045-fea93f47080c   150Gi   RWO   local-path    <unset>   64d
+radar-model-cache                Bound   pvc-38624d28-85be-4ad0-beaa-470718e0749e   100Gi   RWO   local-path    <unset>   29d
+radar-workspace                  Bound   pvc-82b15190-bb66-4712-939e-226d7092f885   100Gi   RWX   nfs-csi-ssd   <unset>   29d
+=== spline ===
+spline-yolov8-train-sj7sw-train-103964838          1/2   ImagePullBackOff   0     6d22h
+=== cert ===
+notAfter=Dec 26 04:51:48 2026 GMT
+  days left: 66
+=== Harbor proxy ===
+  proxy projects: dockerhub(33), gcr(14), ghcr(4), k8s(2), nvcr(1), quay(1)
+=== local-path helper ===
+    image: 172.16.1.72:30002/library/busybox:latest
+=== kyverno ===
+inject-kaniko-registry-mirror   true   false   True   56d   Ready

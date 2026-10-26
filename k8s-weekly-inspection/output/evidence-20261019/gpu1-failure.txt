@@ -1,0 +1,28 @@
+=== node01 nvidia-smi -L ===
+Defaulted container "nvidia-dcgm-exporter" out of: nvidia-dcgm-exporter, toolkit-validation (init)
+GPU 0: NVIDIA RTX PRO 6000 Blackwell Server Edition (UUID: GPU-2e6829ca-a897-7b4d-a86c-590920ac3509)
+Unable to determine the device handle for gpu 0000:98:00.0: Unknown Error
+command terminated with exit code 255
+Defaulted container "nvidia-dcgm-exporter" out of: nvidia-dcgm-exporter, toolkit-validation (init)
+Unable to determine the device handle for GPU1: 0000:98:00.0: Unknown Error
+index, pci.bus_id, uuid, memory.total [MiB], memory.used [MiB]
+0, 00000000:38:00.0, GPU-2e6829ca-a897-7b4d-a86c-590920ac3509, 97887 MiB, 90844 MiB
+
+=== node capacity vs allocatable ===
+capacity GPU: 2
+allocatable GPU: 1
+Ready: 2026-09-18T02:48:43Z
+=== device plugin / GPU operator pods on node01 ===
+gpu-feature-discovery-44fkk                               0/1   CrashLoopBackOff   485 (15s ago)    288d    10.244.86.173   worker-node01-pro6000   <none>   <none>
+gpu-operator-node-feature-discovery-gc-67474f8744-c8vgh   1/1   Running            0                6d23h   10.244.86.191   worker-node01-pro6000   <none>   <none>
+gpu-operator-node-feature-discovery-worker-wc497          1/1   Running            21 (6d23h ago)   288d    10.244.86.135   worker-node01-pro6000   <none>   <none>
+nvidia-container-toolkit-daemonset-ngjqf                  1/1   Running            5 (32d ago)      288d    10.244.86.182   worker-node01-pro6000   <none>   <none>
+nvidia-cuda-validator-nb7b7                               0/1   Completed          0                32d     10.244.86.158   worker-node01-pro6000   <none>   <none>
+nvidia-dcgm-exporter-c2zwk                                1/1   Running            5 (32d ago)      288d    10.244.86.160   worker-node01-pro6000   <none>   <none>
+nvidia-device-plugin-daemonset-7vm7c                      1/1   Running            5 (32d ago)      288d    10.244.86.137   worker-node01-pro6000   <none>   <none>
+nvidia-mig-manager-5gqq9                                  1/1   Running            5 (32d ago)      288d    10.244.86.107   worker-node01-pro6000   <none>   <none>
+nvidia-operator-validator-zstwn                           1/1   Running            5 (32d ago)      288d    10.244.86.128   worker-node01-pro6000   <none>   <none>
+Defaulted container "nvidia-dcgm-exporter" out of: nvidia-dcgm-exporter, toolkit-validation (init)
+index, uuid, pci.bus_id
+Unable to determine the device handle for GPU1: 0000:98:00.0: Unknown Error
+0, GPU-2e6829ca-a897-7b4d-a86c-590920ac3509, 00000000:38:00.0

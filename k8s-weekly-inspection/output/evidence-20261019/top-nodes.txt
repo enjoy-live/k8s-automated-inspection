@@ -1,0 +1,4 @@
+NAME                           CPU(cores)   CPU(%)   MEMORY(bytes)   MEMORY(%)   
+master-node-storage-r620-g40   1297m        2%       7083Mi          22%         
+worker-node01-pro6000          2586m        2%       77909Mi         15%         
+worker-node02-3090             2405m        6%       64596Mi         50%         

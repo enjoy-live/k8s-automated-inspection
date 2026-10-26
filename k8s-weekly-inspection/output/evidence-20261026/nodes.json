@@ -1,0 +1,1777 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "Node",
+            "metadata": {
+                "annotations": {
+                    "csi.volume.kubernetes.io/nodeid": "{\"nfs.csi.k8s.io\":\"master-node-storage-r620-g40\"}",
+                    "kubeadm.alpha.kubernetes.io/cri-socket": "unix:///var/run/containerd/containerd.sock",
+                    "nfd.node.kubernetes.io/feature-labels": "cpu-cpuid.ADX,cpu-cpuid.AESNI,cpu-cpuid.AMXFP8,cpu-cpuid.AVX,cpu-cpuid.AVX2,cpu-cpuid.AVX512BITALG,cpu-cpuid.AVX512BW,cpu-cpuid.AVX512CD,cpu-cpuid.AVX512DQ,cpu-cpuid.AVX512F,cpu-cpuid.AVX512IFMA,cpu-cpuid.AVX512VBMI,cpu-cpuid.AVX512VBMI2,cpu-cpuid.AVX512VL,cpu-cpuid.AVX512VNNI,cpu-cpuid.AVX512VPOPCNTDQ,cpu-cpuid.CMPXCHG8,cpu-cpuid.FLUSH_L1D,cpu-cpuid.FMA3,cpu-cpuid.FSRM,cpu-cpuid.FXSR,cpu-cpuid.FXSROPT,cpu-cpuid.GFNI,cpu-cpuid.IA32_ARCH_CAP,cpu-cpuid.IBPB,cpu-cpuid.LAHF,cpu-cpuid.MD_CLEAR,cpu-cpuid.MOVBE,cpu-cpuid.OSXSAVE,cpu-cpuid.PCONFIG,cpu-cpuid.PMU_FIXEDCOUNTER_CYCLES,cpu-cpuid.PMU_FIXEDCOUNTER_INSTRUCTIONS,cpu-cpuid.PMU_FIXEDCOUNTER_REFCYCLES,cpu-cpuid.PMU_FIXEDCOUNTER_TOPDOWN_SLOTS,cpu-cpuid.PSFD,cpu-cpuid.SHA,cpu-cpuid.SPEC_CTRL_SSBD,cpu-cpuid.STIBP,cpu-cpuid.SYSCALL,cpu-cpuid.SYSEE,cpu-cpuid.TME,cpu-cpuid.VAES,cpu-cpuid.VMX,cpu-cpuid.VPCLMULQDQ,cpu-cpuid.WBNOINVD,cpu-cpuid.X87,cpu-cpuid.XGETBV1,cpu-cpuid.XSAVE,cpu-cpuid.XSAVEC,cpu-cpuid.XSAVEOPT,cpu-cpuid.XSAVES,cpu-cstate.enabled,cpu-hardware_multithreading,cpu-model.family,cpu-model.id,cpu-model.vendor_id,cpu-pstate.status,cpu-pstate.turbo,kernel-config.NO_HZ,kernel-config.NO_HZ_FULL,kernel-version.full,kernel-version.major,kernel-version.minor,kernel-version.revision,network-sriov.capable,pci-15b3.present,pci-15b3.sriov.capable,pci-1a03.present,rdma.capable,storage-nonrotationaldisk,system-os_release.ID,system-os_release.VERSION_ID,system-os_release.VERSION_ID.major,system-os_release.VERSION_ID.minor,usb-ff_0bda_8153.present",
+                    "node.alpha.kubernetes.io/ttl": "0",
+                    "projectcalico.org/IPv4Address": "12.12.12.1/24",
+                    "projectcalico.org/IPv4IPIPTunnelAddr": "10.244.31.0",
+                    "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+                },
+                "creationTimestamp": "2025-12-26T04:51:59Z",
+                "labels": {
+                    "beta.kubernetes.io/arch": "amd64",
+                    "beta.kubernetes.io/os": "linux",
+                    "feature.node.kubernetes.io/cpu-cpuid.ADX": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AESNI": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AMXFP8": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX2": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512BITALG": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512BW": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512CD": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512DQ": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512F": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512IFMA": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512VBMI": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512VBMI2": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512VL": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512VNNI": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512VPOPCNTDQ": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.CMPXCHG8": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.FLUSH_L1D": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.FMA3": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.FSRM": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.FXSR": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.FXSROPT": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.GFNI": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.IA32_ARCH_CAP": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.IBPB": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.LAHF": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.MD_CLEAR": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.MOVBE": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.OSXSAVE": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.PCONFIG": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.PMU_FIXEDCOUNTER_CYCLES": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.PMU_FIXEDCOUNTER_INSTRUCTIONS": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.PMU_FIXEDCOUNTER_REFCYCLES": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.PMU_FIXEDCOUNTER_TOPDOWN_SLOTS": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.PSFD": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.SHA": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.SPEC_CTRL_SSBD": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.STIBP": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.SYSCALL": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.SYSEE": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.TME": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.VAES": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.VMX": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.VPCLMULQDQ": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.WBNOINVD": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.X87": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.XGETBV1": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.XSAVE": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.XSAVEC": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.XSAVEOPT": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.XSAVES": "true",
+                    "feature.node.kubernetes.io/cpu-cstate.enabled": "true",
+                    "feature.node.kubernetes.io/cpu-hardware_multithreading": "true",
+                    "feature.node.kubernetes.io/cpu-model.family": "6",
+                    "feature.node.kubernetes.io/cpu-model.id": "106",
+                    "feature.node.kubernetes.io/cpu-model.vendor_id": "Intel",
+                    "feature.node.kubernetes.io/cpu-pstate.status": "passive",
+                    "feature.node.kubernetes.io/cpu-pstate.turbo": "true",
+                    "feature.node.kubernetes.io/kernel-config.NO_HZ": "true",
+                    "feature.node.kubernetes.io/kernel-config.NO_HZ_FULL": "true",
+                    "feature.node.kubernetes.io/kernel-version.full": "6.8.0-94-generic",
+                    "feature.node.kubernetes.io/kernel-version.major": "6",
+                    "feature.node.kubernetes.io/kernel-version.minor": "8",
+                    "feature.node.kubernetes.io/kernel-version.revision": "0",
+                    "feature.node.kubernetes.io/network-sriov.capable": "true",
+                    "feature.node.kubernetes.io/pci-15b3.present": "true",
+                    "feature.node.kubernetes.io/pci-15b3.sriov.capable": "true",
+                    "feature.node.kubernetes.io/pci-1a03.present": "true",
+                    "feature.node.kubernetes.io/rdma.capable": "true",
+                    "feature.node.kubernetes.io/storage-nonrotationaldisk": "true",
+                    "feature.node.kubernetes.io/system-os_release.ID": "ubuntu",
+                    "feature.node.kubernetes.io/system-os_release.VERSION_ID": "22.04",
+                    "feature.node.kubernetes.io/system-os_release.VERSION_ID.major": "22",
+                    "feature.node.kubernetes.io/system-os_release.VERSION_ID.minor": "04",
+                    "feature.node.kubernetes.io/usb-ff_0bda_8153.present": "true",
+                    "kubernetes.io/arch": "amd64",
+                    "kubernetes.io/hostname": "master-node-storage-r620-g40",
+                    "kubernetes.io/os": "linux",
+                    "monitoring-node": "true",
+                    "node-role.kubernetes.io/control-plane": "",
+                    "node.kubernetes.io/exclude-from-external-load-balancers": ""
+                },
+                "name": "master-node-storage-r620-g40",
+                "resourceVersion": "318680600",
+                "uid": "c6ca374e-3192-4ad1-9978-4a0318556cd7"
+            },
+            "spec": {
+                "podCIDR": "10.244.0.0/24",
+                "podCIDRs": [
+                    "10.244.0.0/24"
+                ],
+                "taints": [
+                    {
+                        "effect": "NoSchedule",
+                        "key": "node-role.kubernetes.io/control-plane"
+                    }
+                ]
+            },
+            "status": {
+                "addresses": [
+                    {
+                        "address": "12.12.12.1",
+                        "type": "InternalIP"
+                    },
+                    {
+                        "address": "master-node-storage-r620-g40",
+                        "type": "Hostname"
+                    }
+                ],
+                "allocatable": {
+                    "cpu": "56",
+                    "ephemeral-storage": "412408611772",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "32390060Ki",
+                    "pods": "110"
+                },
+                "capacity": {
+                    "cpu": "56",
+                    "ephemeral-storage": "447491984Ki",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "32492460Ki",
+                    "pods": "110"
+                },
+                "conditions": [
+                    {
+                        "lastHeartbeatTime": "2026-02-09T01:13:44Z",
+                        "lastTransitionTime": "2026-02-09T01:13:44Z",
+                        "message": "Calico is running on this node",
+                        "reason": "CalicoIsUp",
+                        "status": "False",
+                        "type": "NetworkUnavailable"
+                    },
+                    {
+                        "lastHeartbeatTime": "2026-10-26T09:58:37Z",
+                        "lastTransitionTime": "2025-12-26T04:51:57Z",
+                        "message": "kubelet has sufficient memory available",
+                        "reason": "KubeletHasSufficientMemory",
+                        "status": "False",
+                        "type": "MemoryPressure"
+                    },
+                    {
+                        "lastHeartbeatTime": "2026-10-26T09:58:37Z",
+                        "lastTransitionTime": "2026-01-15T06:32:54Z",
+                        "message": "kubelet has no disk pressure",
+                        "reason": "KubeletHasNoDiskPressure",
+                        "status": "False",
+                        "type": "DiskPressure"
+                    },
+                    {
+                        "lastHeartbeatTime": "2026-10-26T09:58:37Z",
+                        "lastTransitionTime": "2025-12-26T04:51:57Z",
+                        "message": "kubelet has sufficient PID available",
+                        "reason": "KubeletHasSufficientPID",
+                        "status": "False",
+                        "type": "PIDPressure"
+                    },
+                    {
+                        "lastHeartbeatTime": "2026-10-26T09:58:37Z",
+                        "lastTransitionTime": "2025-12-26T05:29:16Z",
+                        "message": "kubelet is posting ready status",
+                        "reason": "KubeletReady",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "daemonEndpoints": {
+                    "kubeletEndpoint": {
+                        "Port": 10250
+                    }
+                },
+                "images": [
+                    {
+                        "names": [
+                            "docker.io/library/simplesymbol-pytorch-cuda:v12.1.1"
+                        ],
+                        "sizeBytes": 9304635103
+                    },
+                    {
+                        "names": [
+                            "docker.io/library/python:3.11"
+                        ],
+                        "sizeBytes": 1127047672
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/node-feature-discovery:v0.18.2",
+                            "172.16.1.72:30002/library/sha256:6a744d4448cbea90b54a813d5c12aa05751c58222a786aa29e1906bff32262f4",
+                            "registry.k8s.io/nfd/node-feature-discovery:v0.18.2"
+                        ],
+                        "sizeBytes": 279019615
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/node:v3.25.0",
+                            "172.16.1.72:30002/library/sha256:08616d26b8e74867402274687491e5978ba4a6ded94e9f5ecc3e364024e5683e",
+                            "docker.io/calico/node:v3.25.0"
+                        ],
+                        "sizeBytes": 246777938
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/install-cni:1.24.3",
+                            "172.16.1.72:30002/library/sha256:02f56b7b1432fda15de7d2ed6ab6892691a0eff3d668d5fbc31aea6d4e0f4b10",
+                            "gcr.io/istio-release/install-cni:1.24.3"
+                        ],
+                        "sizeBytes": 223930121
+                    },
+                    {
+                        "names": [
+                            "docker.io/grafana/grafana:12.3.0"
+                        ],
+                        "sizeBytes": 210145120
+                    },
+                    {
+                        "names": [
+                            "docker.io/velero/velero:v1.17.2-rc.2"
+                        ],
+                        "sizeBytes": 199235885
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/cni:v3.25.0",
+                            "172.16.1.72:30002/library/sha256:d70a5947d57e5ab3340d126a38e6ae51bd9e8e0b342daa2012e78d8868bed5b7",
+                            "docker.io/calico/cni:v3.25.0"
+                        ],
+                        "sizeBytes": 197891380
+                    },
+                    {
+                        "names": [
+                            "docker.io/minio/minio:latest"
+                        ],
+                        "sizeBytes": 176248209
+                    },
+                    {
+                        "names": [
+                            "nvcr.io/nvidia/gpu-operator@sha256:634471cdfedcc3bd6b4412a905a9fbc9a9bf91df7f436aa00454b088d087c60a",
+                            "172.16.1.72:30002/library/gpu-operator:v25.10.1",
+                            "172.16.1.72:30002/library/sha256:9f1aa463536f9e0ea399610e8f93bd3d358d8e729ad90f48c90b7721ae53aa41",
+                            "nvcr.io/nvidia/gpu-operator:v25.10.1"
+                        ],
+                        "sizeBytes": 170527515
+                    },
+                    {
+                        "names": [
+                            "quay.io/prometheus/prometheus@sha256:2b6f734e372c1b4717008f7d0a0152316aedd4d13ae17ef1e3268dbfaf68041b",
+                            "quay.io/prometheus/prometheus:v3.8.1"
+                        ],
+                        "sizeBytes": 136309267
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/kfp-cache-server:2.4.1"
+                        ],
+                        "sizeBytes": 85810508
+                    },
+                    {
+                        "names": [
+                            "docker.io/kserve/kserve-controller:v0.14.1"
+                        ],
+                        "sizeBytes": 81854700
+                    },
+                    {
+                        "names": [
+                            "docker.io/kserve/kserve-localmodel-controller:v0.14.1"
+                        ],
+                        "sizeBytes": 79287038
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/kube-controllers:v3.25.0",
+                            "172.16.1.72:30002/library/sha256:5e785d005ccc1ab22527a783835cf2741f6f5f385a8956144c661f8c23ae9d78",
+                            "docker.io/calico/kube-controllers:v3.25.0"
+                        ],
+                        "sizeBytes": 71657306
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/kube-state-metrics@sha256:e39c9904ab49cc0b44f2903e1159131c9b377cbbbc12f510182d7d5b2462315e",
+                            "172.16.1.72:30002/library/kube-state-metrics:v2.17.0"
+                        ],
+                        "sizeBytes": 63897660
+                    },
+                    {
+                        "names": [
+                            "public.ecr.aws/n0r2y8g6/sig-storage/nfsplugin@sha256:2b9c2d8295ec4c9344f55407cf63515395cf5bfc31add19807b71d5577314bc7",
+                            "172.16.1.72:30002/library/nfsplugin:v4.12.1",
+                            "172.16.1.72:30002/library/sha256:9689a8f6953b8ffb2ba53e0b685efcb50ab8b2ca9ab9e6196217e4ba1ebbb1db",
+                            "public.ecr.aws/n0r2y8g6/sig-storage/nfsplugin:v4.12.1"
+                        ],
+                        "sizeBytes": 54893421
+                    },
+                    {
+                        "names": [
+                            "quay.io/prometheus/alertmanager@sha256:abb750ac7b63116761c16dd481ae92496fbe04721686c0920f0fa4d0728cd4a6",
+                            "quay.io/prometheus/alertmanager:v0.30.0"
+                        ],
+                        "sizeBytes": 38651737
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/csi-provisioner:v5.3.0",
+                            "172.16.1.72:30002/library/sha256:656e8e61e9219130a42109638faec39251f8e9d048107bce4d019ee3ce85b215",
+                            "public.ecr.aws/n0r2y8g6/sig-storage/csi-provisioner:v5.3.0"
+                        ],
+                        "sizeBytes": 35596293
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/csi-resizer:v1.14.0",
+                            "172.16.1.72:30002/library/sha256:0006ce71b066552a8c4f59a5156ac46eb834ce8adefa1249c8a5dcea43d9246a",
+                            "public.ecr.aws/n0r2y8g6/sig-storage/csi-resizer:v1.14.0"
+                        ],
+                        "sizeBytes": 33631342
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/csi-snapshotter:v8.3.0",
+                            "172.16.1.72:30002/library/sha256:28f679932ad50e5719db62d10982a24bd2e1e4413e4212635d3234a952cd802c",
+                            "public.ecr.aws/n0r2y8g6/sig-storage/csi-snapshotter:v8.3.0"
+                        ],
+                        "sizeBytes": 33618683
+                    },
+                    {
+                        "names": [
+                            "registry.cn-hangzhou.aliyuncs.com/google_containers/kube-proxy@sha256:0762fbb58fb36dcce90dacbeedabde9a969b804e579a108f09d0f8df31a26482",
+                            "registry.k8s.io/kube-proxy@sha256:0244651801747edf2368222f93a7d17cba6e668a890db72532d6b67a7e06dca5",
+                            "172.16.1.72:30002/library/kube-proxy:v1.32.1",
+                            "172.16.1.72:30002/library/sha256:e29f9c7391fd92d96bc72026fc755b0f9589536e36ecd7102161f1ded087897a",
+                            "registry.cn-hangzhou.aliyuncs.com/google_containers/kube-proxy:v1.32.1"
+                        ],
+                        "sizeBytes": 30908081
+                    },
+                    {
+                        "names": [
+                            "docker.io/joeelliott/cert-exporter:v2.18.0"
+                        ],
+                        "sizeBytes": 29048593
+                    },
+                    {
+                        "names": [
+                            "registry.cn-hangzhou.aliyuncs.com/google_containers/kube-apiserver@sha256:8f8d916f08b21f2e22a7921508ea61ccf7fc7d59bf624dda541acbdf45f6bf64",
+                            "registry.k8s.io/kube-apiserver@sha256:b88ede8e7c3ce354ca0c45c448c48c094781ce692883ee56f181fa569338c0ac",
+                            "172.16.1.72:30002/library/kube-apiserver:v1.32.1",
+                            "172.16.1.72:30002/library/sha256:95c0bda56fc4dd44cf1876f15c04427feabe5556394553874934ffd2514eeb0a",
+                            "registry.cn-hangzhou.aliyuncs.com/google_containers/kube-apiserver:v1.32.1"
+                        ],
+                        "sizeBytes": 28671220
+                    },
+                    {
+                        "names": [
+                            "quay.io/kiwigrid/k8s-sidecar@sha256:716b0b33ff2dc938a3f2bc64e5ea791d81fb09760bcd27cec1eb896968d6e134",
+                            "quay.io/kiwigrid/k8s-sidecar:2.1.2"
+                        ],
+                        "sizeBytes": 26661641
+                    },
+                    {
+                        "names": [
+                            "registry.cn-hangzhou.aliyuncs.com/google_containers/kube-controller-manager@sha256:46603231201ac821eacb5b1d7da7eac9dc4fa74de0760546c699e035b2a43d64",
+                            "registry.k8s.io/kube-controller-manager@sha256:7e86b2b274365bbc5f5d1e08f0d32d8bb04b8484ac6a92484c298dc695025954",
+                            "172.16.1.72:30002/library/kube-controller-manager:v1.32.1",
+                            "172.16.1.72:30002/library/sha256:019ee182b58e20da055b173dc0b598fbde321d4bf959e1c2a832908ed7642d35",
+                            "registry.cn-hangzhou.aliyuncs.com/google_containers/kube-controller-manager:v1.32.1"
+                        ],
+                        "sizeBytes": 26258066
+                    },
+                    {
+                        "names": [
+                            "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/gcr.io/kaniko-project/executor@sha256:cf4cb31819e49e6b24e6c5650986381db0b23ea60d8d0f6c26a09771a47ec740",
+                            "swr.cn-north-4.myhuaweicloud.com/ddn-k8s/gcr.io/kaniko-project/executor:v1.9.1"
+                        ],
+                        "sizeBytes": 25787920
+                    },
+                    {
+                        "names": [
+                            "registry.cn-hangzhou.aliyuncs.com/google_containers/etcd@sha256:8fd1ddb270d6bc721dac202d9f2536c926415feee3170c1f3ba7dc3f726ab8fb",
+                            "registry.k8s.io/etcd@sha256:251e7e490f64859d329cd963bc879dc04acf3d7195bb52c4c50b4a07bedf37d6",
+                            "172.16.1.72:30002/library/etcd:3.5.24-0",
+                            "172.16.1.72:30002/library/sha256:8cb12dd0c3e42c6d0175d09a060358cbb68a3ecc2ba4dbb00327c7d760e1425d",
+                            "registry.cn-hangzhou.aliyuncs.com/google_containers/etcd:3.5.24-0"
+                        ],
+                        "sizeBytes": 23715628
+                    },
+                    {
+                        "names": [
+                            "registry.cn-hangzhou.aliyuncs.com/google_containers/kube-scheduler@sha256:57af9c870a7f0029f3b9cee37de30ebb0c0c4ecfc06e1cadeff0bcca4bfa7029",
+                            "registry.k8s.io/kube-scheduler@sha256:b8fcbcd2afe44acf368b24b61813686f64be4d7fff224d305d78a05bac38f72e",
+                            "172.16.1.72:30002/library/kube-scheduler:v1.32.1",
+                            "172.16.1.72:30002/library/sha256:2b0d6572d062c0f590b08c3113e5d9a61e381b3da7845a0289bdbf1faa1b23d1",
+                            "registry.cn-hangzhou.aliyuncs.com/google_containers/kube-scheduler:v1.32.1"
+                        ],
+                        "sizeBytes": 20657132
+                    },
+                    {
+                        "names": [
+                            "quay.io/prometheus-operator/prometheus-operator@sha256:6dbbbbeca6d7b94aa30723bfaa55262e41b9f8c15304c484611c696503840aac",
+                            "quay.io/prometheus-operator/prometheus-operator:v0.87.1"
+                        ],
+                        "sizeBytes": 19444206
+                    },
+                    {
+                        "names": [
+                            "registry.k8s.io/coredns/coredns:v1.11.3"
+                        ],
+                        "sizeBytes": 18562039
+                    },
+                    {
+                        "names": [
+                            "registry.aliyuncs.com/google_containers/livenessprobe@sha256:096c4f7a1258dea77edecf999faceae5d3e5bd6ca216d7bee3e0df2ca75ab584",
+                            "registry.k8s.io/sig-storage/livenessprobe@sha256:9b75b9ade162136291d5e8f13a1dfc3dec71ee61419b1bfc112e0796ff8a6aa9",
+                            "172.16.1.72:30002/library/livenessprobe:v2.17.0",
+                            "172.16.1.72:30002/library/sha256:b137e44d53c9ead9f1443664eac69fed713b20bc947d0f5e04a3d66e3f5cd3f5",
+                            "public.ecr.aws/n0r2y8g6/sig-storage/livenessprobe:v2.17.0"
+                        ],
+                        "sizeBytes": 15259255
+                    },
+                    {
+                        "names": [
+                            "quay.io/prometheus-operator/prometheus-config-reloader@sha256:257ce3543e8f45c059dab488bcf897d8cc598cabd78afba12f41d6dbe36e22d2",
+                            "quay.io/prometheus-operator/prometheus-config-reloader:v0.87.1"
+                        ],
+                        "sizeBytes": 15204798
+                    },
+                    {
+                        "names": [
+                            "registry.aliyuncs.com/google_containers/csi-node-driver-registrar@sha256:1a49a15eb200ca7a756965e5b29f72ebe99f3b970f81c49f302479ce812efabf",
+                            "registry.k8s.io/sig-storage/csi-node-driver-registrar@sha256:11f199f6bec47403b03cb49c79a41f445884b213b382582a60710b8c6fdc316a",
+                            "172.16.1.72:30002/library/csi-node-driver-registrar:v2.15.0",
+                            "172.16.1.72:30002/library/sha256:82d682baaacdc6902133ec494bbfb01b3884c4a98efac59391880253012c96b9",
+                            "public.ecr.aws/n0r2y8g6/sig-storage/csi-node-driver-registrar:v2.15.0"
+                        ],
+                        "sizeBytes": 15130744
+                    },
+                    {
+                        "names": [
+                            "quay.io/prometheus/node-exporter@sha256:337ff1d356b68d39cef853e8c6345de11ce7556bb34cda8bd205bcf2ed30b565",
+                            "172.16.1.72:30002/library/node-exporter:v1.10.2",
+                            "172.16.1.72:30002/library/sha256:2715d223fd463573419598cc8811def0fdd913fe6f95e9447ab66ef57a1d3661",
+                            "quay.io/prometheus/node-exporter:v1.10.2"
+                        ],
+                        "sizeBytes": 13054407
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/jkroepke/kube-webhook-certgen@sha256:c7f925cc3ec386e11b7393f941a8844786311fd2328943fe3e7c744c373ed864",
+                            "ghcr.io/jkroepke/kube-webhook-certgen:1.7.3"
+                        ],
+                        "sizeBytes": 9381323
+                    },
+                    {
+                        "names": [
+                            "docker.io/library/alpine@sha256:d9e853e87e55526f6b2917df91a2115c36dd7c696a35be12163d44e6e2a4b6bc",
+                            "docker.io/library/alpine:3.20"
+                        ],
+                        "sizeBytes": 3641182
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/busybox@sha256:870e815c3a50dd0f6b40efddb319c72c32c3ee340b5a3e8945904232ccd12f44",
+                            "172.16.1.72:30002/library/busybox:latest"
+                        ],
+                        "sizeBytes": 2214823
+                    },
+                    {
+                        "names": [
+                            "registry.cn-hangzhou.aliyuncs.com/google_containers/pause@sha256:0ca1162b75bf9fc55c4cac99a1ff06f7095c881d5c07acfa07c853e72225c36f",
+                            "registry.k8s.io/pause@sha256:ee6521f290b2168b6e0935a181d4cff9be1ac3f505666ef0e3c98fae8199917a",
+                            "172.16.1.72:30002/library/pause:3.10",
+                            "172.16.1.72:30002/library/sha256:873ed75102791e5b0b8a7fcd41606c92fcec98d56d05ead4ac5131650004c136",
+                            "registry.cn-hangzhou.aliyuncs.com/google_containers/pause:3.10"
+                        ],
+                        "sizeBytes": 320368
+                    },
+                    {
+                        "names": [
+                            "registry.aliyuncs.com/google_containers/pause@sha256:d8aed0a71d2bd723de589dd2a857e7b5952b970bc1b5c70174b12a0eefd42f49",
+                            "registry.cn-hangzhou.aliyuncs.com/google_containers/pause@sha256:d8aed0a71d2bd723de589dd2a857e7b5952b970bc1b5c70174b12a0eefd42f49",
+                            "172.16.1.72:30002/library/pause:3.10.1",
+                            "172.16.1.72:30002/library/sha256:cd073f4c5f6a8e9dc6f3125ba00cf60819cae95c1ec84a1f146ee4a9cf9e803f",
+                            "hangzhou.aliyuncs.com/google_containers/pause:3.10.1"
+                        ],
+                        "sizeBytes": 319714
+                    }
+                ],
+                "nodeInfo": {
+                    "architecture": "amd64",
+                    "bootID": "a368feb0-0adb-4b88-a7bc-2148c78f80df",
+                    "containerRuntimeVersion": "containerd://1.7.25",
+                    "kernelVersion": "6.8.0-94-generic",
+                    "kubeProxyVersion": "v1.32.10",
+                    "kubeletVersion": "v1.32.10",
+                    "machineID": "b36f4c69121e41039ea03e67008fc969",
+                    "operatingSystem": "linux",
+                    "osImage": "Ubuntu 22.04.5 LTS",
+                    "systemUUID": "8f5084fe-aa4f-11ec-90db-083a88ca0c1a"
+                }
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Node",
+            "metadata": {
+                "annotations": {
+                    "csi.volume.kubernetes.io/nodeid": "{\"nfs.csi.k8s.io\":\"worker-node01-pro6000\"}",
+                    "kubeadm.alpha.kubernetes.io/cri-socket": "unix:///var/run/containerd/containerd.sock",
+                    "nfd.node.kubernetes.io/feature-labels": "cpu-cpuid.ADX,cpu-cpuid.AESNI,cpu-cpuid.AMXBF16,cpu-cpuid.AMXFP8,cpu-cpuid.AMXINT8,cpu-cpuid.AMXTILE,cpu-cpuid.AVX,cpu-cpuid.AVX2,cpu-cpuid.AVX512BF16,cpu-cpuid.AVX512BITALG,cpu-cpuid.AVX512BW,cpu-cpuid.AVX512CD,cpu-cpuid.AVX512DQ,cpu-cpuid.AVX512F,cpu-cpuid.AVX512FP16,cpu-cpuid.AVX512IFMA,cpu-cpuid.AVX512VBMI,cpu-cpuid.AVX512VBMI2,cpu-cpuid.AVX512VL,cpu-cpuid.AVX512VNNI,cpu-cpuid.AVX512VPOPCNTDQ,cpu-cpuid.AVXVNNI,cpu-cpuid.BHI_CTRL,cpu-cpuid.CETIBT,cpu-cpuid.CETSS,cpu-cpuid.CLDEMOTE,cpu-cpuid.CMPSB_SCADBS_SHORT,cpu-cpuid.CMPXCHG8,cpu-cpuid.ENQCMD,cpu-cpuid.FLUSH_L1D,cpu-cpuid.FMA3,cpu-cpuid.FSRM,cpu-cpuid.FXSR,cpu-cpuid.FXSROPT,cpu-cpuid.GFNI,cpu-cpuid.IA32_ARCH_CAP,cpu-cpuid.IA32_CORE_CAP,cpu-cpuid.IBPB,cpu-cpuid.IDPRED_CTRL,cpu-cpuid.LAHF,cpu-cpuid.MD_CLEAR,cpu-cpuid.MOVBE,cpu-cpuid.MOVDIR64B,cpu-cpuid.MOVDIRI,cpu-cpuid.MOVSB_ZL,cpu-cpuid.OSXSAVE,cpu-cpuid.PCONFIG,cpu-cpuid.PMU_FIXEDCOUNTER_CYCLES,cpu-cpuid.PMU_FIXEDCOUNTER_INSTRUCTIONS,cpu-cpuid.PMU_FIXEDCOUNTER_REFCYCLES,cpu-cpuid.PMU_FIXEDCOUNTER_TOPDOWN_SLOTS,cpu-cpuid.PSFD,cpu-cpuid.RRSBA_CTRL,cpu-cpuid.SERIALIZE,cpu-cpuid.SHA,cpu-cpuid.SPEC_CTRL_SSBD,cpu-cpuid.STIBP,cpu-cpuid.STOSB_SHORT,cpu-cpuid.SYSCALL,cpu-cpuid.SYSEE,cpu-cpuid.TME,cpu-cpuid.TSXLDTRK,cpu-cpuid.VAES,cpu-cpuid.VMX,cpu-cpuid.VPCLMULQDQ,cpu-cpuid.WAITPKG,cpu-cpuid.WBNOINVD,cpu-cpuid.X87,cpu-cpuid.XGETBV1,cpu-cpuid.XSAVE,cpu-cpuid.XSAVEC,cpu-cpuid.XSAVEOPT,cpu-cpuid.XSAVES,cpu-cstate.enabled,cpu-hardware_multithreading,cpu-model.family,cpu-model.id,cpu-model.vendor_id,cpu-pstate.scaling_governor,cpu-pstate.status,cpu-pstate.turbo,kernel-config.NO_HZ,kernel-config.NO_HZ_FULL,kernel-version.full,kernel-version.major,kernel-version.minor,kernel-version.revision,memory-numa,network-sriov.capable,nvidia.com/cuda.driver-version.full,nvidia.com/cuda.driver-version.major,nvidia.com/cuda.driver-version.minor,nvidia.com/cuda.driver-version.revision,nvidia.com/cuda.driver.major,nvidia.com/cuda.driver.minor,nvidia.com/cuda.driver.rev,nvidia.com/cuda.runtime-version.full,nvidia.com/cuda.runtime-version.major,nvidia.com/cuda.runtime-version.minor,nvidia.com/cuda.runtime.major,nvidia.com/cuda.runtime.minor,nvidia.com/gfd.timestamp,nvidia.com/gpu.compute.major,nvidia.com/gpu.compute.minor,nvidia.com/gpu.count,nvidia.com/gpu.family,nvidia.com/gpu.machine,nvidia.com/gpu.memory,nvidia.com/gpu.mode,nvidia.com/gpu.product,nvidia.com/gpu.replicas,nvidia.com/gpu.sharing-strategy,nvidia.com/mig.capable,nvidia.com/mig.strategy,nvidia.com/mps.capable,nvidia.com/vgpu.present,pci-10de.present,pci-10de.sriov.capable,pci-15b3.present,pci-15b3.sriov.capable,pci-1a03.present,pci-8086.present,pci-8086.sriov.capable,rdma.capable,storage-nonrotationaldisk,system-os_release.ID,system-os_release.VERSION_ID,system-os_release.VERSION_ID.major,system-os_release.VERSION_ID.minor",
+                    "node.alpha.kubernetes.io/ttl": "0",
+                    "nvidia.com/gpu-driver-upgrade-enabled": "true",
+                    "projectcalico.org/IPv4Address": "12.12.12.2/24",
+                    "projectcalico.org/IPv4IPIPTunnelAddr": "10.244.86.69",
+                    "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+                },
+                "creationTimestamp": "2026-01-05T10:45:00Z",
+                "labels": {
+                    "beta.kubernetes.io/arch": "amd64",
+                    "beta.kubernetes.io/os": "linux",
+                    "feature.node.kubernetes.io/cpu-cpuid.ADX": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AESNI": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AMXBF16": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AMXFP8": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AMXINT8": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AMXTILE": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX2": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512BF16": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512BITALG": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512BW": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512CD": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512DQ": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512F": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512FP16": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512IFMA": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512VBMI": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512VBMI2": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512VL": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512VNNI": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512VPOPCNTDQ": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVXVNNI": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.BHI_CTRL": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.CETIBT": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.CETSS": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.CLDEMOTE": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.CMPSB_SCADBS_SHORT": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.CMPXCHG8": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.ENQCMD": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.FLUSH_L1D": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.FMA3": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.FSRM": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.FXSR": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.FXSROPT": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.GFNI": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.IA32_ARCH_CAP": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.IA32_CORE_CAP": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.IBPB": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.IDPRED_CTRL": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.LAHF": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.MD_CLEAR": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.MOVBE": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.MOVDIR64B": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.MOVDIRI": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.MOVSB_ZL": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.OSXSAVE": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.PCONFIG": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.PMU_FIXEDCOUNTER_CYCLES": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.PMU_FIXEDCOUNTER_INSTRUCTIONS": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.PMU_FIXEDCOUNTER_REFCYCLES": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.PMU_FIXEDCOUNTER_TOPDOWN_SLOTS": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.PSFD": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.RRSBA_CTRL": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.SERIALIZE": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.SHA": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.SPEC_CTRL_SSBD": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.STIBP": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.STOSB_SHORT": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.SYSCALL": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.SYSEE": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.TME": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.TSXLDTRK": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.VAES": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.VMX": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.VPCLMULQDQ": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.WAITPKG": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.WBNOINVD": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.X87": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.XGETBV1": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.XSAVE": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.XSAVEC": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.XSAVEOPT": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.XSAVES": "true",
+                    "feature.node.kubernetes.io/cpu-cstate.enabled": "true",
+                    "feature.node.kubernetes.io/cpu-hardware_multithreading": "true",
+                    "feature.node.kubernetes.io/cpu-model.family": "6",
+                    "feature.node.kubernetes.io/cpu-model.id": "207",
+                    "feature.node.kubernetes.io/cpu-model.vendor_id": "Intel",
+                    "feature.node.kubernetes.io/cpu-pstate.scaling_governor": "powersave",
+                    "feature.node.kubernetes.io/cpu-pstate.status": "active",
+                    "feature.node.kubernetes.io/cpu-pstate.turbo": "true",
+                    "feature.node.kubernetes.io/kernel-config.NO_HZ": "true",
+                    "feature.node.kubernetes.io/kernel-config.NO_HZ_FULL": "true",
+                    "feature.node.kubernetes.io/kernel-version.full": "6.8.0-90-generic",
+                    "feature.node.kubernetes.io/kernel-version.major": "6",
+                    "feature.node.kubernetes.io/kernel-version.minor": "8",
+                    "feature.node.kubernetes.io/kernel-version.revision": "0",
+                    "feature.node.kubernetes.io/memory-numa": "true",
+                    "feature.node.kubernetes.io/network-sriov.capable": "true",
+                    "feature.node.kubernetes.io/pci-10de.present": "true",
+                    "feature.node.kubernetes.io/pci-10de.sriov.capable": "true",
+                    "feature.node.kubernetes.io/pci-15b3.present": "true",
+                    "feature.node.kubernetes.io/pci-15b3.sriov.capable": "true",
+                    "feature.node.kubernetes.io/pci-1a03.present": "true",
+                    "feature.node.kubernetes.io/pci-8086.present": "true",
+                    "feature.node.kubernetes.io/pci-8086.sriov.capable": "true",
+                    "feature.node.kubernetes.io/rdma.capable": "true",
+                    "feature.node.kubernetes.io/storage-nonrotationaldisk": "true",
+                    "feature.node.kubernetes.io/system-os_release.ID": "ubuntu",
+                    "feature.node.kubernetes.io/system-os_release.VERSION_ID": "22.04",
+                    "feature.node.kubernetes.io/system-os_release.VERSION_ID.major": "22",
+                    "feature.node.kubernetes.io/system-os_release.VERSION_ID.minor": "04",
+                    "kubernetes.io/arch": "amd64",
+                    "kubernetes.io/hostname": "worker-node01-pro6000",
+                    "kubernetes.io/os": "linux",
+                    "nvidia.com/cuda.driver-version.full": "580.126.09",
+                    "nvidia.com/cuda.driver-version.major": "580",
+                    "nvidia.com/cuda.driver-version.minor": "126",
+                    "nvidia.com/cuda.driver-version.revision": "09",
+                    "nvidia.com/cuda.driver.major": "580",
+                    "nvidia.com/cuda.driver.minor": "126",
+                    "nvidia.com/cuda.driver.rev": "09",
+                    "nvidia.com/cuda.runtime-version.full": "13.0",
+                    "nvidia.com/cuda.runtime-version.major": "13",
+                    "nvidia.com/cuda.runtime-version.minor": "0",
+                    "nvidia.com/cuda.runtime.major": "13",
+                    "nvidia.com/cuda.runtime.minor": "0",
+                    "nvidia.com/gfd.timestamp": "1792736509",
+                    "nvidia.com/gpu.compute.major": "12",
+                    "nvidia.com/gpu.compute.minor": "0",
+                    "nvidia.com/gpu.count": "2",
+                    "nvidia.com/gpu.deploy.container-toolkit": "true",
+                    "nvidia.com/gpu.deploy.dcgm": "true",
+                    "nvidia.com/gpu.deploy.dcgm-exporter": "true",
+                    "nvidia.com/gpu.deploy.device-plugin": "true",
+                    "nvidia.com/gpu.deploy.driver": "true",
+                    "nvidia.com/gpu.deploy.gpu-feature-discovery": "true",
+                    "nvidia.com/gpu.deploy.mig-manager": "true",
+                    "nvidia.com/gpu.deploy.node-status-exporter": "true",
+                    "nvidia.com/gpu.deploy.nvsm": "true",
+                    "nvidia.com/gpu.deploy.operator-validator": "true",
+                    "nvidia.com/gpu.family": "blackwell",
+                    "nvidia.com/gpu.machine": "NA",
+                    "nvidia.com/gpu.memory": "97887",
+                    "nvidia.com/gpu.mode": "compute",
+                    "nvidia.com/gpu.present": "true",
+                    "nvidia.com/gpu.product": "NVIDIA-RTX-PRO-6000-Blackwell-Server-Edition",
+                    "nvidia.com/gpu.replicas": "1",
+                    "nvidia.com/gpu.sharing-strategy": "none",
+                    "nvidia.com/mig.capable": "true",
+                    "nvidia.com/mig.config": "all-disabled",
+                    "nvidia.com/mig.config.state": "success",
+                    "nvidia.com/mig.strategy": "single",
+                    "nvidia.com/mps.capable": "false",
+                    "nvidia.com/vgpu.present": "false"
+                },
+                "name": "worker-node01-pro6000",
+                "resourceVersion": "318679711",
+                "uid": "092bd461-01a6-45cf-be3f-791408bc91ec"
+            },
+            "spec": {
+                "podCIDR": "10.244.3.0/24",
+                "podCIDRs": [
+                    "10.244.3.0/24"
+                ]
+            },
+            "status": {
+                "addresses": [
+                    {
+                        "address": "12.12.12.2",
+                        "type": "InternalIP"
+                    },
+                    {
+                        "address": "worker-node01-pro6000",
+                        "type": "Hostname"
+                    }
+                ],
+                "allocatable": {
+                    "cpu": "128",
+                    "ephemeral-storage": "819195710542",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "527901744Ki",
+                    "nvidia.com/gpu": "2",
+                    "pods": "250"
+                },
+                "capacity": {
+                    "cpu": "128",
+                    "ephemeral-storage": "888884236Ki",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "528004144Ki",
+                    "nvidia.com/gpu": "2",
+                    "pods": "250"
+                },
+                "conditions": [
+                    {
+                        "lastHeartbeatTime": "2026-10-23T06:20:16Z",
+                        "lastTransitionTime": "2026-10-23T06:20:16Z",
+                        "message": "Calico is running on this node",
+                        "reason": "CalicoIsUp",
+                        "status": "False",
+                        "type": "NetworkUnavailable"
+                    },
+                    {
+                        "lastHeartbeatTime": "2026-10-26T09:57:25Z",
+                        "lastTransitionTime": "2026-10-23T06:20:07Z",
+                        "message": "kubelet has sufficient memory available",
+                        "reason": "KubeletHasSufficientMemory",
+                        "status": "False",
+                        "type": "MemoryPressure"
+                    },
+                    {
+                        "lastHeartbeatTime": "2026-10-26T09:57:25Z",
+                        "lastTransitionTime": "2026-10-23T06:20:07Z",
+                        "message": "kubelet has no disk pressure",
+                        "reason": "KubeletHasNoDiskPressure",
+                        "status": "False",
+                        "type": "DiskPressure"
+                    },
+                    {
+                        "lastHeartbeatTime": "2026-10-26T09:57:25Z",
+                        "lastTransitionTime": "2026-10-23T06:20:07Z",
+                        "message": "kubelet has sufficient PID available",
+                        "reason": "KubeletHasSufficientPID",
+                        "status": "False",
+                        "type": "PIDPressure"
+                    },
+                    {
+                        "lastHeartbeatTime": "2026-10-26T09:57:25Z",
+                        "lastTransitionTime": "2026-10-23T06:20:07Z",
+                        "message": "kubelet is posting ready status",
+                        "reason": "KubeletReady",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "daemonEndpoints": {
+                    "kubeletEndpoint": {
+                        "Port": 10250
+                    }
+                },
+                "images": [
+                    {
+                        "names": [
+                            "docker.m.daocloud.io/vllm/vllm-openai@sha256:251eba5cc7c12fed0b75da22a9240e582b1c9e39f6fbc064f86781b963bd814f",
+                            "docker.m.daocloud.io/vllm/vllm-openai:latest"
+                        ],
+                        "sizeBytes": 9203906113
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/xray2pelvic-user3/deepsdf-dictionary-runtime@sha256:3ac990884c8bea178d8ec74c59f5954f1e272f4a2703c191172cb5e89a799104"
+                        ],
+                        "sizeBytes": 6381096960
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/xray2pelvic-user3/deepsdf-dictionary-runtime@sha256:17750b814fadb1d3b349278170643e8336a8d082b33cd54a29b94de558c9e0a5"
+                        ],
+                        "sizeBytes": 6381090068
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/xray2pelvic-user3/pengwin-task3-beta-runtime@sha256:968090f1d92a30ded18da496e3c98378b8827003870b4e8d6ad014f93bfd6889"
+                        ],
+                        "sizeBytes": 6304327620
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/xray2pelvic-user3/pengwin-surface-refine@sha256:24c8badf9e4b88f2cc9fa26a49671492af36d96e53c956cebc91aeba7cc5ea27"
+                        ],
+                        "sizeBytes": 6303063900
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/xray2pelvic-user3/joint-geometry@sha256:070e0a45dfd3724ad87eaac7c79f46ce732e31a2135606b6c7530ce2d9add512"
+                        ],
+                        "sizeBytes": 6302763684
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/xray2pelvic-user3/r2-engineering@sha256:b98ead56d25aee4adc771f0a712077b7801e0597e275d4197a8c6666f63dbc5c"
+                        ],
+                        "sizeBytes": 6302749974
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/ai/damo-radar-api@sha256:262f1a4b3be78c8c247543882c1c3c4855c5288d9574ca0fef3f62b62e2c1660",
+                            "172.16.1.72:30002/ai/damo-radar-api:0.2.0-rc1"
+                        ],
+                        "sizeBytes": 4245871844
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/ai/damo-radar-weight-probe@sha256:b835977d6c8f2a6f5c86b004ba99f3bdd57f63887a703113f215d9c8c48f8685",
+                            "172.16.1.72:30002/ai/damo-radar-weight-probe:0.0.2-amd64"
+                        ],
+                        "sizeBytes": 4236654440
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/ai/damo-radar-runtime-probe@sha256:d97222e8427040fe9647fbc3ccb1c4e816a37ec21f41bc053637b7313b8992f6",
+                            "172.16.1.72:30002/ai/damo-radar-runtime-probe:0.0.1-amd64"
+                        ],
+                        "sizeBytes": 4236647741
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-pytorch-cuda-full@sha256:526cd83a1e3e27ab061de49fe6752fa6e0602d13ea671c3b469bdd34230ea5bc",
+                            "172.16.1.72:30002/library/jupyter-pytorch-cuda-full:v1.10.0",
+                            "172.16.1.72:30002/library/sha256:9c2a53b3eee8bc8f8966de36374ab60d88901e18d5d6c638dcf37cfd96f2bb6f",
+                            "ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-pytorch-cuda-full:v1.10.0"
+                        ],
+                        "sizeBytes": 3937505768
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/pytorch-full@sha256:b7806b1db1c1079064b8de70b14fbc8b2a999999ba24bf16a7e1def5321edcbd"
+                        ],
+                        "sizeBytes": 3773609436
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/kfp-visualization-server@sha256:4a79c6b45115e62852930d6c08e22ac5602840bae37e849a2baab6aad51afbd1",
+                            "172.16.1.72:30002/library/kfp-visualization-server:2.4.1",
+                            "172.16.1.72:30002/library/sha256:e5e53cc942ebea4463804469d31208cc9909b604bc86b11687fd94abceb9b8ce",
+                            "ghcr.io/kubeflow/kfp-visualization-server:2.4.1"
+                        ],
+                        "sizeBytes": 1603616283
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full@sha256:60f75e7325504cf25c4cf310907b10e971c033957dc33d468993a8e7b8ff3329",
+                            "ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full:v1.10.0"
+                        ],
+                        "sizeBytes": 1528333213
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/sha256:a585bb80ff18409222dd9a8ec3181c6cbee6064d310f6b88cf5462f10d6afda0",
+                            "172.16.1.72:30002/library/spark-operator:2.1.0",
+                            "docker.io/kubeflow/spark-operator:2.1.0"
+                        ],
+                        "sizeBytes": 1060062359
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/mysql:8.0.26",
+                            "172.16.1.72:30002/library/sha256:9da615fced53bc1bc11e3d7f20a37873362e1d5354354238f0b63c6d549f7f66",
+                            "gcr.io/ml-pipeline/mysql:8.0.26"
+                        ],
+                        "sizeBytes": 519200710
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/kubeflow/notebook-servers/codeserver-python:v1.10.0"
+                        ],
+                        "sizeBytes": 457558327
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/mysql:8.0.29",
+                            "172.16.1.72:30002/library/sha256:33037edcac9b155a185e9555a5da711d754c88cb244e3d13e214db029c3b28ed",
+                            "docker.io/library/mysql:8.0.29"
+                        ],
+                        "sizeBytes": 455475370
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/kfp-metadata-writer@sha256:892eeb82010ba79ac33e09734654aa740b839645f917e62295cdbaee8b718c95",
+                            "172.16.1.72:30002/library/kfp-metadata-writer:2.4.1",
+                            "172.16.1.72:30002/library/sha256:43f432cf137a92e8bb37223638d8d1566f46c434c31fc0cb25c1b7a785f32578",
+                            "ghcr.io/kubeflow/kfp-metadata-writer:2.4.1"
+                        ],
+                        "sizeBytes": 418818295
+                    },
+                    {
+                        "names": [
+                            "public.ecr.aws/docker/library/python@sha256:f742af2ba32cd619634370fddbb39ae8539ad84163da52d63a822a04ac2732a1",
+                            "172.16.1.72:30002/library/python:3.12",
+                            "172.16.1.72:30002/library/sha256:16ec192207dd062f56cb86d663e0543911142073c1be1ede4bd1e479bad77234",
+                            "public.ecr.aws/docker/library/python:3.12"
+                        ],
+                        "sizeBytes": 410431024
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/models-web-app:v0.14.0-rc.0",
+                            "172.16.1.72:30002/library/sha256:06518abec9aee01d8822868686354dfd6968a3ca329c78eb5469ce10197f88d0",
+                            "docker.io/kserve/models-web-app:v0.14.0-rc.0"
+                        ],
+                        "sizeBytes": 337113968
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/node-feature-discovery:v0.18.2",
+                            "172.16.1.72:30002/library/sha256:6a744d4448cbea90b54a813d5c12aa05751c58222a786aa29e1906bff32262f4",
+                            "registry.k8s.io/nfd/node-feature-discovery:v0.18.2"
+                        ],
+                        "sizeBytes": 279019615
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/proxyv2:1.24.3",
+                            "172.16.1.72:30002/library/sha256:9d21a7e7594f73d440890f1ee7d54ea5aa41fda8cd92616e03b297d3e4858a02",
+                            "gcr.io/istio-release/proxyv2:1.24.3"
+                        ],
+                        "sizeBytes": 248485526
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/node:v3.25.0",
+                            "172.16.1.72:30002/library/sha256:08616d26b8e74867402274687491e5978ba4a6ded94e9f5ecc3e364024e5683e",
+                            "docker.io/calico/node:v3.25.0"
+                        ],
+                        "sizeBytes": 246777938
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/install-cni:1.24.3",
+                            "172.16.1.72:30002/library/sha256:02f56b7b1432fda15de7d2ed6ab6892691a0eff3d668d5fbc31aea6d4e0f4b10",
+                            "gcr.io/istio-release/install-cni:1.24.3"
+                        ],
+                        "sizeBytes": 223930121
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/minio:RELEASE.2019-08-14T20-37-41Z-license-compliance",
+                            "172.16.1.72:30002/library/sha256:290a74f42cdfb86897969c9011a9e8a1fb22048fe4d5af930d8cb108e6e2b37c",
+                            "gcr.io/ml-pipeline/minio:RELEASE.2019-08-14T20-37-41Z-license-compliance"
+                        ],
+                        "sizeBytes": 215355764
+                    },
+                    {
+                        "names": [
+                            "docker.1ms.run/zenmldocker/zenml-server@sha256:c73e10a03d961c2aa280b1adb475aa0086e447b0fe90743dda8a2448bc487c68",
+                            "docker.1ms.run/zenmldocker/zenml-server:0.96.1"
+                        ],
+                        "sizeBytes": 205633839
+                    },
+                    {
+                        "names": [
+                            "docker.io/velero/velero:v1.17.2-rc.2"
+                        ],
+                        "sizeBytes": 199235885
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/cni:v3.25.0",
+                            "172.16.1.72:30002/library/sha256:d70a5947d57e5ab3340d126a38e6ae51bd9e8e0b342daa2012e78d8868bed5b7",
+                            "docker.io/calico/cni:v3.25.0"
+                        ],
+                        "sizeBytes": 197891380
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/pilot:1.24.3",
+                            "172.16.1.72:30002/library/sha256:573d287f32b9de7d8a52cd9088edfed43205d4b2b9ded09f79490eb4b9249023",
+                            "gcr.io/istio-release/pilot:1.24.3"
+                        ],
+                        "sizeBytes": 194883872
+                    },
+                    {
+                        "names": [
+                            "docker.io/minio/minio:latest"
+                        ],
+                        "sizeBytes": 176248209
+                    },
+                    {
+                        "names": [
+                            "nvcr.io/nvidia/gpu-operator@sha256:634471cdfedcc3bd6b4412a905a9fbc9a9bf91df7f436aa00454b088d087c60a",
+                            "172.16.1.72:30002/library/gpu-operator:v25.10.1",
+                            "nvcr.io/nvidia/gpu-operator:v25.10.1"
+                        ],
+                        "sizeBytes": 170527515
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/kfp-frontend@sha256:4d2ae4196ca11d7cb2e18ad10709b21a73a1f644daa634fab40f958ceb56984a",
+                            "172.16.1.72:30002/library/kfp-frontend:2.4.1",
+                            "172.16.1.72:30002/library/sha256:71bf4187a72668a1c3f45793c012761240f0f61e4cd1afd24fc422dbce56763e",
+                            "ghcr.io/kubeflow/kfp-frontend:2.4.1"
+                        ],
+                        "sizeBytes": 170077179
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/ml_metadata_store_server:1.14.0",
+                            "172.16.1.72:30002/library/sha256:7eb57eef79021ac83ef97325a9a68d96cc8aa5799d32d2f38a26c718dab48b79",
+                            "gcr.io/tfx-oss-public/ml_metadata_store_server:1.14.0"
+                        ],
+                        "sizeBytes": 158755724
+                    },
+                    {
+                        "names": [
+                            "nvcr.io/nvidia/k8s/container-toolkit@sha256:ef2a0ef6bbf9c43529da3730974de9d51b8436c2314a68e718d437e6ab7c4b58",
+                            "172.16.1.72:30002/library/container-toolkit:v1.18.1",
+                            "172.16.1.72:30002/library/sha256:c616b8d4ded88e3e0ac42a35992e304b115633373ac8750d939100e954cd3b8e",
+                            "nvcr.io/nvidia/k8s/container-toolkit:v1.18.1"
+                        ],
+                        "sizeBytes": 138187071
+                    },
+                    {
+                        "names": [
+                            "docker.io/goharbor/trivy-adapter-photon@sha256:13dddb2adef7e28530e04e5659c49f550e5463e5f2536378ffd9207f7b23aac4",
+                            "172.16.1.72:30002/library/sha256:50f45016f50779387272ef37cd7675470c118826237ff375ee55e06a003ec16a",
+                            "172.16.1.72:30002/library/trivy-adapter-photon:v2.14.1",
+                            "docker.io/goharbor/trivy-adapter-photon:v2.14.1"
+                        ],
+                        "sizeBytes": 129770113
+                    },
+                    {
+                        "names": [
+                            "reg.kyverno.io/kyverno/kyverno:v1.16.1"
+                        ],
+                        "sizeBytes": 127665436
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/kfp-api-server@sha256:f062809ad9e0c509ea7cbd1f0014fd846f97d55b46e92c2778133998c67ef24c",
+                            "172.16.1.72:30002/library/kfp-api-server:2.4.1",
+                            "172.16.1.72:30002/library/sha256:b8394fd195a3bf7878d65e9ab990617184c1b0d23fe8ca62b5b5b3a042605ec2",
+                            "ghcr.io/kubeflow/kfp-api-server:2.4.1"
+                        ],
+                        "sizeBytes": 122821643
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/kfp-metadata-envoy@sha256:7a63a6c7ea764c6552ab2b8587209c164df8d509d30223e1c05e3aa40bb971c6",
+                            "172.16.1.72:30002/library/kfp-metadata-envoy:2.4.1",
+                            "172.16.1.72:30002/library/sha256:40cd2c043668b4f706c015487a3190f82190c0328e32953ef0527cfe032e92e2",
+                            "ghcr.io/kubeflow/kfp-metadata-envoy:2.4.1"
+                        ],
+                        "sizeBytes": 113504184
+                    },
+                    {
+                        "names": [
+                            "gcr.io/ml-pipeline/argoexec@sha256:7b9ccf952bcdb05b1f84459959d43d51a7f3514ad6e2385a36d8dc1ef061eb87",
+                            "gcr.io/ml-pipeline/argoexec:v3.4.17-license-compliance"
+                        ],
+                        "sizeBytes": 111991173
+                    },
+                    {
+                        "names": [
+                            "docker.io/goharbor/harbor-db@sha256:7ffdd1b51388fbd445735857514bf4155e4dc717ef86f04f840231e94b3d38da",
+                            "172.16.1.72:30002/library/harbor-db:v2.14.1",
+                            "172.16.1.72:30002/library/sha256:db932026f91dc154e3c136296c82df740c4e9a20ac3e5f55ff16ad85aa9baa6a",
+                            "docker.io/goharbor/harbor-db:v2.14.1"
+                        ],
+                        "sizeBytes": 107973339
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/kubeflow/jupyter-web-app@sha256:e29083895bf5b669a98c275cb1cb074086608247e519ca98a0bcee3201f01e43",
+                            "172.16.1.72:30002/library/jupyter-web-app:v1.10.0",
+                            "172.16.1.72:30002/library/sha256:b1f99a5917eb89915273d7ac5f3455bc082845c842f08b793743389452b805c5",
+                            "ghcr.io/kubeflow/kubeflow/jupyter-web-app:v1.10.0"
+                        ],
+                        "sizeBytes": 98208103
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/kubeflow/volumes-web-app@sha256:ca300d41f40b1be5eb56f734f2caba32e29d5105de04d2da5fb4ebfb2103608b",
+                            "172.16.1.72:30002/library/sha256:3866d4b3b6a3f9ba43d3e7e2595031c41dfe8d7ce885f20fb98ee33fcb5c46e0",
+                            "172.16.1.72:30002/library/volumes-web-app:v1.10.0",
+                            "ghcr.io/kubeflow/kubeflow/volumes-web-app:v1.10.0"
+                        ],
+                        "sizeBytes": 98037484
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/kube-proxy:v1.32.1",
+                            "registry.k8s.io/kube-proxy:v1.32.1"
+                        ],
+                        "sizeBytes": 95269037
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/katib/katib-controller@sha256:b61eb2d3edb29a3cbd835553d75bea7291b30d1bdcb8a8adb3c06b8ada518f3c",
+                            "172.16.1.72:30002/library/katib-controller:v0.18.0",
+                            "172.16.1.72:30002/library/sha256:b9a0ddfa8b6f5b82122b834e44c29fa580f84e53af21203195ba416b5b325c00",
+                            "ghcr.io/kubeflow/katib/katib-controller:v0.18.0"
+                        ],
+                        "sizeBytes": 86691690
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/sha256:a08b76e05f6b0b1302602814277b52a13ed7f4f85eb93d74d0ff4d2b5a6acb03",
+                            "172.16.1.72:30002/library/workflow-controller:v3.4.17-license-compliance",
+                            "docker.io/gcriomlpipeline/workflow-controller:v3.4.17-license-compliance",
+                            "gcr.io/ml-pipeline/workflow-controller:v3.4.17-license-compliance"
+                        ],
+                        "sizeBytes": 85504012
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/kubeflow/tensorboards-web-app@sha256:2ef002804c668b2feba2d610ba8e117379283696fb67adb437ecda84d21137e7",
+                            "172.16.1.72:30002/library/sha256:18da2a4163923c5a834f1f93edcbfc3b14d1bfd0ad9fcb222a5a22c8716df962",
+                            "172.16.1.72:30002/library/tensorboards-web-app:v1.10.0",
+                            "ghcr.io/kubeflow/kubeflow/tensorboards-web-app:v1.10.0"
+                        ],
+                        "sizeBytes": 83518558
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/kserve-controller:v0.14.1",
+                            "172.16.1.72:30002/library/sha256:d02cbd403e7a87527b92f4744ae5b36bc449398500f15d062a7c36628b7dc17f",
+                            "docker.io/kserve/kserve-controller:v0.14.1"
+                        ],
+                        "sizeBytes": 81854700
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/kserve-localmodel-controller:v0.14.1",
+                            "172.16.1.72:30002/library/sha256:58c01317ce034302879072098e660f76b6f455d66f33cac530d73d29b56a8082",
+                            "docker.io/kserve/kserve-localmodel-controller:v0.14.1"
+                        ],
+                        "sizeBytes": 79287038
+                    },
+                    {
+                        "names": [
+                            "gcr.io/istio-release/pilot@sha256:4eb2620d0cd1c775d7c9963f29b177334cdfe560d99caeb8cdd3a1ac9d867533",
+                            "gcr.io/istio-release/pilot:1.22.0"
+                        ],
+                        "sizeBytes": 79243065
+                    }
+                ],
+                "nodeInfo": {
+                    "architecture": "amd64",
+                    "bootID": "1be9d666-bff0-4822-a924-64ffe15c2e4c",
+                    "containerRuntimeVersion": "containerd://1.7.25",
+                    "kernelVersion": "6.8.0-90-generic",
+                    "kubeProxyVersion": "v1.32.10",
+                    "kubeletVersion": "v1.32.10",
+                    "machineID": "53a53be76d81425190ca3ed77aff34b2",
+                    "operatingSystem": "linux",
+                    "osImage": "Ubuntu 22.04.5 LTS",
+                    "systemUUID": "a5f7d4b8-a914-06eb-0010-5d40528369c2"
+                }
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Node",
+            "metadata": {
+                "annotations": {
+                    "csi.volume.kubernetes.io/nodeid": "{\"nfs.csi.k8s.io\":\"worker-node02-3090\"}",
+                    "nfd.node.kubernetes.io/feature-labels": "cpu-cpuid.ADX,cpu-cpuid.AESNI,cpu-cpuid.AMXFP8,cpu-cpuid.AVX,cpu-cpuid.AVX2,cpu-cpuid.AVX512BW,cpu-cpuid.AVX512CD,cpu-cpuid.AVX512DQ,cpu-cpuid.AVX512F,cpu-cpuid.AVX512VL,cpu-cpuid.AVX512VNNI,cpu-cpuid.CMPXCHG8,cpu-cpuid.FLUSH_L1D,cpu-cpuid.FMA3,cpu-cpuid.FXSR,cpu-cpuid.FXSROPT,cpu-cpuid.IA32_ARCH_CAP,cpu-cpuid.IBPB,cpu-cpuid.LAHF,cpu-cpuid.MD_CLEAR,cpu-cpuid.MOVBE,cpu-cpuid.MPX,cpu-cpuid.OSXSAVE,cpu-cpuid.PMU_FIXEDCOUNTER_CYCLES,cpu-cpuid.PMU_FIXEDCOUNTER_INSTRUCTIONS,cpu-cpuid.PMU_FIXEDCOUNTER_REFCYCLES,cpu-cpuid.SPEC_CTRL_SSBD,cpu-cpuid.STIBP,cpu-cpuid.SYSCALL,cpu-cpuid.SYSEE,cpu-cpuid.VMX,cpu-cpuid.X87,cpu-cpuid.XGETBV1,cpu-cpuid.XSAVE,cpu-cpuid.XSAVEC,cpu-cpuid.XSAVEOPT,cpu-cpuid.XSAVES,cpu-cstate.enabled,cpu-hardware_multithreading,cpu-model.family,cpu-model.id,cpu-model.vendor_id,cpu-pstate.status,cpu-pstate.turbo,kernel-config.NO_HZ,kernel-config.NO_HZ_IDLE,kernel-version.full,kernel-version.major,kernel-version.minor,kernel-version.revision,memory-numa,network-sriov.capable,nvidia.com/cuda.driver-version.full,nvidia.com/cuda.driver-version.major,nvidia.com/cuda.driver-version.minor,nvidia.com/cuda.driver-version.revision,nvidia.com/cuda.driver.major,nvidia.com/cuda.driver.minor,nvidia.com/cuda.driver.rev,nvidia.com/cuda.runtime-version.full,nvidia.com/cuda.runtime-version.major,nvidia.com/cuda.runtime-version.minor,nvidia.com/cuda.runtime.major,nvidia.com/cuda.runtime.minor,nvidia.com/gfd.timestamp,nvidia.com/gpu.compute.major,nvidia.com/gpu.compute.minor,nvidia.com/gpu.count,nvidia.com/gpu.family,nvidia.com/gpu.machine,nvidia.com/gpu.memory,nvidia.com/gpu.mode,nvidia.com/gpu.product,nvidia.com/gpu.replicas,nvidia.com/gpu.sharing-strategy,nvidia.com/mig.capable,nvidia.com/mig.strategy,nvidia.com/mps.capable,nvidia.com/vgpu.present,pci-10de.present,pci-1a03.present,pci-8086.present,pci-8086.sriov.capable,storage-nonrotationaldisk,system-os_release.ID,system-os_release.VERSION_ID,system-os_release.VERSION_ID.major,system-os_release.VERSION_ID.minor",
+                    "node.alpha.kubernetes.io/ttl": "0",
+                    "nvidia.com/gpu-driver-upgrade-enabled": "true",
+                    "projectcalico.org/IPv4Address": "12.12.12.3/24",
+                    "projectcalico.org/IPv4IPIPTunnelAddr": "10.244.195.64",
+                    "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+                },
+                "creationTimestamp": "2026-03-19T09:39:11Z",
+                "labels": {
+                    "beta.kubernetes.io/arch": "amd64",
+                    "beta.kubernetes.io/os": "linux",
+                    "feature.node.kubernetes.io/cpu-cpuid.ADX": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AESNI": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AMXFP8": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX2": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512BW": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512CD": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512DQ": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512F": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512VL": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.AVX512VNNI": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.CMPXCHG8": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.FLUSH_L1D": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.FMA3": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.FXSR": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.FXSROPT": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.IA32_ARCH_CAP": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.IBPB": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.LAHF": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.MD_CLEAR": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.MOVBE": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.MPX": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.OSXSAVE": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.PMU_FIXEDCOUNTER_CYCLES": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.PMU_FIXEDCOUNTER_INSTRUCTIONS": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.PMU_FIXEDCOUNTER_REFCYCLES": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.SPEC_CTRL_SSBD": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.STIBP": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.SYSCALL": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.SYSEE": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.VMX": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.X87": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.XGETBV1": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.XSAVE": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.XSAVEC": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.XSAVEOPT": "true",
+                    "feature.node.kubernetes.io/cpu-cpuid.XSAVES": "true",
+                    "feature.node.kubernetes.io/cpu-cstate.enabled": "true",
+                    "feature.node.kubernetes.io/cpu-hardware_multithreading": "true",
+                    "feature.node.kubernetes.io/cpu-model.family": "6",
+                    "feature.node.kubernetes.io/cpu-model.id": "85",
+                    "feature.node.kubernetes.io/cpu-model.vendor_id": "Intel",
+                    "feature.node.kubernetes.io/cpu-pstate.status": "passive",
+                    "feature.node.kubernetes.io/cpu-pstate.turbo": "true",
+                    "feature.node.kubernetes.io/kernel-config.NO_HZ": "true",
+                    "feature.node.kubernetes.io/kernel-config.NO_HZ_IDLE": "true",
+                    "feature.node.kubernetes.io/kernel-version.full": "5.15.0-177-generic",
+                    "feature.node.kubernetes.io/kernel-version.major": "5",
+                    "feature.node.kubernetes.io/kernel-version.minor": "15",
+                    "feature.node.kubernetes.io/kernel-version.revision": "0",
+                    "feature.node.kubernetes.io/memory-numa": "true",
+                    "feature.node.kubernetes.io/network-sriov.capable": "true",
+                    "feature.node.kubernetes.io/pci-10de.present": "true",
+                    "feature.node.kubernetes.io/pci-1a03.present": "true",
+                    "feature.node.kubernetes.io/pci-8086.present": "true",
+                    "feature.node.kubernetes.io/pci-8086.sriov.capable": "true",
+                    "feature.node.kubernetes.io/storage-nonrotationaldisk": "true",
+                    "feature.node.kubernetes.io/system-os_release.ID": "ubuntu",
+                    "feature.node.kubernetes.io/system-os_release.VERSION_ID": "22.04",
+                    "feature.node.kubernetes.io/system-os_release.VERSION_ID.major": "22",
+                    "feature.node.kubernetes.io/system-os_release.VERSION_ID.minor": "04",
+                    "kubernetes.io/arch": "amd64",
+                    "kubernetes.io/hostname": "worker-node02-3090",
+                    "kubernetes.io/os": "linux",
+                    "nvidia.com/cuda.driver-version.full": "580.95.05",
+                    "nvidia.com/cuda.driver-version.major": "580",
+                    "nvidia.com/cuda.driver-version.minor": "95",
+                    "nvidia.com/cuda.driver-version.revision": "05",
+                    "nvidia.com/cuda.driver.major": "580",
+                    "nvidia.com/cuda.driver.minor": "95",
+                    "nvidia.com/cuda.driver.rev": "05",
+                    "nvidia.com/cuda.runtime-version.full": "13.0",
+                    "nvidia.com/cuda.runtime-version.major": "13",
+                    "nvidia.com/cuda.runtime-version.minor": "0",
+                    "nvidia.com/cuda.runtime.major": "13",
+                    "nvidia.com/cuda.runtime.minor": "0",
+                    "nvidia.com/gfd.timestamp": "1778260943",
+                    "nvidia.com/gpu.compute.major": "8",
+                    "nvidia.com/gpu.compute.minor": "6",
+                    "nvidia.com/gpu.count": "4",
+                    "nvidia.com/gpu.deploy.container-toolkit": "true",
+                    "nvidia.com/gpu.deploy.dcgm": "true",
+                    "nvidia.com/gpu.deploy.dcgm-exporter": "true",
+                    "nvidia.com/gpu.deploy.device-plugin": "true",
+                    "nvidia.com/gpu.deploy.driver": "true",
+                    "nvidia.com/gpu.deploy.gpu-feature-discovery": "true",
+                    "nvidia.com/gpu.deploy.node-status-exporter": "true",
+                    "nvidia.com/gpu.deploy.operator-validator": "true",
+                    "nvidia.com/gpu.family": "ampere",
+                    "nvidia.com/gpu.machine": "SYS-7049GP-TRT",
+                    "nvidia.com/gpu.memory": "24576",
+                    "nvidia.com/gpu.mode": "graphics",
+                    "nvidia.com/gpu.present": "true",
+                    "nvidia.com/gpu.product": "NVIDIA-GeForce-RTX-3090",
+                    "nvidia.com/gpu.replicas": "1",
+                    "nvidia.com/gpu.sharing-strategy": "none",
+                    "nvidia.com/mig.capable": "false",
+                    "nvidia.com/mig.strategy": "single",
+                    "nvidia.com/mps.capable": "false",
+                    "nvidia.com/vgpu.present": "false"
+                },
+                "name": "worker-node02-3090",
+                "resourceVersion": "318680610",
+                "uid": "8782a76c-ca95-4960-9292-dd85b48c9eed"
+            },
+            "spec": {
+                "podCIDR": "10.244.1.0/24",
+                "podCIDRs": [
+                    "10.244.1.0/24"
+                ]
+            },
+            "status": {
+                "addresses": [
+                    {
+                        "address": "12.12.12.3",
+                        "type": "InternalIP"
+                    },
+                    {
+                        "address": "worker-node02-3090",
+                        "type": "Hostname"
+                    }
+                ],
+                "allocatable": {
+                    "cpu": "40",
+                    "ephemeral-storage": "852626400278",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "131539560Ki",
+                    "nvidia.com/gpu": "4",
+                    "pods": "110"
+                },
+                "capacity": {
+                    "cpu": "40",
+                    "ephemeral-storage": "925158856Ki",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "131641960Ki",
+                    "nvidia.com/gpu": "4",
+                    "pods": "110"
+                },
+                "conditions": [
+                    {
+                        "lastHeartbeatTime": "2026-05-08T17:20:55Z",
+                        "lastTransitionTime": "2026-05-08T17:20:55Z",
+                        "message": "Calico is running on this node",
+                        "reason": "CalicoIsUp",
+                        "status": "False",
+                        "type": "NetworkUnavailable"
+                    },
+                    {
+                        "lastHeartbeatTime": "2026-10-26T09:58:37Z",
+                        "lastTransitionTime": "2026-10-14T03:20:45Z",
+                        "message": "kubelet has sufficient memory available",
+                        "reason": "KubeletHasSufficientMemory",
+                        "status": "False",
+                        "type": "MemoryPressure"
+                    },
+                    {
+                        "lastHeartbeatTime": "2026-10-26T09:58:37Z",
+                        "lastTransitionTime": "2026-10-14T03:20:45Z",
+                        "message": "kubelet has no disk pressure",
+                        "reason": "KubeletHasNoDiskPressure",
+                        "status": "False",
+                        "type": "DiskPressure"
+                    },
+                    {
+                        "lastHeartbeatTime": "2026-10-26T09:58:37Z",
+                        "lastTransitionTime": "2026-10-14T03:20:45Z",
+                        "message": "kubelet has sufficient PID available",
+                        "reason": "KubeletHasSufficientPID",
+                        "status": "False",
+                        "type": "PIDPressure"
+                    },
+                    {
+                        "lastHeartbeatTime": "2026-10-26T09:58:37Z",
+                        "lastTransitionTime": "2026-10-14T03:20:45Z",
+                        "message": "kubelet is posting ready status",
+                        "reason": "KubeletReady",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "daemonEndpoints": {
+                    "kubeletEndpoint": {
+                        "Port": 10250
+                    }
+                },
+                "images": [
+                    {
+                        "names": [
+                            "docker.io/library/simplesymbol-pytorch-cuda:v12.1.1"
+                        ],
+                        "sizeBytes": 9304635103
+                    },
+                    {
+                        "names": [
+                            "docker.io/pytorch/pytorch:2.4.0-cuda12.4-cudnn9-runtime"
+                        ],
+                        "sizeBytes": 7921057326
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/xray2pelvic-user3/deepsdf-dictionary-runtime@sha256:3ac990884c8bea178d8ec74c59f5954f1e272f4a2703c191172cb5e89a799104"
+                        ],
+                        "sizeBytes": 6381096960
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/zzm/torch-template-py311-torch271-cu128@sha256:dbb54fc305343c332524ab96e62b945a89c8879a020a88f74325f21803be5994",
+                            "172.16.1.72:30002/zzm/torch-template-py311-torch271-cu128:v5"
+                        ],
+                        "sizeBytes": 6334402351
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/xray2pelvic-user3/pengwin-task3-beta-runtime@sha256:968090f1d92a30ded18da496e3c98378b8827003870b4e8d6ad014f93bfd6889"
+                        ],
+                        "sizeBytes": 6304327620
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/xray2pelvic-user3/pengwin-surface-refine@sha256:24c8badf9e4b88f2cc9fa26a49671492af36d96e53c956cebc91aeba7cc5ea27"
+                        ],
+                        "sizeBytes": 6303063900
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/xray2pelvic-user3/pengwin-surface-refine@sha256:bb2a0e109c2f766b048a921b4f624e6ffdd7a2b5f409d9c903639dd72ff2ccc4"
+                        ],
+                        "sizeBytes": 6303058136
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/zzm/torch-template-py311-torch271-cu128@sha256:6648cd0b210f662aa3e79bda3e289fb6f9573393b8b0aee68ac300649d7b6d4c"
+                        ],
+                        "sizeBytes": 6061775107
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/private_library/style_transfer_image@sha256:e858b0070485952f61423c35e765d955ebf204de0f3a28197677f6d5c9afec7c",
+                            "172.16.1.72:30002/library/sha256:dcee3f30323f0bdefa7b56bc464195256de2e839b72ec14ddd6db0e19ece171c",
+                            "172.16.1.72:30002/library/style_transfer_image:v2.0",
+                            "172.16.1.72:30002/private_library/style_transfer_image:v2.0"
+                        ],
+                        "sizeBytes": 5270312652
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/kfp-visualization-server:2.4.1",
+                            "ghcr.io/kubeflow/kfp-visualization-server:2.4.1"
+                        ],
+                        "sizeBytes": 4837625886
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/private_library/pytorch2_7_1-cuda12_8-image@sha256:6b710081de0d508ec938933deb35537eb3939d79dbf92ab042f0c7fc2b89dcdd",
+                            "172.16.1.72:30002/private_library/pytorch2_7_1-cuda12_8-image@sha256:79a940874092b8554186ea5111331928a92062e66cc193b590d51ce07f5ba5d3",
+                            "172.16.1.72:30002/private_library/pytorch2_7_1-cuda12_8-image:v1.0"
+                        ],
+                        "sizeBytes": 4524024735
+                    },
+                    {
+                        "names": [
+                            "12.12.12.2:30002/private_library/pytorch/pytorch@sha256:c16f4c749e2d9e96878875cdf6cc45cddda1d1a36fddd371dd6f2360f1b6e2a2",
+                            "12.12.12.2:30002/private_library/pytorch/pytorch:2.7.1-cuda12.8-cudnn9-runtime"
+                        ],
+                        "sizeBytes": 4221638737
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-cuda-full@sha256:20b10690fbaf95da655d9050bb3ac7a0cb1954aef906864910daa5ab209e7948",
+                            "172.16.1.72:30002/library/jupyter-tensorflow-cuda-full:v1.10.0",
+                            "172.16.1.72:30002/library/sha256:1d1f60343f0664797cc60f5729914c337541f1a32a11ff4b75e622494d0fe88e",
+                            "ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-cuda-full:v1.10.0"
+                        ],
+                        "sizeBytes": 4210404280
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-pytorch-cuda-full@sha256:526cd83a1e3e27ab061de49fe6752fa6e0602d13ea671c3b469bdd34230ea5bc",
+                            "172.16.1.72:30002/library/jupyter-pytorch-cuda-full:v1.10.0",
+                            "172.16.1.72:30002/library/sha256:9c2a53b3eee8bc8f8966de36374ab60d88901e18d5d6c638dcf37cfd96f2bb6f",
+                            "ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-pytorch-cuda-full:v1.10.0"
+                        ],
+                        "sizeBytes": 3937505768
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/private_library/awgs-training@sha256:0b80b7b36fe34e90a077cb8c62120b5445309b0406faf769386a2a048fb90536",
+                            "172.16.1.72:30002/private_library/awgs-training@sha256:e7e744b4e3aa57e8b7e9c1f6ddfabe26e71e8590246d1441e001ace2550b099d",
+                            "172.16.1.72:30002/private_library/awgs-training:v1.0"
+                        ],
+                        "sizeBytes": 3840411643
+                    },
+                    {
+                        "names": [
+                            "docker.io/pytorch/pytorch@sha256:971fbeae82c0a5a7a970a264a8b8ce1c3426aa79df7111004ad2bc2640f7d89c",
+                            "docker.io/pytorch/pytorch:2.1.2-cuda11.8-cudnn8-runtime"
+                        ],
+                        "sizeBytes": 3787692389
+                    },
+                    {
+                        "names": [
+                            "docker.io/tensorflow/tensorflow@sha256:64602abcd8cc4f4bdd6268ca0abc39e6d37113d700886afd15f6dd151210b206",
+                            "172.16.1.72:30002/library/sha256:68d96d40670e06f0c7b926edf49528a881cf2fca37714de065eacfc75e831192",
+                            "172.16.1.72:30002/library/tensorflow:2.14.0-gpu",
+                            "docker.io/tensorflow/tensorflow:2.14.0-gpu"
+                        ],
+                        "sizeBytes": 3770703623
+                    },
+                    {
+                        "names": [
+                            "docker.io/tensorflow/tensorflow@sha256:ce32fe3c53f94938de1513b3fe5fa25aa655a2f4c4bced42cf598fb8ce911219",
+                            "172.16.1.72:30002/library/tensorflow:2.12.0-gpu",
+                            "docker.io/tensorflow/tensorflow:2.12.0-gpu"
+                        ],
+                        "sizeBytes": 3375840646
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/cache-deployer:2.0.1",
+                            "172.16.1.72:30002/library/sha256:ff59b168419ebfed63a4825d0be1e01f966b7f346e7b7b785c80780473ef081e",
+                            "gcr.io/ml-pipeline/cache-deployer:2.0.1"
+                        ],
+                        "sizeBytes": 3019059798
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/rancher:v2.8.5",
+                            "172.16.1.72:30002/library/sha256:91a26da6b860b5b3a4507db6b30879d74f7d95edf252dce0a4cf86dd52449d74",
+                            "docker.io/rancher/rancher:v2.8.5"
+                        ],
+                        "sizeBytes": 2102721096
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full@sha256:60f75e7325504cf25c4cf310907b10e971c033957dc33d468993a8e7b8ff3329",
+                            "172.16.1.72:30002/library/jupyter-tensorflow-full:v1.10.0",
+                            "172.16.1.72:30002/library/sha256:8b0f94a6d46ef7fe7ef43d88b376eb8139390f760d6425fb61bdd7f019183c16",
+                            "ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-tensorflow-full:v1.10.0"
+                        ],
+                        "sizeBytes": 1528333213
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy@sha256:5c64bc8a4298bcb89b522e16903f49965a287a99cfdeededa426cc266c04cdaf",
+                            "172.16.1.72:30002/library/jupyter-scipy:v1.10.0",
+                            "172.16.1.72:30002/library/sha256:0b433ee704887fc15355ccbb6516a65984085b842f95a99a1f6fc2d3605f7091",
+                            "ghcr.io/kubeflow/kubeflow/notebook-servers/jupyter-scipy:v1.10.0"
+                        ],
+                        "sizeBytes": 1294834789
+                    },
+                    {
+                        "names": [
+                            "docker.io/library/python:3.11"
+                        ],
+                        "sizeBytes": 1127047672
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/metadata-writer:2.0.1",
+                            "172.16.1.72:30002/library/sha256:d2410f0ddc47a7c137e4945fac04f6629e0e0659b110dd1977b2f1474eb8e0ed",
+                            "gcr.io/ml-pipeline/metadata-writer:2.0.1"
+                        ],
+                        "sizeBytes": 1110360090
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/sha256:a585bb80ff18409222dd9a8ec3181c6cbee6064d310f6b88cf5462f10d6afda0",
+                            "172.16.1.72:30002/library/spark-operator:2.1.0",
+                            "docker.io/kubeflow/spark-operator:2.1.0"
+                        ],
+                        "sizeBytes": 1060062359
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/python:3.7",
+                            "172.16.1.72:30002/library/sha256:16d93ae3411be3db255b6b52fdfc155a0dff0f697c2e4e3d862caf8d978830b2",
+                            "docker.io/library/python:3.7"
+                        ],
+                        "sizeBytes": 1016446859
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/kfp-frontend:2.4.1",
+                            "172.16.1.72:30002/library/sha256:71bf4187a72668a1c3f45793c012761240f0f61e4cd1afd24fc422dbce56763e",
+                            "ghcr.io/kubeflow/kfp-frontend:2.4.1"
+                        ],
+                        "sizeBytes": 629089529
+                    },
+                    {
+                        "names": [
+                            "docker.io/kserve/sklearnserver:v0.14.1"
+                        ],
+                        "sizeBytes": 549416643
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/mysql:8.0.26",
+                            "172.16.1.72:30002/library/sha256:9da615fced53bc1bc11e3d7f20a37873362e1d5354354238f0b63c6d549f7f66",
+                            "gcr.io/ml-pipeline/mysql:8.0.26"
+                        ],
+                        "sizeBytes": 519200710
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/kubeflow/notebook-servers/codeserver-python@sha256:77e9091fa0e458c256db08163767cac1aafa5f092e115824ca66b82fa55baa9d",
+                            "172.16.1.72:30002/library/codeserver-python:v1.10.0",
+                            "ghcr.io/kubeflow/kubeflow/notebook-servers/codeserver-python:v1.10.0"
+                        ],
+                        "sizeBytes": 457558327
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/mysql:8.0.29",
+                            "172.16.1.72:30002/library/sha256:33037edcac9b155a185e9555a5da711d754c88cb244e3d13e214db029c3b28ed",
+                            "docker.io/library/mysql:8.0.29"
+                        ],
+                        "sizeBytes": 455475370
+                    },
+                    {
+                        "names": [
+                            "docker.io/kserve/storage-initializer:v0.14.1"
+                        ],
+                        "sizeBytes": 430053652
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/kubeflow/kfp-metadata-writer@sha256:892eeb82010ba79ac33e09734654aa740b839645f917e62295cdbaee8b718c95",
+                            "172.16.1.72:30002/library/kfp-metadata-writer:2.4.1",
+                            "ghcr.io/kubeflow/kfp-metadata-writer:2.4.1"
+                        ],
+                        "sizeBytes": 418818295
+                    },
+                    {
+                        "names": [
+                            "public.ecr.aws/docker/library/python@sha256:f742af2ba32cd619634370fddbb39ae8539ad84163da52d63a822a04ac2732a1",
+                            "172.16.1.72:30002/library/python:3.12",
+                            "172.16.1.72:30002/library/sha256:16ec192207dd062f56cb86d663e0543911142073c1be1ede4bd1e479bad77234",
+                            "public.ecr.aws/docker/library/python:3.12"
+                        ],
+                        "sizeBytes": 410431024
+                    },
+                    {
+                        "names": [
+                            "docker.io/library/python@sha256:ddc4560e6e692d47cc5e3109ea978d4a4f7d3ccab24557dedefd278563e2b1a2",
+                            "172.16.1.72:30002/library/python:3.11",
+                            "172.16.1.72:30002/library/sha256:258d02e80207372ffa988e0886f193f22d0698285170a3a0f3b73ebaa7e5ff6c"
+                        ],
+                        "sizeBytes": 408712926
+                    },
+                    {
+                        "names": [
+                            "docker.io/library/python@sha256:ad84630de0e8b6f2ee92b4e2996b08c269efa96be13558d0233ed08a0e190606",
+                            "172.16.1.72:30002/library/python:3.10",
+                            "172.16.1.72:30002/library/sha256:561f778d5f7652df1d3266b3387f6515d630d46277d3c72ef51d5290144cd9fc",
+                            "docker.io/library/python:3.10"
+                        ],
+                        "sizeBytes": 405906448
+                    },
+                    {
+                        "names": [
+                            "docker.io/library/python@sha256:da5aee29682d12a6649f51c8d6f15b87deb3e6c524b923c41d0cb3304d07c913",
+                            "docker.io/library/python:3.9"
+                        ],
+                        "sizeBytes": 405102362
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/sha256:e9ca1dba2cccd132f78649894240fc35f977c6b743ae0a27ccb553117451f60d",
+                            "172.16.1.72:30002/library/shell:v0.1.22",
+                            "docker.io/rancher/shell:v0.1.22"
+                        ],
+                        "sizeBytes": 362311524
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/models-web-app:v0.14.0-rc.0",
+                            "172.16.1.72:30002/library/sha256:06518abec9aee01d8822868686354dfd6968a3ca329c78eb5469ce10197f88d0",
+                            "docker.io/kserve/models-web-app:v0.14.0-rc.0"
+                        ],
+                        "sizeBytes": 337113968
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/api-server:2.0.1",
+                            "172.16.1.72:30002/library/sha256:fd34f1bc6e7fc637fb3ec588b87564328dd1cef7304352f6da597e6976c096a9",
+                            "gcr.io/ml-pipeline/api-server:2.0.1"
+                        ],
+                        "sizeBytes": 326426360
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/jupyter-web-app:v1.10.0",
+                            "172.16.1.72:30002/library/sha256:b1f99a5917eb89915273d7ac5f3455bc082845c842f08b793743389452b805c5",
+                            "ghcr.io/kubeflow/kubeflow/jupyter-web-app:v1.10.0"
+                        ],
+                        "sizeBytes": 314536456
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/sha256:3866d4b3b6a3f9ba43d3e7e2595031c41dfe8d7ce885f20fb98ee33fcb5c46e0",
+                            "172.16.1.72:30002/library/volumes-web-app:v1.10.0",
+                            "ghcr.io/kubeflow/kubeflow/volumes-web-app:v1.10.0"
+                        ],
+                        "sizeBytes": 313827849
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/node-feature-discovery:v0.18.2",
+                            "172.16.1.72:30002/library/sha256:6a744d4448cbea90b54a813d5c12aa05751c58222a786aa29e1906bff32262f4",
+                            "registry.k8s.io/nfd/node-feature-discovery:v0.18.2"
+                        ],
+                        "sizeBytes": 279019615
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/proxyv2:1.19.6",
+                            "172.16.1.72:30002/library/sha256:f5af1098e1ae6aafc0292c08646216664addc8ad342b37acf31e28d25cc256e9",
+                            "docker.io/istio/proxyv2:1.19.6"
+                        ],
+                        "sizeBytes": 257197103
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/proxyv2:1.24.3",
+                            "172.16.1.72:30002/library/sha256:9d21a7e7594f73d440890f1ee7d54ea5aa41fda8cd92616e03b297d3e4858a02",
+                            "gcr.io/istio-release/proxyv2:1.24.3"
+                        ],
+                        "sizeBytes": 248485526
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/node:v3.25.0",
+                            "172.16.1.72:30002/library/sha256:08616d26b8e74867402274687491e5978ba4a6ded94e9f5ecc3e364024e5683e",
+                            "docker.io/calico/node:v3.25.0"
+                        ],
+                        "sizeBytes": 246777938
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/cuda:12.2.0-base-ubuntu22.04",
+                            "172.16.1.72:30002/library/sha256:00d989b22f26fca88f57a39307edaaff2ffec059333f317d95c5fdcfcc0d2117",
+                            "docker.io/nvidia/cuda:12.2.0-base-ubuntu22.04"
+                        ],
+                        "sizeBytes": 242001695
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/fleet:v0.9.5",
+                            "172.16.1.72:30002/library/sha256:70db9d75e81728094dd1891f5e07adec3e24e42440487402a9a3254267d7cccd",
+                            "docker.io/rancher/fleet:v0.9.5"
+                        ],
+                        "sizeBytes": 240126627
+                    },
+                    {
+                        "names": [
+                            "172.16.1.72:30002/library/sha256:18da2a4163923c5a834f1f93edcbfc3b14d1bfd0ad9fcb222a5a22c8716df962",
+                            "172.16.1.72:30002/library/tensorboards-web-app:v1.10.0",
+                            "ghcr.io/kubeflow/kubeflow/tensorboards-web-app:v1.10.0"
+                        ],
+                        "sizeBytes": 235034997
+                    },
+                    {
+                        "names": [
+                            "docker.m.daocloud.io/library/mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b",
+                            "docker.m.daocloud.io/library/mysql:8.0"
+                        ],
+                        "sizeBytes": 233594134
+                    }
+                ],
+                "nodeInfo": {
+                    "architecture": "amd64",
+                    "bootID": "b8adc54a-be3c-4419-834a-afb401621b59",
+                    "containerRuntimeVersion": "containerd://1.7.25",
+                    "kernelVersion": "5.15.0-177-generic",
+                    "kubeProxyVersion": "v1.32.10",
+                    "kubeletVersion": "v1.32.10",
+                    "machineID": "ceef7c077b2341ffb2ef7c35d3e2e8ad",
+                    "operatingSystem": "linux",
+                    "osImage": "Ubuntu 22.04.5 LTS",
+                    "systemUUID": "331bf400-ebc7-11e9-8000-ac1f6bfb51ee"
+                }
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}
