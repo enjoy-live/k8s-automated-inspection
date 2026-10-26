@@ -12,7 +12,7 @@ export PATH="${HOME}/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bi
 
 ROOT=/home/storage/k8s-weekly-inspection
 SKILL=/home/storage/.cursor/skills/k8s-weekly-inspection/SKILL.md
-TEMPLATE="${ROOT}/template/维护周报-20260921.pdf"
+TEMPLATE="${ROOT}/template/维护周报.pdf"
 ENV_FILE="${ROOT}/cursor.env"
 LOG_DIR="${ROOT}/logs"
 LOCK_FILE="${ROOT}/logs/trigger.lock"

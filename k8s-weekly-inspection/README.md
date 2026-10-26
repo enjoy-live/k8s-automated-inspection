@@ -57,7 +57,7 @@ bash /home/storage/k8s-weekly-inspection/scripts/trigger.sh \
 
 `YYYYMMDD` 是周期结束日。命令证据在同目录的 `evidence-YYYYMMDD/`。运行日志在 `/home/storage/k8s-weekly-inspection/logs/`。
 
-PDF 由 `/home/storage/k8s-weekly-inspection/scripts/render_weekly_report.py` 读取 `design-language.yaml` 生成，与 09-21 / 09-30 / 10-12 交付版视觉一致。
+PDF 由 `/home/storage/k8s-weekly-inspection/scripts/render_weekly_report.py` 读取 `design-language.yaml` 生成。页边距、字体、表头蓝底沿用 09-21 / 09-30 / 10-12 交付版；本周重点、严重核心行、警告整行，以及含「异常」「复发」的行，按该文件里的强调色渲染。
 
 ## 验证方法
 

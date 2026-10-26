@@ -2,7 +2,7 @@
 # 以 维护周报.pdf 和 2026-09-21 / 09-30 / 10-12 各期交付 PDF 为基准，后续渲染必须读取本文件，禁止临时改色改字号。
 # 配套脚本：scripts/render_weekly_report.py
 
-version: 1
+version: 2
 name: kubeflow-maintenance-weekly-report
 baseline_pdfs:
   - 维护周报.pdf
@@ -46,6 +46,12 @@ colors:
   status_ok: "#1b7f3b"
   status_warn: "#b36b00"
   status_fail: "#c0392b"
+  # 本周重点、严重标题、严重核心行：红字，不铺底
+  emphasis: "#c0392b"
+  # 警告整行，以及含「异常」「复发」的整行：红字
+  row_alert_fg: "#c0392b"
+  # 上述整行另铺浅红底，和严重核心行的“只红字”区分开
+  row_alert_bg: "#fdecea"
 
 typography:
   title:  { size: 19,   leading: 24, bold: true,  space_before: 4, space_after: 2, left_indent: 0 }
@@ -56,6 +62,8 @@ typography:
   meta:   { size: 10,   leading: 14, bold: false, space_before: 2, space_after: 4, left_indent: 0 }
   list:   { size: 10,   leading: 15, bold: false, space_before: 2, space_after: 4, left_indent: 10 }
   quote:  { size: 9.5,  leading: 14, bold: false, space_before: 4, space_after: 4, left_indent: 8 }
+  highlight_title: { size: 11, leading: 16, bold: true, space_before: 6, space_after: 2, left_indent: 0 }
+  highlight: { size: 10.5, leading: 16, bold: true, space_before: 1, space_after: 1, left_indent: 10 }
   th:     { size: 9,    leading: 12, bold: true,  space_before: 1, space_after: 1, left_indent: 0 }
   td:     { size: 9,    leading: 12, bold: false, space_before: 1, space_after: 1, left_indent: 0 }
 
@@ -82,6 +90,35 @@ hr:
 
 list:
   bullet: "•"
+  # 并列数据用 Markdown 有序列表（1. 2. 3.）。下面的 bullet 只留给「字段：值」定义行。
+
+# 渲染脚本读取这里的词，决定哪一行变红。改判定词只改本段，不要在脚本里另写一套。
+emphasis_rules:
+  highlight_label: "本周重点"
+  critical_marker: "【严重】"
+  warning_line_marker: "【警告】"
+  warning_tokens: ["警告", "warning"]
+  critical_tokens: ["严重", "critical"]
+  core_prefixes: ["现象", "结论", "影响"]
+  alert_terms: ["异常", "复发"]
+  # 整句是否定发现时不标红。先删掉这些短语，再查找 alert_terms。
+  alert_negations:
+    - "未发现异常"
+    - "没有发现异常"
+    - "没有出现异常"
+    - "未出现异常"
+    - "不存在异常"
+    - "未见异常"
+    - "没有异常"
+    - "无异常"
+    - "零异常"
+    - "未出现复发"
+    - "没有复发"
+    - "不存在复发"
+    - "未见复发"
+    - "无复发"
+    - "未复发"
+    - "不再复发"
 
 # WQY MicroHei / 嵌入子集缺 emoji 字形；统一替换为带色 ASCII，避免方框或乱码
 # ℃ (U+2103) 在 WQY MicroHei 中有映射但字形为空，渲染成空白，统一替换为 °C
@@ -100,6 +137,11 @@ markdown_conventions:
   celsius: "℃"               # 渲染为 °C
   code_spans: "`...`"        # 保持等宽观感，仍用 CJK 字体面
   bold: "**...**"
+  highlight_block: "引用行中的「本周重点」加有序列表，渲染为红色加粗序号"
+  critical_heading: "标题含【严重】时标题用 emphasis 红色"
+  critical_core_line: "严重小节内以现象/结论/影响开头的行用 emphasis 红色"
+  warning_row: "级别格为警告或 warning 时整行 row_alert 红字加浅红底"
+  alert_line: "去掉否定短语后仍含异常或复发时，正文整行红字；表格整行红字加浅红底"
 
 do_not:
   - 改用 Inter / Roboto / 系统默认无中文字体
@@ -107,3 +149,6 @@ do_not:
   - 去掉表格斑马纹或表头蓝底
   - 在 PDF 中直接嵌入未回退的 emoji
   - 临时在脚本里硬编码另一套色值（改样式只改本 YAML）
+  - 把本周重点渲染成灰色引用
+  - 在 Markdown 里写 HTML 颜色；红色只由 emphasis_rules 的标记触发
+  - 用琥珀色代替警告行、异常行、复发行的红色
